@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="KxBie6T6uw1Iexm0-tldr4zEIM4zAUdDLF9N_t97cIE" name="google-site-verification"/>
+<meta content="CTF writeups made by LUHack members." name="description">
+<meta content="Buggy Time Machine" property="og:title"/>
+<meta content="website" property="og:type"/>
+<meta content="../../static/images/logo_small.png" property="og:image"/>
+<meta content="" property="og:url"/>
+<meta content="LUHack" property="og:site_name"/>
+<meta content="CTF writeups made by LUHack members." property="og:description"/>
+<link href="../../static/images/apple-touch-icon-57x57.png" rel="apple-touch-icon-precomposed" sizes="57x57"/>
+<link href="../../static/images/apple-touch-icon-114x114.png" rel="apple-touch-icon-precomposed" sizes="114x114">
+<link href="../../static/images/apple-touch-icon-72x72.png" rel="apple-touch-icon-precomposed" sizes="72x72"/>
+<link href="../../static/images/apple-touch-icon-144x144.png" rel="apple-touch-icon-precomposed" sizes="144x144"/>
+<link href="../../static/images/apple-touch-icon-60x60.png" rel="apple-touch-icon-precomposed" sizes="60x60"/>
+<link href="../../static/images/apple-touch-icon-120x120.png" rel="apple-touch-icon-precomposed" sizes="120x120"/>
+<link href="../../static/images/apple-touch-icon-76x76.png" rel="apple-touch-icon-precomposed" sizes="76x76"/>
+<link href="../../static/images/apple-touch-icon-152x152.png" rel="apple-touch-icon-precomposed" sizes="152x152"/>
+<link href="../../static/images/favicon-196x196.png" rel="icon" sizes="196x196" type="image/png"/>
+<link href="../../static/images/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+<link href="../../static/images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="../../static/images/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="../../static/images/favicon-128.png" rel="icon" sizes="128x128" type="image/png"/>
+<meta content="LUHack" name="application-name"/>
+<meta content="#FFFFFF" name="msapplication-TileColor"/>
+<meta content="../../static/images/mstile-144x144.png" name="msapplication-TileImage"/>
+<meta content="../../static/images/mstile-70x70.png" name="msapplication-square70x70logo"/>
+<meta content="../../static/images/mstile-150x150.png" name="msapplication-square150x150logo"/>
+<meta content="../../static/images/mstile-310x150.png" name="msapplication-wide310x150logo"/>
+<meta content="../../static/images/mstile-310x310.png" name="msapplication-square310x310logo"/>
+<script type="application/ld+json">
+     {
+         "@context": "https://schema.org",
+         "@type": "Article",
+         "author": "henry5534",
+         "name": "Buggy Time Machine",
+         "about": "Cyber Security",
+         "url": "",
+         "datePublished": "2020-11-23T23:54:02.179323",
+         "dateModified": "2020-11-23T23:54:02.179323",
+         "publsher": {
+             "@type": "Organization",
+             "name": "LUHack"
+         }
+     }
+    </script>
+<title>LUHack Writeup: Buggy Time Machine</title>
+<link href="../../_assets/cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/fontawesome.min.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="../../_assets/cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/solid.min.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="../../_assets/cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/brands.min.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="../../_assets/unpkg.com/purecss%402.0.3/build/pure-min.css" rel="stylesheet"/>
+<link href="../../_assets/fonts.googleapis.com/css_81f601ca.css" rel="stylesheet"/>
+<link href="../../static/css/main.css" rel="stylesheet"/>
+<link href="../../static/css/highlight.min.css" rel="stylesheet"/>
+<script defer="" src="../../static/js/base.js"></script>
+</link></meta></head>
+<body>
+<div class="with-sidebar">
+<div class="fill-height">
+<div class="sidebar" id="menu">
+<div class="header">
+<h1 class="brand-title">
+<a class="logo" href="../../index.html">
+<img alt="LUHack logo" src="../../static/images/luhack_logo.png" width="100%"/>
+</a>
+</h1>
+<nav class="nav">
+<ul class="nav-list">
+<li class="nav-item">
+<a class="button" href="../../index.html">Home</a>
+</li>
+<li class="nav-item">
+<a class="button" href="../index.html">Writeups</a>
+</li>
+<li class="nav-item">
+<a class="button" href="../../challenges/index.html">Challenges</a>
+</li>
+<br/>
+<li class="nav-item">
+<a class="button" href="../tags.html">Tag List</a>
+</li>
+<li class="nav-item">
+<a class="button" href="../new.html">New Writeup</a>
+</li>
+</ul>
+</nav>
+<br/>
+<form action="../index.html" class="pure-form" method="GET">
+<input autocomplete="off" class="search-bar" id="search-bar" name="search" placeholder="Search writeups" type="search" value=""/>
+</form>
+<div class="header-content">
+<div class="article-meta">
+<h2>Buggy Time Machine</h2>
+<h4 class="author">By: <a href="../user/henry5534.html">henry5534</a></h4>
+<h4 class="date">2020-11-23 23:54:02.179323</h4>
+<div class="tags">
+<a class="post-category" href="../tag/htbctf.html">htbctf</a>
+<a class="post-category" href="../tag/crypto.html">crypto</a>
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+<div class="legal">
+<div class="">
+<a href="#" title="Sign In">Sign In</a>
+</div>
+</div>
+</div>
+</div>
+<div class="not-sidebar">
+<main>
+<h1>Buggy Time Machine</h1>
+<p>We are given the code to a random number generator (RNG) and the goal is to determine the internal state of the RNG so that we provide it with a seed such that it will produce a given output (2020) - doing so gives us the flag!</p>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+<span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">render_template</span>
+<span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">request</span>
+<span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">gcd</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">from</span> <span class="nn">secret</span> <span class="kn">import</span> <span class="n">flag</span><span class="p">,</span> <span class="n">hops</span><span class="p">,</span> <span class="n">msg</span>
+
+<span class="k">class</span> <span class="nc">TimeMachineCore</span><span class="p">:</span>
+    
+    <span class="n">n</span> <span class="o">=</span> <span class="o">...</span>
+    <span class="n">m</span> <span class="o">=</span> <span class="o">...</span>
+    <span class="n">c</span> <span class="o">=</span> <span class="o">...</span>
+    	
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">seed</span><span class="p">):</span>
+    	<span class="bp">self</span><span class="o">.</span><span class="n">year</span> <span class="o">=</span> <span class="n">seed</span> 
+
+    <span class="k">def</span> <span class="nf">next</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    	<span class="bp">self</span><span class="o">.</span><span class="n">year</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">year</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">m</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">c</span><span class="p">)</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">n</span>
+    	<span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">year</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+<span class="n">seed</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">'%Y%m</span><span class="si">%d</span><span class="s1">'</span><span class="p">))</span> <span class="o">&lt;&lt;</span><span class="mi">1337</span> <span class="o">%</span> <span class="n">random</span><span class="o">.</span><span class="n">getrandbits</span><span class="p">(</span><span class="mi">128</span><span class="p">)</span>
+<span class="n">gen</span> <span class="o">=</span> <span class="n">TimeMachineCore</span><span class="p">(</span><span class="n">seed</span><span class="p">)</span>
+
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">'/next_year'</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">next_year</span><span class="p">():</span>
+    <span class="k">return</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">({</span><span class="s1">'year'</span><span class="p">:</span><span class="nb">str</span><span class="p">(</span><span class="n">gen</span><span class="o">.</span><span class="n">next</span><span class="p">())})</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">'/predict_year'</span><span class="p">,</span> <span class="n">methods</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'POST'</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">predict_year</span><span class="p">():</span>
+    
+    <span class="n">prediction</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">[</span><span class="s1">'year'</span><span class="p">]</span>
+    <span class="k">try</span><span class="p">:</span>
+
+    	<span class="k">if</span> <span class="n">prediction</span> <span class="o">==</span><span class="n">gen</span><span class="o">.</span><span class="n">next</span><span class="p">():</span>
+    		<span class="k">return</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">({</span><span class="s1">'msg'</span><span class="p">:</span> <span class="n">msg</span><span class="p">})</span>
+    	<span class="k">else</span><span class="p">:</span>
+    		<span class="k">return</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">({</span><span class="s1">'fail'</span><span class="p">:</span> <span class="s1">'wrong year'</span><span class="p">})</span>
+
+    <span class="k">except</span><span class="p">:</span>
+
+    	<span class="k">return</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">({</span><span class="s1">'error'</span><span class="p">:</span> <span class="s1">'year not found in keys.'</span><span class="p">})</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">'/travelTo2020'</span><span class="p">,</span> <span class="n">methods</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'POST'</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">travelTo2020</span><span class="p">():</span>
+    <span class="n">seed</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">[</span><span class="s1">'seed'</span><span class="p">]</span>
+    <span class="n">gen</span> <span class="o">=</span> <span class="n">TimeMachineCore</span><span class="p">(</span><span class="n">seed</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">hops</span><span class="p">):</span> <span class="n">state</span> <span class="o">=</span> <span class="n">gen</span><span class="o">.</span><span class="n">next</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">state</span> <span class="o">==</span> <span class="mi">2020</span><span class="p">:</span>
+    	<span class="k">return</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">({</span><span class="s1">'flag'</span><span class="p">:</span> <span class="n">flag</span><span class="p">})</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">'/'</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">home</span><span class="p">():</span>
+    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">'index.html'</span><span class="p">)</span>
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">'__main__'</span><span class="p">:</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+<p>From the code, we can determine the it uses a <a href="https://en.wikipedia.org/wiki/Linear_congruential_generator">Linear congruential generator (LCG)</a>, which is known to be weak; this uses a multiplier (<code>m</code>), addition (<code>c</code>) and modular value (<code>n</code>) to compute the next state, given the previous state. Given a couple of outputs, we can determine these values using the script from <a href="https://tailcall.net/blog/cracking-randomness-lcgs/">here</a>.</p>
+<p><img alt="" class="pure-img" src="../../images/b56a5d27-81bf-4dad-94fd-7a2c6479caad.png"/></p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">gcd</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
+    <span class="n">c</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">a</span><span class="p">,</span><span class="n">b</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">),</span><span class="nb">min</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
+    <span class="k">while</span> <span class="n">c</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">c</span> <span class="o">=</span> <span class="n">a</span><span class="o">%</span><span class="n">b</span>
+        <span class="n">a</span><span class="p">,</span><span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="p">,</span><span class="n">c</span>
+    <span class="k">return</span> <span class="n">a</span>
+
+<span class="k">def</span> <span class="nf">egcd</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">a</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">g</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">egcd</span><span class="p">(</span><span class="n">b</span> <span class="o">%</span> <span class="n">a</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">y</span> <span class="o">-</span> <span class="p">(</span><span class="n">b</span> <span class="o">//</span> <span class="n">a</span><span class="p">)</span> <span class="o">*</span> <span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">modinv</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+    <span class="n">g</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">egcd</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">g</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">x</span> <span class="o">%</span> <span class="n">n</span>
+
+<span class="k">def</span> <span class="nf">crack_unknown_increment</span><span class="p">(</span><span class="n">states</span><span class="p">,</span> <span class="n">modulus</span><span class="p">,</span> <span class="n">multiplier</span><span class="p">):</span>
+    <span class="n">increment</span> <span class="o">=</span> <span class="p">(</span><span class="n">states</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">states</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">multiplier</span><span class="p">)</span> <span class="o">%</span> <span class="n">modulus</span>
+    <span class="k">return</span> <span class="n">modulus</span><span class="p">,</span> <span class="n">multiplier</span><span class="p">,</span> <span class="n">increment</span>
+
+<span class="k">def</span> <span class="nf">crack_unknown_multiplier</span><span class="p">(</span><span class="n">states</span><span class="p">,</span> <span class="n">modulus</span><span class="p">):</span>
+    <span class="n">multiplier</span> <span class="o">=</span> <span class="p">(</span><span class="n">states</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">-</span> <span class="n">states</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">*</span> <span class="n">modinv</span><span class="p">(</span><span class="n">states</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">states</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">modulus</span><span class="p">)</span> <span class="o">%</span> <span class="n">modulus</span>
+    <span class="k">return</span> <span class="n">crack_unknown_increment</span><span class="p">(</span><span class="n">states</span><span class="p">,</span> <span class="n">modulus</span><span class="p">,</span> <span class="n">multiplier</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">crack_unknown_modulus</span><span class="p">(</span><span class="n">states</span><span class="p">):</span>
+    <span class="n">diffs</span> <span class="o">=</span> <span class="p">[</span><span class="n">s1</span> <span class="o">-</span> <span class="n">s0</span> <span class="k">for</span> <span class="n">s0</span><span class="p">,</span> <span class="n">s1</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">states</span><span class="p">,</span> <span class="n">states</span><span class="p">[</span><span class="mi">1</span><span class="p">:])]</span>
+    <span class="n">zeroes</span> <span class="o">=</span> <span class="p">[</span><span class="n">t2</span><span class="o">*</span><span class="n">t0</span> <span class="o">-</span> <span class="n">t1</span><span class="o">*</span><span class="n">t1</span> <span class="k">for</span> <span class="n">t0</span><span class="p">,</span> <span class="n">t1</span><span class="p">,</span> <span class="n">t2</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">diffs</span><span class="p">,</span> <span class="n">diffs</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span> <span class="n">diffs</span><span class="p">[</span><span class="mi">2</span><span class="p">:])]</span>
+    <span class="n">modulus</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">reduce</span><span class="p">(</span><span class="n">gcd</span><span class="p">,</span> <span class="n">zeroes</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">crack_unknown_multiplier</span><span class="p">(</span><span class="n">states</span><span class="p">,</span> <span class="n">modulus</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">crack_unknown_modulus</span><span class="p">([</span><span class="mi">1747796932</span><span class="p">,</span> <span class="mi">1863148530</span><span class="p">,</span> <span class="mi">1575038917</span><span class="p">,</span> <span class="mi">1340007766</span><span class="p">,</span> <span class="mi">1307424946</span><span class="p">,</span> <span class="mi">460150330</span><span class="p">,</span> <span class="mi">493218509</span><span class="p">]))</span>
+</pre></div>
+<p>We can then run this, and it will determine the values used in the internal state of the LCG for <code>m</code>, <code>c</code>, and <code>n</code> in the format <code>(m, n, c)</code>:</p>
+<pre><code>henry@Henry:~$ python2 determine_state.py
+(2147483647, 48271, 0)
+</code></pre>
+<p>We can then use these values to predict the next value, and then submit this to the <code>/predict_year</code> endpoint, which should then give us a message.</p>
+<p><img alt="" class="pure-img" src="../../images/746a4b6c-9e22-4aca-a3af-571cca99dabf.png"/></p>
+<p>We now have to find out the initial seed that will produce the value 2020 on the 876578'th hop. Easy.</p>
+<p>We first need to find the modular inverse given the number we multiply the value with and the value we take the modulo of: 42871 and 2147483647.</p>
+<div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="k">def</span> <span class="nf">egcd</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+   <span class="o">...</span><span class="p">:</span>     <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span> <span class="n">u</span><span class="p">,</span><span class="n">v</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span><span class="mi">0</span>
+   <span class="o">...</span><span class="p">:</span>     <span class="k">while</span> <span class="n">a</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+   <span class="o">...</span><span class="p">:</span>         <span class="n">q</span><span class="p">,</span> <span class="n">r</span> <span class="o">=</span> <span class="n">b</span><span class="o">//</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="o">%</span><span class="n">a</span>
+   <span class="o">...</span><span class="p">:</span>         <span class="n">m</span><span class="p">,</span> <span class="n">n</span> <span class="o">=</span> <span class="n">x</span><span class="o">-</span><span class="n">u</span><span class="o">*</span><span class="n">q</span><span class="p">,</span> <span class="n">y</span><span class="o">-</span><span class="n">v</span><span class="o">*</span><span class="n">q</span>
+   <span class="o">...</span><span class="p">:</span>         <span class="n">b</span><span class="p">,</span><span class="n">a</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span> <span class="n">u</span><span class="p">,</span><span class="n">v</span> <span class="o">=</span> <span class="n">a</span><span class="p">,</span><span class="n">r</span><span class="p">,</span> <span class="n">u</span><span class="p">,</span><span class="n">v</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span><span class="n">n</span>
+   <span class="o">...</span><span class="p">:</span>     <span class="n">gcd</span> <span class="o">=</span> <span class="n">b</span>
+   <span class="o">...</span><span class="p">:</span>     <span class="k">return</span> <span class="n">gcd</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span>
+   <span class="o">...</span><span class="p">:</span> 
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="p">(</span><span class="n">gcd</span><span class="p">,</span> <span class="n">ainv</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="o">=</span> <span class="n">egcd</span><span class="p">(</span><span class="mi">48271</span><span class="p">,</span> <span class="mi">2147483647</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">6</span><span class="p">]:</span> <span class="n">ainv</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">6</span><span class="p">]:</span> <span class="o">-</span><span class="mi">247665088</span>
+</pre></div>
+<p>We can now use this value to go from 2020 back to the original seed needed to reach 2020 on the 876578'th hop.</p>
+<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">end</span> <span class="o">=</span> <span class="mi">2020</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">seed</span> <span class="o">=</span> <span class="mi">2020</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">876578</span><span class="p">):</span>
+<span class="o">...</span>     <span class="n">seed</span> <span class="o">=</span> <span class="p">(</span><span class="n">seed</span> <span class="o">*</span> <span class="o">-</span><span class="mi">247665088</span><span class="p">)</span> <span class="o">%</span> <span class="mi">2147483647</span>
+<span class="o">...</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">seed</span>
+<span class="mi">2113508741</span>
+</pre></div>
+<p>This is the original seed we need to use to get to 2020. If we submit this to the <code>/travelTo2020</code> endpoint, we should get the flag.</p>
+<p><img alt="" class="pure-img" src="../../images/cd2f64e0-9fea-4834-bd64-a18e78e683c8.png"/></p>
+<p>The flag is <code>HTB{l1n34r_c0n9ru3nc35_4nd_prn91Zz}</code></p>
+</main>
+</div>
+</div>
+</div>
+</body>
+</html>

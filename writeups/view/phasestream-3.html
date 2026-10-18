@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="KxBie6T6uw1Iexm0-tldr4zEIM4zAUdDLF9N_t97cIE" name="google-site-verification"/>
+<meta content="CTF writeups made by LUHack members." name="description">
+<meta content="PhaseStream 3" property="og:title"/>
+<meta content="website" property="og:type"/>
+<meta content="../../static/images/logo_small.png" property="og:image"/>
+<meta content="" property="og:url"/>
+<meta content="LUHack" property="og:site_name"/>
+<meta content="CTF writeups made by LUHack members." property="og:description"/>
+<link href="../../static/images/apple-touch-icon-57x57.png" rel="apple-touch-icon-precomposed" sizes="57x57"/>
+<link href="../../static/images/apple-touch-icon-114x114.png" rel="apple-touch-icon-precomposed" sizes="114x114">
+<link href="../../static/images/apple-touch-icon-72x72.png" rel="apple-touch-icon-precomposed" sizes="72x72"/>
+<link href="../../static/images/apple-touch-icon-144x144.png" rel="apple-touch-icon-precomposed" sizes="144x144"/>
+<link href="../../static/images/apple-touch-icon-60x60.png" rel="apple-touch-icon-precomposed" sizes="60x60"/>
+<link href="../../static/images/apple-touch-icon-120x120.png" rel="apple-touch-icon-precomposed" sizes="120x120"/>
+<link href="../../static/images/apple-touch-icon-76x76.png" rel="apple-touch-icon-precomposed" sizes="76x76"/>
+<link href="../../static/images/apple-touch-icon-152x152.png" rel="apple-touch-icon-precomposed" sizes="152x152"/>
+<link href="../../static/images/favicon-196x196.png" rel="icon" sizes="196x196" type="image/png"/>
+<link href="../../static/images/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+<link href="../../static/images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="../../static/images/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="../../static/images/favicon-128.png" rel="icon" sizes="128x128" type="image/png"/>
+<meta content="LUHack" name="application-name"/>
+<meta content="#FFFFFF" name="msapplication-TileColor"/>
+<meta content="../../static/images/mstile-144x144.png" name="msapplication-TileImage"/>
+<meta content="../../static/images/mstile-70x70.png" name="msapplication-square70x70logo"/>
+<meta content="../../static/images/mstile-150x150.png" name="msapplication-square150x150logo"/>
+<meta content="../../static/images/mstile-310x150.png" name="msapplication-wide310x150logo"/>
+<meta content="../../static/images/mstile-310x310.png" name="msapplication-square310x310logo"/>
+<script type="application/ld+json">
+     {
+         "@context": "https://schema.org",
+         "@type": "Article",
+         "author": "henry5534",
+         "name": "PhaseStream 3",
+         "about": "Cyber Security",
+         "url": "",
+         "datePublished": "2021-04-22T23:23:57.296237",
+         "dateModified": "2021-04-22T23:23:57.296237",
+         "publsher": {
+             "@type": "Organization",
+             "name": "LUHack"
+         }
+     }
+    </script>
+<title>LUHack Writeup: PhaseStream 3</title>
+<link href="../../_assets/cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/fontawesome.min.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="../../_assets/cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/solid.min.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="../../_assets/cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/brands.min.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="../../_assets/unpkg.com/purecss%402.0.3/build/pure-min.css" rel="stylesheet"/>
+<link href="../../_assets/fonts.googleapis.com/css_81f601ca.css" rel="stylesheet"/>
+<link href="../../static/css/main.css" rel="stylesheet"/>
+<link href="../../static/css/highlight.min.css" rel="stylesheet"/>
+<script defer="" src="../../static/js/base.js"></script>
+</link></meta></head>
+<body>
+<div class="with-sidebar">
+<div class="fill-height">
+<div class="sidebar" id="menu">
+<div class="header">
+<h1 class="brand-title">
+<a class="logo" href="../../index.html">
+<img alt="LUHack logo" src="../../static/images/luhack_logo.png" width="100%"/>
+</a>
+</h1>
+<nav class="nav">
+<ul class="nav-list">
+<li class="nav-item">
+<a class="button" href="../../index.html">Home</a>
+</li>
+<li class="nav-item">
+<a class="button" href="../index.html">Writeups</a>
+</li>
+<li class="nav-item">
+<a class="button" href="../../challenges/index.html">Challenges</a>
+</li>
+<br/>
+<li class="nav-item">
+<a class="button" href="../tags.html">Tag List</a>
+</li>
+<li class="nav-item">
+<a class="button" href="../new.html">New Writeup</a>
+</li>
+</ul>
+</nav>
+<br/>
+<form action="../index.html" class="pure-form" method="GET">
+<input autocomplete="off" class="search-bar" id="search-bar" name="search" placeholder="Search writeups" type="search" value=""/>
+</form>
+<div class="header-content">
+<div class="article-meta">
+<h2>PhaseStream 3</h2>
+<h4 class="author">By: <a href="../user/henry5534.html">henry5534</a></h4>
+<h4 class="date">2021-04-22 23:23:57.296237</h4>
+<div class="tags">
+<a class="post-category" href="../tag/crypto.html">crypto</a>
+<a class="post-category" href="../tag/htb-cyber-apocalypse.html">htb-cyber-apocalypse</a>
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+<div class="legal">
+<div class="">
+<a href="#" title="Sign In">Sign In</a>
+</div>
+</div>
+</div>
+</div>
+<div class="not-sidebar">
+<main>
+<p>We are given the following Python code which encrypts two messages with the <em>SAME KEY</em> in AES Counter mode, we know of the the plaintexts.</p>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">Crypto.Cipher</span> <span class="kn">import</span> <span class="n">AES</span>
+<span class="kn">from</span> <span class="nn">Crypto.Util</span> <span class="kn">import</span> <span class="n">Counter</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="n">KEY</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">urandom</span><span class="p">(</span><span class="mi">16</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">encrypt</span><span class="p">(</span><span class="n">plaintext</span><span class="p">):</span>
+    <span class="n">cipher</span> <span class="o">=</span> <span class="n">AES</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">KEY</span><span class="p">,</span> <span class="n">AES</span><span class="o">.</span><span class="n">MODE_CTR</span><span class="p">,</span> <span class="n">counter</span><span class="o">=</span><span class="n">Counter</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">128</span><span class="p">))</span>
+    <span class="n">ciphertext</span> <span class="o">=</span> <span class="n">cipher</span><span class="o">.</span><span class="n">encrypt</span><span class="p">(</span><span class="n">plaintext</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">ciphertext</span><span class="o">.</span><span class="n">hex</span><span class="p">()</span>
+
+
+<span class="n">test</span> <span class="o">=</span> <span class="sa">b</span><span class="s2">"No right of private conversation was enumerated in the Constitution. I don't suppose it occurred to anyone at the time that it could be prevented."</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">encrypt</span><span class="p">(</span><span class="n">test</span><span class="p">))</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'flag.txt'</span><span class="p">,</span> <span class="s1">'rb'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">flag</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">encrypt</span><span class="p">(</span><span class="n">flag</span><span class="p">))</span>
+</pre></div>
+<p>Because the key is reused, it is actually fairly easy to decrypt the flag. (See <a href="https://gist.github.com/craSH/2969666">here</a> for someone who knows what they're on about, and a program to do it, but I'm going to do it in CyberChef.) If you're interested, it's called a known-plaintext attack.</p>
+<p>Succinctly, because the key is reused in Counter mode:
+<code>p1</code> xor <code>key</code> == <code>c1</code>
+<code>p2</code> xor <code>key</code> == <code>c2</code></p>
+<p>But, we know <code>p1</code>, <code>c1</code>, and <code>c2</code>. So, we can work out the key as xor is commutative (a xor b == c, a xor c == b, etc.).
+We then just need to xor this key with <code>c2</code> to get <code>p2</code> and the flag!</p>
+<p>This can be shown as: <code>p1</code> xor <code>c1</code> = <code>key</code> xor <code>c2</code> = <code>p2</code>.</p>
+<p>This is done in <a href="https://gchq.github.io/CyberChef/#recipe=From_Hex(%27Auto%27)XOR(%7B%27option%27:%27UTF8%27,%27string%27:%27No%20right%20of%20private%20conversation%20was%20enumerated%20in%20the%20Constitution.%20I%20don%5C%27t%20suppose%20it%20occurred%20to%20anyone%20at%20the%20time%20that%20it%20could%20be%20prevented.%27%7D,%27Standard%27,false)XOR(%7B%27option%27:%27Hex%27,%27string%27:%274b6f25623a2d3b3833a8405557e7e83257d360a054c2ea%27%7D,%27Standard%27,false)&amp;input=NDY0ODUxNTIyODM4NjAzOTI2ZjQ0MjJhNGNhNmQ4MWIwMmYzNTFiNDU0ZTZmOTY4YTMyNGZjYzc3ZGEzMGNmOTc5ZWVjNTdjODY3NWRlM2JiOTJmNmMyMTczMDYwNzA2NjIyNjc4MGE4ZDQ1MzlmY2Y2N2Y5ZjU1ODlkMTUwYTZjNzg2NzE0MGI1YTYzZGUyOTcxZGMyMDlmNDgwYzI3MDg4MjE5NGYyODgxNjdlZDkxMGI2NGNmNjI3ZWE2MzkyNDU2ZmExYjY0OGFmZDBiMjM5YjU5NjUyYmFlZGM1OTVkNGY4NzYzNGNmN2VjNDI2MmY4Yzk1ODFkN2Y1NmRjNmY4MzZjZmU2OTY1MThjZTQzNGVmNDYxNjQzMWQ0ZDFiMzYxYw">this</a> recipe, and the flag is <code>CHTB{r3u53d_k3Y_4TT4cK}</code>.</p>
+</main>
+</div>
+</div>
+</div>
+</body>
+</html>

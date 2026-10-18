@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="KxBie6T6uw1Iexm0-tldr4zEIM4zAUdDLF9N_t97cIE" name="google-site-verification"/>
+<meta content="CTF writeups made by LUHack members." name="description">
+<meta content="Rolling Printer" property="og:title"/>
+<meta content="website" property="og:type"/>
+<meta content="../../static/images/logo_small.png" property="og:image"/>
+<meta content="" property="og:url"/>
+<meta content="LUHack" property="og:site_name"/>
+<meta content="CTF writeups made by LUHack members." property="og:description"/>
+<link href="../../static/images/apple-touch-icon-57x57.png" rel="apple-touch-icon-precomposed" sizes="57x57"/>
+<link href="../../static/images/apple-touch-icon-114x114.png" rel="apple-touch-icon-precomposed" sizes="114x114">
+<link href="../../static/images/apple-touch-icon-72x72.png" rel="apple-touch-icon-precomposed" sizes="72x72"/>
+<link href="../../static/images/apple-touch-icon-144x144.png" rel="apple-touch-icon-precomposed" sizes="144x144"/>
+<link href="../../static/images/apple-touch-icon-60x60.png" rel="apple-touch-icon-precomposed" sizes="60x60"/>
+<link href="../../static/images/apple-touch-icon-120x120.png" rel="apple-touch-icon-precomposed" sizes="120x120"/>
+<link href="../../static/images/apple-touch-icon-76x76.png" rel="apple-touch-icon-precomposed" sizes="76x76"/>
+<link href="../../static/images/apple-touch-icon-152x152.png" rel="apple-touch-icon-precomposed" sizes="152x152"/>
+<link href="../../static/images/favicon-196x196.png" rel="icon" sizes="196x196" type="image/png"/>
+<link href="../../static/images/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+<link href="../../static/images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="../../static/images/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="../../static/images/favicon-128.png" rel="icon" sizes="128x128" type="image/png"/>
+<meta content="LUHack" name="application-name"/>
+<meta content="#FFFFFF" name="msapplication-TileColor"/>
+<meta content="../../static/images/mstile-144x144.png" name="msapplication-TileImage"/>
+<meta content="../../static/images/mstile-70x70.png" name="msapplication-square70x70logo"/>
+<meta content="../../static/images/mstile-150x150.png" name="msapplication-square150x150logo"/>
+<meta content="../../static/images/mstile-310x150.png" name="msapplication-wide310x150logo"/>
+<meta content="../../static/images/mstile-310x310.png" name="msapplication-square310x310logo"/>
+<script type="application/ld+json">
+     {
+         "@context": "https://schema.org",
+         "@type": "Article",
+         "author": "henry5534",
+         "name": "Rolling Printer",
+         "about": "Cyber Security",
+         "url": "",
+         "datePublished": "2019-04-11T16:02:59.415827",
+         "dateModified": "2019-04-11T16:02:59.415827",
+         "publsher": {
+             "@type": "Organization",
+             "name": "LUHack"
+         }
+     }
+    </script>
+<title>LUHack Writeup: Rolling Printer</title>
+<link href="../../_assets/cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/fontawesome.min.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="../../_assets/cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/solid.min.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="../../_assets/cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/brands.min.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="../../_assets/unpkg.com/purecss%402.0.3/build/pure-min.css" rel="stylesheet"/>
+<link href="../../_assets/fonts.googleapis.com/css_81f601ca.css" rel="stylesheet"/>
+<link href="../../static/css/main.css" rel="stylesheet"/>
+<link href="../../static/css/highlight.min.css" rel="stylesheet"/>
+<script defer="" src="../../static/js/base.js"></script>
+</link></meta></head>
+<body>
+<div class="with-sidebar">
+<div class="fill-height">
+<div class="sidebar" id="menu">
+<div class="header">
+<h1 class="brand-title">
+<a class="logo" href="../../index.html">
+<img alt="LUHack logo" src="../../static/images/luhack_logo.png" width="100%"/>
+</a>
+</h1>
+<nav class="nav">
+<ul class="nav-list">
+<li class="nav-item">
+<a class="button" href="../../index.html">Home</a>
+</li>
+<li class="nav-item">
+<a class="button" href="../index.html">Writeups</a>
+</li>
+<li class="nav-item">
+<a class="button" href="../../challenges/index.html">Challenges</a>
+</li>
+<br/>
+<li class="nav-item">
+<a class="button" href="../tags.html">Tag List</a>
+</li>
+<li class="nav-item">
+<a class="button" href="../new.html">New Writeup</a>
+</li>
+</ul>
+</nav>
+<br/>
+<form action="../index.html" class="pure-form" method="GET">
+<input autocomplete="off" class="search-bar" id="search-bar" name="search" placeholder="Search writeups" type="search" value=""/>
+</form>
+<div class="header-content">
+<div class="article-meta">
+<h2>Rolling Printer</h2>
+<h4 class="author">By: <a href="../user/henry5534.html">henry5534</a></h4>
+<h4 class="date">2019-04-11 16:02:59.415827</h4>
+<div class="tags">
+<a class="post-category" href="../tag/mic.html">mic</a>
+<a class="post-category" href="../tag/forensics.html">forensics</a>
+<a class="post-category" href="../tag/panad-ctf.html">panad-ctf</a>
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+<div class="legal">
+<div class="">
+<a href="#" title="Sign In">Sign In</a>
+</div>
+</div>
+</div>
+</div>
+<div class="not-sidebar">
+<main>
+<p>We are given an image of a QR code and are tasked to find out when the file was printed. We are told that the flag is in the format <code>pactf{yyyyMMddHHmm}</code>.</p>
+<p>We first look in the metadata to find out when the image was created</p>
+<pre><code>C:\Users\clark\Downloads\exiftool-11.32&gt;"exiftool(-k).exe" "printout.png"
+ExifTool Version Number         : 11.32
+File Name                       : printout.png
+Directory                       : C:/Users/clark/Documents/GitHub/luhack_ctf_resources/pa/rolling printer/images
+File Size                       : 410 kB
+File Modification Date/Time     : 2019:04:06 13:01:22+01:00
+File Access Date/Time           : 2019:04:06 13:16:57+01:00
+File Creation Date/Time         : 2019:04:06 13:01:22+01:00
+File Permissions                : rw-rw-rw-
+File Type                       : PNG
+File Type Extension             : png
+MIME Type                       : image/png
+Image Width                     : 4961
+Image Height                    : 7016
+Bit Depth                       : 8
+Color Type                      : RGB
+Compression                     : Deflate/Inflate
+Filter                          : Adaptive
+Interlace                       : Noninterlaced
+Exif Byte Order                 : Little-endian (Intel, II)
+Bits Per Sample                 : 8 8 8
+X Resolution                    : 236.22
+Y Resolution                    : 236.22
+Resolution Unit                 : cm
+Software                        : GIMP 2.10.8
+Photometric Interpretation      : YCbCr
+Samples Per Pixel               : 3
+Thumbnail Offset                : 272
+Thumbnail Length                : 1622
+Pixels Per Unit X               : 23622
+Pixels Per Unit Y               : 23622
+Pixel Units                     : meters
+Modify Date                     : 2019:03:18 09:12:34
+Image Size                      : 4961x7016
+Megapixels                      : 34.8
+Thumbnail Image                 : (Binary data 1622 bytes, use -b option to extract)
+</code></pre>
+<p>None of the dates or times are the correct flag (we are later told that it is not about the creation data or anything found in the metadata).</p>
+<p>However, if we open the image in paint on Windows, and then fill the background with black, some marks appear that we could not see before.</p>
+<p>If we take a closer look, the pattern seems to be repeating.</p>
+<p>Printers leave marks on pages they print off for identification. Could it be this? If we google printer watermark and go on <a href="https://en.wikipedia.org/wiki/Machine_Identification_Code">wikipedia</a> we can see that the example pattern looks similar to ours, and has a guide to decode it. The code contains a date and time that is was printed, this must be it!</p>
+<p>We can use this to decode the pattern to identify the time and date that it was printed.</p>
+<ul>
+<li>Year: 2012</li>
+<li>Month: 04</li>
+<li>Day: 14</li>
+<li>Hour: 18</li>
+<li>Minute: 44</li>
+</ul>
+<p>Therefore, the flag is <code>pactf{201204141844}</code>.</p>
+</main>
+</div>
+</div>
+</div>
+</body>
+</html>

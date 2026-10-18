@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /writeups/tags
+Disallow: /writeups/tag/
+Disallow: /writeups/user/
+
+Sitemap: /sitemap.xml

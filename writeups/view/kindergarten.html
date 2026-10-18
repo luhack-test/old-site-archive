@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="KxBie6T6uw1Iexm0-tldr4zEIM4zAUdDLF9N_t97cIE" name="google-site-verification"/>
+<meta content="CTF writeups made by LUHack members." name="description">
+<meta content="kindergarten" property="og:title"/>
+<meta content="website" property="og:type"/>
+<meta content="../../static/images/logo_small.png" property="og:image"/>
+<meta content="" property="og:url"/>
+<meta content="LUHack" property="og:site_name"/>
+<meta content="CTF writeups made by LUHack members." property="og:description"/>
+<link href="../../static/images/apple-touch-icon-57x57.png" rel="apple-touch-icon-precomposed" sizes="57x57"/>
+<link href="../../static/images/apple-touch-icon-114x114.png" rel="apple-touch-icon-precomposed" sizes="114x114">
+<link href="../../static/images/apple-touch-icon-72x72.png" rel="apple-touch-icon-precomposed" sizes="72x72"/>
+<link href="../../static/images/apple-touch-icon-144x144.png" rel="apple-touch-icon-precomposed" sizes="144x144"/>
+<link href="../../static/images/apple-touch-icon-60x60.png" rel="apple-touch-icon-precomposed" sizes="60x60"/>
+<link href="../../static/images/apple-touch-icon-120x120.png" rel="apple-touch-icon-precomposed" sizes="120x120"/>
+<link href="../../static/images/apple-touch-icon-76x76.png" rel="apple-touch-icon-precomposed" sizes="76x76"/>
+<link href="../../static/images/apple-touch-icon-152x152.png" rel="apple-touch-icon-precomposed" sizes="152x152"/>
+<link href="../../static/images/favicon-196x196.png" rel="icon" sizes="196x196" type="image/png"/>
+<link href="../../static/images/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+<link href="../../static/images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="../../static/images/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="../../static/images/favicon-128.png" rel="icon" sizes="128x128" type="image/png"/>
+<meta content="LUHack" name="application-name"/>
+<meta content="#FFFFFF" name="msapplication-TileColor"/>
+<meta content="../../static/images/mstile-144x144.png" name="msapplication-TileImage"/>
+<meta content="../../static/images/mstile-70x70.png" name="msapplication-square70x70logo"/>
+<meta content="../../static/images/mstile-150x150.png" name="msapplication-square150x150logo"/>
+<meta content="../../static/images/mstile-310x150.png" name="msapplication-wide310x150logo"/>
+<meta content="../../static/images/mstile-310x310.png" name="msapplication-square310x310logo"/>
+<script type="application/ld+json">
+     {
+         "@context": "https://schema.org",
+         "@type": "Article",
+         "author": "mysterypotatoguy",
+         "name": "kindergarten",
+         "about": "Cyber Security",
+         "url": "",
+         "datePublished": "2020-12-01T01:30:14.863100",
+         "dateModified": "2020-12-01T01:30:14.863100",
+         "publsher": {
+             "@type": "Organization",
+             "name": "LUHack"
+         }
+     }
+    </script>
+<title>LUHack Writeup: kindergarten</title>
+<link href="../../_assets/cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/fontawesome.min.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="../../_assets/cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/solid.min.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="../../_assets/cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/brands.min.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="../../_assets/unpkg.com/purecss%402.0.3/build/pure-min.css" rel="stylesheet"/>
+<link href="../../_assets/fonts.googleapis.com/css_81f601ca.css" rel="stylesheet"/>
+<link href="../../static/css/main.css" rel="stylesheet"/>
+<link href="../../static/css/highlight.min.css" rel="stylesheet"/>
+<script defer="" src="../../static/js/base.js"></script>
+</link></meta></head>
+<body>
+<div class="with-sidebar">
+<div class="fill-height">
+<div class="sidebar" id="menu">
+<div class="header">
+<h1 class="brand-title">
+<a class="logo" href="../../index.html">
+<img alt="LUHack logo" src="../../static/images/luhack_logo.png" width="100%"/>
+</a>
+</h1>
+<nav class="nav">
+<ul class="nav-list">
+<li class="nav-item">
+<a class="button" href="../../index.html">Home</a>
+</li>
+<li class="nav-item">
+<a class="button" href="../index.html">Writeups</a>
+</li>
+<li class="nav-item">
+<a class="button" href="../../challenges/index.html">Challenges</a>
+</li>
+<br/>
+<li class="nav-item">
+<a class="button" href="../tags.html">Tag List</a>
+</li>
+<li class="nav-item">
+<a class="button" href="../new.html">New Writeup</a>
+</li>
+</ul>
+</nav>
+<br/>
+<form action="../index.html" class="pure-form" method="GET">
+<input autocomplete="off" class="search-bar" id="search-bar" name="search" placeholder="Search writeups" type="search" value=""/>
+</form>
+<div class="header-content">
+<div class="article-meta">
+<h2>kindergarten</h2>
+<h4 class="author">By: <a href="../user/mysterypotatoguy.html">mysterypotatoguy</a></h4>
+<h4 class="date">2020-12-01 01:30:14.863100</h4>
+<div class="tags">
+<a class="post-category" href="../tag/htbctf.html">htbctf</a>
+<a class="post-category" href="../tag/buffer-overflows.html">buffer-overflows</a>
+<a class="post-category" href="../tag/pwn.html">pwn</a>
+<a class="post-category" href="../tag/reverse-engineering.html">reverse-engineering</a>
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+<div class="legal">
+<div class="">
+<a href="#" title="Sign In">Sign In</a>
+</div>
+</div>
+</div>
+</div>
+<div class="not-sidebar">
+<main>
+<h1>Kindergarten</h1>
+<p>Kindergarten is the first pwn challenge of the HTB x UNI 2020 CTF, we are given a 64 bit ELF binary which we must exploit to read a flag stored on the server.</p>
+<p>Using Ghidra we can decompile the binary and read a rough representation of the original code.
+In the main method we find a C <code>read</code> call which writes to an area of memory labelled <code>ans</code> which is 90 bytes long at <code>0x602040</code>.</p>
+<p><img alt="" class="pure-img" src="../../images/bb16c555-bff9-4cfc-aeff-5734c73db3f9.png"/></p>
+<p><img alt="" class="pure-img" src="../../images/14d5749c-11bd-46b9-a6d1-83ee1ba57fad.png"/></p>
+<p>Then a call to the <code>kinder</code> function, which takes some more input and then does a suspicious <code>read</code> call on line 36 with a length of 0x14c or 332 bytes into an array only 24 bytes long.</p>
+<p><img alt="" class="pure-img" src="../../images/7bd847ad-191a-4032-a504-e36e8e5b3a48.png"/></p>
+<p>We can use GDB with PEDA to debug this binary and find ways to exploit it. First off we use PEDA's <code>pattern_create</code> to generate a pattern of characters we can feed into the buffer overflow and check if the return pointer is overwritten. I used a pattern length of 150 and then wrote a command which would step through each question and eventually input our exploit string to the final question.</p>
+<p><img alt="" class="pure-img" src="../../images/211a8ab4-8c4d-4789-8280-da07c95c9eea.png"/></p>
+<p>The program then crashes with a segfault and we can use <code>backtrace</code> to find where our program went. Using <code>pattern_offset</code> on the values in <code>backtrace</code> and the contents of the <code>RBP</code> register we can get the offsets needed to overwrite both the base pointer (128 bytes) and the return instruction pointer (136). The base pointer is not actually needed to exploit here but it could have been useful.</p>
+<p><img alt="" class="pure-img" src="../../images/064fcc6c-4ccf-461e-ac46-70dea10a56d8.png"/></p>
+<p>We can then write a short python script to generate our buffer overflow string which will jump us to <code>0x602040</code>.</p>
+<p><img alt="" class="pure-img" src="../../images/1d352a93-122f-4d57-8f52-e7b5e550c232.png"/></p>
+<p><img alt="" class="pure-img" src="../../images/6106c126-7b57-4e8c-9190-a3b637fe8d95.png"/></p>
+<p>Sidenote: There is a function in the binary named <code>kids_are_not_allowed_here</code> which contained a <code>CALL</code> instruction on the <code>ans</code> memory location but this was not needed as we can jump straight to <code>ans</code> with our buffer overflow.</p>
+<p><img alt="" class="pure-img" src="../../images/efff2961-0cfa-45fb-be92-9841bff7ef19.png"/></p>
+<p>Testing this leads us to another segfault, but we segfault on memory address <code>0x60204c</code> which is inside of the buffer, successful program execution redirection! Onto writing our shellcode.</p>
+<p><img alt="" class="pure-img" src="../../images/06f46019-243d-4688-944c-9410c8978a42.png"/></p>
+<p>As another quick sidenote, as the program is being setup there is a call to a function named <code>sec</code>, this function does a few calls to <code>seccomp_rule_add</code> which is a Linux-specific call for adding system call filters. Using <code>seccomp-tools</code> I dumped the full ruleset and as we can see only the <code>read</code>, <code>write</code> and <code>open</code> syscalls are available to us, which means no spawning shells without serious trickery.</p>
+<p><img alt="" class="pure-img" src="../../images/65453734-7300-425d-a1d2-43f6c9a0726b.png"/></p>
+<p><img alt="" class="pure-img" src="../../images/948a432d-9c23-42c3-9d96-8900547122b3.png"/></p>
+<p>Using <a href="https://filippo.io/linux-syscall-table/">this linux syscall table</a>, <code>rasm2</code> an instruction compiler from radare2 and a python script to convert the hex values to raw bytes, I wrote assembly code which would push the string <code>flag.txt</code> to the stack, open a file with that name, read N bytes from that file and then write them to stdout. This payload is 87 bytes long which probably means it writes the flag outside of the <code>ans</code> buffer but it didn't seem to break anything.</p>
+<p><img alt="" class="pure-img" src="../../images/f6b446dd-74a6-49ad-88d7-3fdfd5b0d5b2.png"/></p>
+<p><img alt="" class="pure-img" src="../../images/ff260677-5325-4b03-9d78-776c485f1a13.png"/></p>
+<p><img alt="" class="pure-img" src="../../images/cd99f548-4922-4932-b73b-57a1b877ef4d.png"/></p>
+<p>I placed a file named <code>flag.txt</code> with contents <code>testvalue</code> on my desktop and attempted to read it using the generated shellcode + the buffer overflow and it was successful!</p>
+<p><img alt="" class="pure-img" src="../../images/3881800d-38d3-41ae-8d79-393a536d6ece.png"/></p>
+<p><img alt="" class="pure-img" src="../../images/ce8f6988-a42d-4ed2-9f54-423ddcc79fcc.png"/></p>
+<p>Next to execute it on the docker instance... (While editing the N value to print more characters until the end of the flag, the correct number of characters was 22)</p>
+<p><img alt="" class="pure-img" src="../../images/634b535a-de15-4f88-be34-2f42dbd85fa1.png"/></p>
+<p>And we get our flag:
+<code>HTB{2_c00l_4_$ch0OL!!}</code></p>
+</main>
+</div>
+</div>
+</div>
+</body>
+</html>

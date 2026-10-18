@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="KxBie6T6uw1Iexm0-tldr4zEIM4zAUdDLF9N_t97cIE" name="google-site-verification"/>
+<meta content="CTF writeups made by LUHack members." name="description">
+<meta content="Off the grid" property="og:title"/>
+<meta content="website" property="og:type"/>
+<meta content="../../static/images/logo_small.png" property="og:image"/>
+<meta content="" property="og:url"/>
+<meta content="LUHack" property="og:site_name"/>
+<meta content="CTF writeups made by LUHack members." property="og:description"/>
+<link href="../../static/images/apple-touch-icon-57x57.png" rel="apple-touch-icon-precomposed" sizes="57x57"/>
+<link href="../../static/images/apple-touch-icon-114x114.png" rel="apple-touch-icon-precomposed" sizes="114x114">
+<link href="../../static/images/apple-touch-icon-72x72.png" rel="apple-touch-icon-precomposed" sizes="72x72"/>
+<link href="../../static/images/apple-touch-icon-144x144.png" rel="apple-touch-icon-precomposed" sizes="144x144"/>
+<link href="../../static/images/apple-touch-icon-60x60.png" rel="apple-touch-icon-precomposed" sizes="60x60"/>
+<link href="../../static/images/apple-touch-icon-120x120.png" rel="apple-touch-icon-precomposed" sizes="120x120"/>
+<link href="../../static/images/apple-touch-icon-76x76.png" rel="apple-touch-icon-precomposed" sizes="76x76"/>
+<link href="../../static/images/apple-touch-icon-152x152.png" rel="apple-touch-icon-precomposed" sizes="152x152"/>
+<link href="../../static/images/favicon-196x196.png" rel="icon" sizes="196x196" type="image/png"/>
+<link href="../../static/images/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+<link href="../../static/images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="../../static/images/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="../../static/images/favicon-128.png" rel="icon" sizes="128x128" type="image/png"/>
+<meta content="LUHack" name="application-name"/>
+<meta content="#FFFFFF" name="msapplication-TileColor"/>
+<meta content="../../static/images/mstile-144x144.png" name="msapplication-TileImage"/>
+<meta content="../../static/images/mstile-70x70.png" name="msapplication-square70x70logo"/>
+<meta content="../../static/images/mstile-150x150.png" name="msapplication-square150x150logo"/>
+<meta content="../../static/images/mstile-310x150.png" name="msapplication-wide310x150logo"/>
+<meta content="../../static/images/mstile-310x310.png" name="msapplication-square310x310logo"/>
+<script type="application/ld+json">
+     {
+         "@context": "https://schema.org",
+         "@type": "Article",
+         "author": "simmsb",
+         "name": "Off the grid",
+         "about": "Cyber Security",
+         "url": "",
+         "datePublished": "2021-04-21T00:11:16.595672",
+         "dateModified": "2021-04-21T00:11:16.595672",
+         "publsher": {
+             "@type": "Organization",
+             "name": "LUHack"
+         }
+     }
+    </script>
+<title>LUHack Writeup: Off the grid</title>
+<link href="../../_assets/cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/fontawesome.min.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="../../_assets/cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/solid.min.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="../../_assets/cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/brands.min.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="../../_assets/unpkg.com/purecss%402.0.3/build/pure-min.css" rel="stylesheet"/>
+<link href="../../_assets/fonts.googleapis.com/css_81f601ca.css" rel="stylesheet"/>
+<link href="../../static/css/main.css" rel="stylesheet"/>
+<link href="../../static/css/highlight.min.css" rel="stylesheet"/>
+<script defer="" src="../../static/js/base.js"></script>
+</link></meta></head>
+<body>
+<div class="with-sidebar">
+<div class="fill-height">
+<div class="sidebar" id="menu">
+<div class="header">
+<h1 class="brand-title">
+<a class="logo" href="../../index.html">
+<img alt="LUHack logo" src="../../static/images/luhack_logo.png" width="100%"/>
+</a>
+</h1>
+<nav class="nav">
+<ul class="nav-list">
+<li class="nav-item">
+<a class="button" href="../../index.html">Home</a>
+</li>
+<li class="nav-item">
+<a class="button" href="../index.html">Writeups</a>
+</li>
+<li class="nav-item">
+<a class="button" href="../../challenges/index.html">Challenges</a>
+</li>
+<br/>
+<li class="nav-item">
+<a class="button" href="../tags.html">Tag List</a>
+</li>
+<li class="nav-item">
+<a class="button" href="../new.html">New Writeup</a>
+</li>
+</ul>
+</nav>
+<br/>
+<form action="../index.html" class="pure-form" method="GET">
+<input autocomplete="off" class="search-bar" id="search-bar" name="search" placeholder="Search writeups" type="search" value=""/>
+</form>
+<div class="header-content">
+<div class="article-meta">
+<h2>Off the grid</h2>
+<h4 class="author">By: <a href="../user/simmsb.html">simmsb</a></h4>
+<h4 class="date">2021-04-21 00:11:16.595672</h4>
+<div class="tags">
+<a class="post-category" href="../tag/hardware.html">hardware</a>
+<a class="post-category" href="../tag/htb-cyber-apocalypse.html">htb-cyber-apocalypse</a>
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+<div class="legal">
+<div class="">
+<a href="#" title="Sign In">Sign In</a>
+</div>
+</div>
+</div>
+</div>
+<div class="not-sidebar">
+<main>
+<h1>Off the grid</h1>
+<p>Again, we are given a capture. This time it's the communication between a device an an OLED screen.
+We've also been given a schematic showing which channels go to which pins on the device.</p>
+<p><img alt="" class="pure-img" src="../../images/d4b96adb-45db-43d8-9625-450e9f78f632.png"/></p>
+<p>After a quick search we find that this OLED screen communicates over both i2c and SPI,
+with the pins in the schematic matching a 3-wire SPI interface.</p>
+<p>Loading an analyzer up in Saleae Logic we see this:</p>
+<p><img alt="" class="pure-img" src="../../images/873d6f5d-5039-43c3-99fd-9e00affd7b08.png"/></p>
+<p>To figure out how this works I started reading the source of a rust implementation of a driver
+for this screen.</p>
+<p>After some reading I find the sequences of bytes used to send different commands to the
+display. 
+The command  <code>PageStart</code> is used to signal an 8 pixel tall row is now going to be written to the given 'page'.
+And the command <code>ColStart</code> is used to signal which column to start on.</p>
+<div class="highlight"><pre><span></span><span class="n">Command</span>::<span class="n">ColStart</span><span class="p">(</span><span class="n">addr</span><span class="p">)</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="p">([</span><span class="mh">0xF</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">addr</span><span class="p">,</span><span class="w"> </span><span class="mh">0x10</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="p">(</span><span class="mh">0xF</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="p">(</span><span class="n">addr</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">4</span><span class="p">)),</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">],</span><span class="w"> </span><span class="mi">2</span><span class="p">),</span><span class="w"></span>
+<span class="n">Command</span>::<span class="n">PageStart</span><span class="p">(</span><span class="n">page</span><span class="p">)</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="p">([</span><span class="mh">0xB0</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="p">(</span><span class="n">page</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="kt">u8</span><span class="p">),</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">],</span><span class="w"> </span><span class="mi">1</span><span class="p">),</span><span class="w"></span>
+</pre></div>
+<p>We can correlate this with the data transfer in the following screenshot, 
+we can see that first a <code>0xB3</code> is sent, signalling the third row is going to be written to,
+and then some more commands. And then a long sequence of data is sent,
+presumably this is the image data.</p>
+<p><img alt="" class="pure-img" src="../../images/f6ec2a5b-5b96-43ab-99d5-ebc40acc8258.png"/></p>
+<p>Looking at the code for emitting the image to the display, we see it just writes out
+the framebuffer over the SPI bus:</p>
+<div class="highlight"><pre><span></span><span class="k">pub</span><span class="w"> </span><span class="k">fn</span> <span class="nf">draw</span><span class="p">(</span><span class="o">&amp;</span><span class="k">mut</span><span class="w"> </span><span class="bp">self</span><span class="p">,</span><span class="w"> </span><span class="n">buffer</span>: <span class="kp">&amp;</span><span class="p">[</span><span class="kt">u8</span><span class="p">])</span><span class="w"> </span>-&gt; <span class="nb">Result</span><span class="o">&lt;</span><span class="p">(),</span><span class="w"> </span><span class="n">DisplayError</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="bp">self</span><span class="p">.</span><span class="n">iface</span><span class="p">.</span><span class="n">send_data</span><span class="p">(</span><span class="n">U8</span><span class="p">(</span><span class="o">&amp;</span><span class="n">buffer</span><span class="p">))</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+<p>So we look at the code for setting the value of a single pixel, which boils down to:</p>
+<div class="highlight"><pre><span></span><span class="sd">/// Turn a pixel on or off. A non-zero `value` is treated as on, `0` as off. If the X and Y</span>
+<span class="sd">/// coordinates are out of the bounds of the display, this method call is a noop.</span>
+<span class="k">pub</span><span class="w"> </span><span class="k">fn</span> <span class="nf">set_pixel</span><span class="p">(</span><span class="o">&amp;</span><span class="k">mut</span><span class="w"> </span><span class="bp">self</span><span class="p">,</span><span class="w"> </span><span class="n">x</span>: <span class="kt">u32</span><span class="p">,</span><span class="w"> </span><span class="n">y</span>: <span class="kt">u32</span><span class="p">,</span><span class="w"> </span><span class="n">value</span>: <span class="kt">u8</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">idx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">((</span><span class="n">y</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="kt">usize</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">DSIZE</span>::<span class="n">WIDTH</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="kt">usize</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="kt">usize</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">bit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">8</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="kd">let</span><span class="w"> </span><span class="nb">Some</span><span class="p">(</span><span class="n">byte</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="bp">self</span><span class="p">.</span><span class="n">buffer</span><span class="p">.</span><span class="n">get_mut</span><span class="p">(</span><span class="n">idx</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// Keep track of max and min values</span>
+<span class="w">        </span><span class="bp">self</span><span class="p">.</span><span class="n">min_x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="bp">self</span><span class="p">.</span><span class="n">min_x</span><span class="p">.</span><span class="n">min</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="kt">u8</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="bp">self</span><span class="p">.</span><span class="n">max_x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="bp">self</span><span class="p">.</span><span class="n">max_x</span><span class="p">.</span><span class="n">max</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="kt">u8</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="bp">self</span><span class="p">.</span><span class="n">min_y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="bp">self</span><span class="p">.</span><span class="n">min_y</span><span class="p">.</span><span class="n">min</span><span class="p">(</span><span class="n">y</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="kt">u8</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="bp">self</span><span class="p">.</span><span class="n">max_y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="bp">self</span><span class="p">.</span><span class="n">max_y</span><span class="p">.</span><span class="n">max</span><span class="p">(</span><span class="n">y</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="kt">u8</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">        </span><span class="o">*</span><span class="n">byte</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">*</span><span class="n">byte</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="o">!</span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">bit</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="p">(</span><span class="n">value</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">bit</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+<p>Seems the state of each pixel is stored such that each byte stores an 8 pixel high column of
+pixels, so I exported the data from Logic, and wrote a quick python script that takes the data
+ for each of the 8 rows written to the display, and renders the resulting image.</p>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span><span class="p">,</span> <span class="n">ImageDraw</span>
+
+<span class="n">page0</span> <span class="o">=</span> <span class="p">[</span>
+
+<span class="mh">0xFF</span><span class="p">,</span>
+<span class="mh">0xDF</span><span class="p">,</span>
+<span class="mh">0xAF</span><span class="p">,</span>
+<span class="c1"># ...</span>
+<span class="mh">0x00</span><span class="p">,</span>
+<span class="mh">0x00</span><span class="p">,</span>
+<span class="mh">0x00</span><span class="p">,</span>
+
+<span class="p">]</span>
+
+<span class="n">im</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">"RGB"</span><span class="p">,</span> <span class="p">(</span><span class="mi">128</span><span class="p">,</span> <span class="mi">64</span><span class="p">))</span>
+
+<span class="k">def</span> <span class="nf">c</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
+    <span class="n">idx</span> <span class="o">=</span> <span class="p">(</span><span class="n">y</span> <span class="o">//</span> <span class="mi">8</span> <span class="o">*</span> <span class="mi">128</span><span class="p">)</span> <span class="o">+</span> <span class="n">x</span>
+    <span class="n">bit</span> <span class="o">=</span> <span class="n">y</span> <span class="o">%</span> <span class="mi">8</span>
+    <span class="k">return</span> <span class="n">idx</span><span class="p">,</span> <span class="n">bit</span>
+
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">128</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">8</span> <span class="o">*</span> <span class="mi">8</span><span class="p">):</span>
+        <span class="n">idx</span><span class="p">,</span> <span class="n">bit</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+        <span class="n">byte</span> <span class="o">=</span> <span class="n">page0</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
+        <span class="n">val</span> <span class="o">=</span> <span class="nb">bool</span><span class="p">(</span><span class="n">byte</span> <span class="o">&amp;</span> <span class="p">(</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="n">bit</span><span class="p">))</span>
+        <span class="n">col</span> <span class="o">=</span> <span class="mi">255</span> <span class="k">if</span> <span class="n">val</span> <span class="k">else</span> <span class="mi">0</span>
+
+        <span class="n">im</span><span class="o">.</span><span class="n">putpixel</span><span class="p">((</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">),</span> <span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="n">col</span><span class="p">,</span> <span class="n">col</span><span class="p">))</span>
+
+<span class="n">im</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+<p>There were several frames shown on the screen, with one containing the flag:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="" class="pure-img" src="../../images/0dbf2620-fa13-482d-9cff-c6ead0b4c966.png"/></td>
+<td><img alt="" class="pure-img" src="../../images/f29bc076-44c1-47c8-9a44-4670fac3ec4c.png"/></td>
+</tr>
+<tr>
+<td><img alt="" class="pure-img" src="../../images/e01d343c-044e-4a59-91ff-e99c682dff73.png"/></td>
+<td><img alt="" class="pure-img" src="../../images/ed6a0507-0ca4-4482-9e20-e3b29c87e489.png"/></td>
+</tr>
+</tbody>
+</table>
+</main>
+</div>
+</div>
+</div>
+</body>
+</html>

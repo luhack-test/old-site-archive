@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="KxBie6T6uw1Iexm0-tldr4zEIM4zAUdDLF9N_t97cIE" name="google-site-verification"/>
+<meta content="CTF writeups made by LUHack members." name="description">
+<meta content="LUHack Writeups" property="og:title"/>
+<meta content="website" property="og:type"/>
+<meta content="../../static/images/logo_small.png" property="og:image"/>
+<meta content="" property="og:url"/>
+<meta content="LUHack" property="og:site_name"/>
+<meta content="CTF writeups made by LUHack members." property="og:description"/>
+<link href="../../static/images/apple-touch-icon-57x57.png" rel="apple-touch-icon-precomposed" sizes="57x57"/>
+<link href="../../static/images/apple-touch-icon-114x114.png" rel="apple-touch-icon-precomposed" sizes="114x114">
+<link href="../../static/images/apple-touch-icon-72x72.png" rel="apple-touch-icon-precomposed" sizes="72x72"/>
+<link href="../../static/images/apple-touch-icon-144x144.png" rel="apple-touch-icon-precomposed" sizes="144x144"/>
+<link href="../../static/images/apple-touch-icon-60x60.png" rel="apple-touch-icon-precomposed" sizes="60x60"/>
+<link href="../../static/images/apple-touch-icon-120x120.png" rel="apple-touch-icon-precomposed" sizes="120x120"/>
+<link href="../../static/images/apple-touch-icon-76x76.png" rel="apple-touch-icon-precomposed" sizes="76x76"/>
+<link href="../../static/images/apple-touch-icon-152x152.png" rel="apple-touch-icon-precomposed" sizes="152x152"/>
+<link href="../../static/images/favicon-196x196.png" rel="icon" sizes="196x196" type="image/png"/>
+<link href="../../static/images/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+<link href="../../static/images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="../../static/images/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="../../static/images/favicon-128.png" rel="icon" sizes="128x128" type="image/png"/>
+<meta content="LUHack" name="application-name"/>
+<meta content="#FFFFFF" name="msapplication-TileColor"/>
+<meta content="../../static/images/mstile-144x144.png" name="msapplication-TileImage"/>
+<meta content="../../static/images/mstile-70x70.png" name="msapplication-square70x70logo"/>
+<meta content="../../static/images/mstile-150x150.png" name="msapplication-square150x150logo"/>
+<meta content="../../static/images/mstile-310x150.png" name="msapplication-wide310x150logo"/>
+<meta content="../../static/images/mstile-310x310.png" name="msapplication-square310x310logo"/>
+<title>LUHack Writeups</title>
+<link href="../../_assets/cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/fontawesome.min.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="../../_assets/cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/solid.min.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="../../_assets/cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/brands.min.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="../../_assets/unpkg.com/purecss%402.0.3/build/pure-min.css" rel="stylesheet"/>
+<link href="../../_assets/fonts.googleapis.com/css_81f601ca.css" rel="stylesheet"/>
+<link href="../../static/css/main.css" rel="stylesheet"/>
+<link href="../../static/css/highlight.min.css" rel="stylesheet"/>
+</link></meta></head>
+<body>
+<div class="with-sidebar">
+<div class="fill-height">
+<div class="sidebar" id="menu">
+<div class="header">
+<h1 class="brand-title">
+<a class="logo" href="../../index.html">
+<img alt="LUHack logo" src="../../static/images/luhack_logo.png" width="100%"/>
+</a>
+</h1>
+<nav class="nav">
+<ul class="nav-list">
+<li class="nav-item">
+<a class="button" href="../../index.html">Home</a>
+</li>
+<li class="nav-item">
+<a class="button" href="../index.html">Writeups</a>
+</li>
+<li class="nav-item">
+<a class="button" href="../../challenges/index.html">Challenges</a>
+</li>
+<br/>
+<li class="nav-item">
+<a class="button" href="../tags.html">Tag List</a>
+</li>
+<li class="nav-item">
+<a class="button" href="../new.html">New Writeup</a>
+</li>
+</ul>
+</nav>
+<br/>
+<form action="../index.html" class="pure-form" method="GET">
+<input autocomplete="off" class="search-bar" id="search-bar" name="search" placeholder="Search writeups" type="search" value=""/>
+</form>
+<div class="header-content">
+</div>
+</div>
+<div class="footer">
+<div class="legal">
+<div class="">
+<a href="#" title="Sign In">Sign In</a>
+</div>
+</div>
+</div>
+</div>
+<div class="not-sidebar">
+<main>
+<div class="posts">
+<section class="post">
+<header class="post-header">
+<h2 class="post-title"><a href="../view/htbxuni-ai.html">HTBxUni AI</a></h2>
+<p class="post-meta">
+                
+                    Posted by <a href="../user/collina.html">collina</a> on 2020-12-01 19:47:42.254484
+                
+                
+                        under
+                    
+                    <a class="post-category" href="htbctf.html">htbctf</a>
+<a class="post-category" href="misc.html">misc</a>
+</p>
+</header>
+<div class="post-description">
+<p>
+                HTBxUni AI was a misc challenge where we are given the information that there's a discord bot on Hack The Box Discord called HTB X Uni AI and we need to shut it down   Firstly we retrieved the Discord ID of this bot so we could try to invite him to some server where we could interact with him   So we get the ID 764609448089092119 Then using this ID we can invite the bot to our server using a... 
+            </p>
+</div>
+</section>
+<section class="post">
+<header class="post-header">
+<h2 class="post-title"><a href="../view/matroyshka.html">Matroyshka</a></h2>
+<p class="post-meta">
+                
+                    Posted by <a href="../user/mysterypotatoguy.html">mysterypotatoguy</a> on 2019-04-17 00:12:26.895251
+                
+                
+                        under
+                    
+                    <a class="post-category" href="misc.html">misc</a>
+<a class="post-category" href="panad-ctf.html">panad-ctf</a>
+</p>
+</header>
+<div class="post-description">
+<p>
+                Matryoshka a.k.a. Russian nesting dolls are a set of wooden dolls of decreasing size which are designed to fit inside each other. The name of this challenge suggested that there would be multiple layers of challenges to solve This challenge provided us with a file containing a large base64 encoded string:    Decoding the base64 to ascii produced another base64 string but with additional obstacles: ![layer2](/images/de74da1c-7672-... 
+            </p>
+</div>
+</section>
+<section class="post">
+<header class="post-header">
+<h2 class="post-title"><a href="../view/fish-n-chips.html">Fish 'n' Chips</a></h2>
+<p class="post-meta">
+                
+                    Posted by <a href="../user/mysterypotatoguy.html">mysterypotatoguy</a> on 2019-04-11 16:49:29.171740
+                
+                
+                        under
+                    
+                    <a class="post-category" href="misc.html">misc</a>
+<a class="post-category" href="panad-ctf.html">panad-ctf</a>
+</p>
+</header>
+<div class="post-description">
+<p>
+                The message given on the challenge page: Very simple substitution, replacing <code>🍟</code> with <code>-</code> and <code>🐟</code> with <code>.</code> gives us morse code: <code>pactf{- .... . ..-. .. ... .... -- ..- ... - -... . .... .- -.. -.. --- -.-. -.-}</code> Decoded to ASCII: <code>pactf{THEFISHMUSTBEHADDOCK}</code>
+</p>
+</div>
+</section>
+<section class="post">
+<header class="post-header">
+<h2 class="post-title"><a href="../view/welcome-to-manchester.html">Welcome to Manchester</a></h2>
+<p class="post-meta">
+                
+                    Posted by <a href="../user/henry5534.html">henry5534</a> on 2019-04-11 16:05:51.287312
+                
+                
+                        under
+                    
+                    <a class="post-category" href="misc.html">misc</a>
+<a class="post-category" href="manchester-encoding.html">manchester-encoding</a>
+<a class="post-category" href="panad-ctf.html">panad-ctf</a>
+</p>
+</header>
+<div class="post-description">
+<p>
+                We are given a stream of binary data that we must somehow decode. We eventually worked out that it used <code>Manchester Coding</code>. We can use an online decoder (such as [this]) to decode it, we are then left with: We can then decode this from binary in [CyberChef] into ASCII and this gives us the flag: Flag: <code>pactf{ph4sE-enc0d1ng-PE}</code>
+</p>
+</div>
+</section>
+<section class="post">
+<header class="post-header">
+<h2 class="post-title"><a href="../view/sharp-look.html">Sharp Look</a></h2>
+<p class="post-meta">
+                
+                    Posted by <a href="../user/mrcat1692.html">mrcat1692</a> on 2019-04-11 03:13:20.792826
+                
+                
+                        under
+                    
+                    <a class="post-category" href="sharp-look.html">sharp-look</a>
+<a class="post-category" href="misc.html">misc</a>
+<a class="post-category" href="panad-ctf.html">panad-ctf</a>
+</p>
+</header>
+<div class="post-description">
+<p>
+                In the CTF we were given two images. As the description said ''Look sharp and compare the two images!''. So basically by having image 1 - [http://prntscr.com/nan35psqt] and image 2 - [http://prntscr.com/nan35p], I decided to go with the terminal in Linux to find the hidden flag but I didn't use the terminal properly and it resulted in googling for simple image comparer online - [https://www.imgonline.com.ua/eng/difference-between-two-images.php] . By uploading the two images and putting the result... 
+            </p>
+</div>
+</section>
+</div>
+</main>
+</div>
+</div>
+</div>
+</body>
+</html>

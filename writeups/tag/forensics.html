@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="KxBie6T6uw1Iexm0-tldr4zEIM4zAUdDLF9N_t97cIE" name="google-site-verification"/>
+<meta content="CTF writeups made by LUHack members." name="description">
+<meta content="LUHack Writeups" property="og:title"/>
+<meta content="website" property="og:type"/>
+<meta content="../../static/images/logo_small.png" property="og:image"/>
+<meta content="" property="og:url"/>
+<meta content="LUHack" property="og:site_name"/>
+<meta content="CTF writeups made by LUHack members." property="og:description"/>
+<link href="../../static/images/apple-touch-icon-57x57.png" rel="apple-touch-icon-precomposed" sizes="57x57"/>
+<link href="../../static/images/apple-touch-icon-114x114.png" rel="apple-touch-icon-precomposed" sizes="114x114">
+<link href="../../static/images/apple-touch-icon-72x72.png" rel="apple-touch-icon-precomposed" sizes="72x72"/>
+<link href="../../static/images/apple-touch-icon-144x144.png" rel="apple-touch-icon-precomposed" sizes="144x144"/>
+<link href="../../static/images/apple-touch-icon-60x60.png" rel="apple-touch-icon-precomposed" sizes="60x60"/>
+<link href="../../static/images/apple-touch-icon-120x120.png" rel="apple-touch-icon-precomposed" sizes="120x120"/>
+<link href="../../static/images/apple-touch-icon-76x76.png" rel="apple-touch-icon-precomposed" sizes="76x76"/>
+<link href="../../static/images/apple-touch-icon-152x152.png" rel="apple-touch-icon-precomposed" sizes="152x152"/>
+<link href="../../static/images/favicon-196x196.png" rel="icon" sizes="196x196" type="image/png"/>
+<link href="../../static/images/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+<link href="../../static/images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="../../static/images/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="../../static/images/favicon-128.png" rel="icon" sizes="128x128" type="image/png"/>
+<meta content="LUHack" name="application-name"/>
+<meta content="#FFFFFF" name="msapplication-TileColor"/>
+<meta content="../../static/images/mstile-144x144.png" name="msapplication-TileImage"/>
+<meta content="../../static/images/mstile-70x70.png" name="msapplication-square70x70logo"/>
+<meta content="../../static/images/mstile-150x150.png" name="msapplication-square150x150logo"/>
+<meta content="../../static/images/mstile-310x150.png" name="msapplication-wide310x150logo"/>
+<meta content="../../static/images/mstile-310x310.png" name="msapplication-square310x310logo"/>
+<title>LUHack Writeups</title>
+<link href="../../_assets/cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/fontawesome.min.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="../../_assets/cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/solid.min.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="../../_assets/cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/brands.min.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="../../_assets/unpkg.com/purecss%402.0.3/build/pure-min.css" rel="stylesheet"/>
+<link href="../../_assets/fonts.googleapis.com/css_81f601ca.css" rel="stylesheet"/>
+<link href="../../static/css/main.css" rel="stylesheet"/>
+<link href="../../static/css/highlight.min.css" rel="stylesheet"/>
+</link></meta></head>
+<body>
+<div class="with-sidebar">
+<div class="fill-height">
+<div class="sidebar" id="menu">
+<div class="header">
+<h1 class="brand-title">
+<a class="logo" href="../../index.html">
+<img alt="LUHack logo" src="../../static/images/luhack_logo.png" width="100%"/>
+</a>
+</h1>
+<nav class="nav">
+<ul class="nav-list">
+<li class="nav-item">
+<a class="button" href="../../index.html">Home</a>
+</li>
+<li class="nav-item">
+<a class="button" href="../index.html">Writeups</a>
+</li>
+<li class="nav-item">
+<a class="button" href="../../challenges/index.html">Challenges</a>
+</li>
+<br/>
+<li class="nav-item">
+<a class="button" href="../tags.html">Tag List</a>
+</li>
+<li class="nav-item">
+<a class="button" href="../new.html">New Writeup</a>
+</li>
+</ul>
+</nav>
+<br/>
+<form action="../index.html" class="pure-form" method="GET">
+<input autocomplete="off" class="search-bar" id="search-bar" name="search" placeholder="Search writeups" type="search" value=""/>
+</form>
+<div class="header-content">
+</div>
+</div>
+<div class="footer">
+<div class="legal">
+<div class="">
+<a href="#" title="Sign In">Sign In</a>
+</div>
+</div>
+</div>
+</div>
+<div class="not-sidebar">
+<main>
+<div class="posts">
+<section class="post">
+<header class="post-header">
+<h2 class="post-title"><a href="../view/invitation.html">Invitation</a></h2>
+<p class="post-meta">
+                
+                    Posted by <a href="../user/henry5534.html">henry5534</a> on 2021-04-26 23:53:03.034337
+                
+                
+                        under
+                    
+                    <a class="post-category" href="forensics.html">forensics</a>
+<a class="post-category" href="htb-cyber-apocalypse.html">htb-cyber-apocalypse</a>
+</p>
+</header>
+<div class="post-description">
+<p>
+                In this forensics challenge we are given a word document, and this one does have macros! We can extract the macros using <code>olevba</code>, and see that the code is: However, instead of deobfuscating this ourselves, we can get something else to do the work for us. [ViperMonkey], another incredibly useful tool by [Philippe Lagadec], can be used to emulate the VBA macros. It does this by essentially converting the macro code to Python,... 
+            </p>
+</div>
+</section>
+<section class="post">
+<header class="post-header">
+<h2 class="post-title"><a href="../view/alienphish.html">AlienPhish</a></h2>
+<p class="post-meta">
+                
+                    Posted by <a href="../user/henry5534.html">henry5534</a> on 2021-04-26 22:30:58.425826
+                
+                
+                        under
+                    
+                    <a class="post-category" href="forensics.html">forensics</a>
+<a class="post-category" href="htb-cyber-apocalypse.html">htb-cyber-apocalypse</a>
+</p>
+</header>
+<div class="post-description">
+<p>
+                In this forensics challenge we are given a Powerpoint that we need to analyse. The will be expecting there to be macros that we will need to analyse / Reverse Engieer to figure out the flag. We can first use <code>olevba</code> for this, this is a tool by [Philippe Lagadec] who has made a whole collection of Office Forensics tools. However, as seen above there are no macros in the file. Instead of further analysis, we can simply run the (likely) malicious file in a malware... 
+            </p>
+</div>
+</section>
+<section class="post">
+<header class="post-header">
+<h2 class="post-title"><a href="../view/plug.html">PLUG</a></h2>
+<p class="post-meta">
+                
+                    Posted by <a href="../user/simmsb.html">simmsb</a> on 2020-12-01 21:24:02.837205
+                
+                
+                        under
+                    
+                    <a class="post-category" href="htbctf.html">htbctf</a>
+<a class="post-category" href="forensics.html">forensics</a>
+</p>
+</header>
+<div class="post-description">
+<p>
+                We are given a packet capture containing USB packets:   We can use tshark to extract the packet data to a file: Running binwalk: We can use [PCRT] to extract the png: ||| |-|-| | | | The QR code contains the flag: <code>HTB{IN73R3S7iNG_Us8_s7UFf}</code>
+</p>
+</div>
+</section>
+<section class="post">
+<header class="post-header">
+<h2 class="post-title"><a href="../view/warren-buffer.html">Warren Buffer</a></h2>
+<p class="post-meta">
+                
+                    Posted by <a href="../user/henry5534.html">henry5534</a> on 2020-11-28 19:38:23.344400
+                
+                
+                        under
+                    
+                    <a class="post-category" href="htbctf.html">htbctf</a>
+<a class="post-category" href="forensics.html">forensics</a>
+</p>
+</header>
+<div class="post-description">
+<p>
+                We are again given a PCAP, this contains a mixture of both encrypted TLS and plaintext HTTP. (Eventually) we noticed that the last character of each useragent in each of the HTTP requests is different:     Collecting all of these together, we get <code>68 74 74 70 73 25 33 41 2f 2f 67 68 6f 73 74 62 69 6e 2e 63 6f 2f 70 61 73 74 65 2f 79 71 74 73 65 6b 39 33</code>, converting this from hex we get a URL:... 
+            </p>
+</div>
+</section>
+<section class="post">
+<header class="post-header">
+<h2 class="post-title"><a href="../view/exfil.html">Exfil</a></h2>
+<p class="post-meta">
+                
+                    Posted by <a href="../user/henry5534.html">henry5534</a> on 2020-11-28 19:20:56.007416
+                
+                
+                        under
+                    
+                    <a class="post-category" href="htbctf.html">htbctf</a>
+<a class="post-category" href="forensics.html">forensics</a>
+<a class="post-category" href="steganography.html">steganography</a>
+</p>
+</header>
+<div class="post-description">
+<p>
+                We are given a PCAP file that we can view in Wireshark, this contains a lot of packets, but none of these seem to contain much actual information. Giving it a closer look, it appears to be exfiltrating each bit of a  character of various fields at a time.   It will sleep for three seconds if the bit is a <code>1</code>, or return immediately if it is a <code>0</code>. After some trial and error, we can select only the relevent packets by using the packet filter... 
+            </p>
+</div>
+</section>
+<section class="post">
+<header class="post-header">
+<h2 class="post-title"><a href="../view/kapkan.html">kapKan</a></h2>
+<p class="post-meta">
+                
+                    Posted on 2020-11-27 10:00:47.069727
+                
+                
+                        under
+                    
+                    <a class="post-category" href="htbctf.html">htbctf</a>
+<a class="post-category" href="forensics.html">forensics</a>
+</p>
+</header>
+<div class="post-description">
+<p>
+                kapKan was a Forensics Challenge from HTB x Uni CTF 2020. We are given a blank word document named invoice.docx, opening the file gives us a blank word document. Although, on opening we get the following warning:   The warning suggests there is something going on deeper within this file.  We go on to open to document in some text editor and investigate. After a quick scan through we find the following interesting tag: `&lt;w:fldSimple w:instr="... 
+            </p>
+</div>
+</section>
+<section class="post">
+<header class="post-header">
+<h2 class="post-title"><a href="../view/snapshots.html">Snapshots</a></h2>
+<p class="post-meta">
+                
+                    Posted by <a href="../user/henry5534.html">henry5534</a> on 2019-04-11 16:09:17.043003
+                
+                
+                        under
+                    
+                    <a class="post-category" href="file-recovery.html">file-recovery</a>
+<a class="post-category" href="forensics.html">forensics</a>
+<a class="post-category" href="panad-ctf.html">panad-ctf</a>
+</p>
+</header>
+<div class="post-description">
+<p>
+                We are given a dump from a thumbdrive and need to find a flag hidden in one of the images. We can use <code>foremost</code> or <code>photorec</code> to recover the images, I will use <code>foremost</code>. Looking in the files that it found, we see the flag in one of the images. Flag: <code>pactf{pictUR3-PICture!!}</code>
+</p>
+</div>
+</section>
+<section class="post">
+<header class="post-header">
+<h2 class="post-title"><a href="../view/rolling-printer.html">Rolling Printer</a></h2>
+<p class="post-meta">
+                
+                    Posted by <a href="../user/henry5534.html">henry5534</a> on 2019-04-11 16:02:59.415827
+                
+                
+                        under
+                    
+                    <a class="post-category" href="mic.html">mic</a>
+<a class="post-category" href="forensics.html">forensics</a>
+<a class="post-category" href="panad-ctf.html">panad-ctf</a>
+</p>
+</header>
+<div class="post-description">
+<p>
+                We are given an image of a QR code and are tasked to find out when the file was printed. We are told that the flag is in the format <code>pactf{yyyyMMddHHmm}</code>. We first look in the metadata to find out when the image was created None of the dates or times are the correct flag (we are later told that it is not about the creation data or anything found in the metadata). However, if we open the image in paint on Windows, and then fill the background with black, some marks appear that we could not see... 
+            </p>
+</div>
+</section>
+<section class="post">
+<header class="post-header">
+<h2 class="post-title"><a href="../view/trailer.html">Trailer</a></h2>
+<p class="post-meta">
+                
+                    Posted by <a href="../user/henry5534.html">henry5534</a> on 2019-04-11 15:58:44.017414
+                
+                
+                        under
+                    
+                    <a class="post-category" href="stego.html">stego</a>
+<a class="post-category" href="forensics.html">forensics</a>
+<a class="post-category" href="hidden-file.html">hidden-file</a>
+<a class="post-category" href="panad-ctf.html">panad-ctf</a>
+</p>
+</header>
+<div class="post-description">
+<p>
+                This is a simple steganography challenge, this was easily solved by running the standard stego tools. We are given a PNG image of a tractor. Nothing visually stands out in the image so we can run strings on it. We can then use grep to search for the flag as we know that the flag format is pactf{...}. <code>strings trailer.jpg | grep pactf</code> We get nothing, is there a file hidden inside the image? It has found an image, this can also be done with <code>foremost</code>. If we open the extracted image, we can see the... 
+            </p>
+</div>
+</section>
+</div>
+</main>
+</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="KxBie6T6uw1Iexm0-tldr4zEIM4zAUdDLF9N_t97cIE" name="google-site-verification"/>
+<meta content="CTF writeups made by LUHack members." name="description">
+<meta content="You can't hear me" property="og:title"/>
+<meta content="website" property="og:type"/>
+<meta content="../../static/images/logo_small.png" property="og:image"/>
+<meta content="" property="og:url"/>
+<meta content="LUHack" property="og:site_name"/>
+<meta content="CTF writeups made by LUHack members." property="og:description"/>
+<link href="../../static/images/apple-touch-icon-57x57.png" rel="apple-touch-icon-precomposed" sizes="57x57"/>
+<link href="../../static/images/apple-touch-icon-114x114.png" rel="apple-touch-icon-precomposed" sizes="114x114">
+<link href="../../static/images/apple-touch-icon-72x72.png" rel="apple-touch-icon-precomposed" sizes="72x72"/>
+<link href="../../static/images/apple-touch-icon-144x144.png" rel="apple-touch-icon-precomposed" sizes="144x144"/>
+<link href="../../static/images/apple-touch-icon-60x60.png" rel="apple-touch-icon-precomposed" sizes="60x60"/>
+<link href="../../static/images/apple-touch-icon-120x120.png" rel="apple-touch-icon-precomposed" sizes="120x120"/>
+<link href="../../static/images/apple-touch-icon-76x76.png" rel="apple-touch-icon-precomposed" sizes="76x76"/>
+<link href="../../static/images/apple-touch-icon-152x152.png" rel="apple-touch-icon-precomposed" sizes="152x152"/>
+<link href="../../static/images/favicon-196x196.png" rel="icon" sizes="196x196" type="image/png"/>
+<link href="../../static/images/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+<link href="../../static/images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="../../static/images/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="../../static/images/favicon-128.png" rel="icon" sizes="128x128" type="image/png"/>
+<meta content="LUHack" name="application-name"/>
+<meta content="#FFFFFF" name="msapplication-TileColor"/>
+<meta content="../../static/images/mstile-144x144.png" name="msapplication-TileImage"/>
+<meta content="../../static/images/mstile-70x70.png" name="msapplication-square70x70logo"/>
+<meta content="../../static/images/mstile-150x150.png" name="msapplication-square150x150logo"/>
+<meta content="../../static/images/mstile-310x150.png" name="msapplication-wide310x150logo"/>
+<meta content="../../static/images/mstile-310x310.png" name="msapplication-square310x310logo"/>
+<script type="application/ld+json">
+     {
+         "@context": "https://schema.org",
+         "@type": "Article",
+         "author": "simmsb",
+         "name": "You can&#39;t hear me",
+         "about": "Cyber Security",
+         "url": "",
+         "datePublished": "2022-07-27T23:05:12.287616",
+         "dateModified": "2022-07-27T23:05:12.287616",
+         "publsher": {
+             "@type": "Organization",
+             "name": "LUHack"
+         }
+     }
+    </script>
+<title>LUHack Writeup: You can't hear me</title>
+<link href="../../_assets/cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/fontawesome.min.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="../../_assets/cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/solid.min.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="../../_assets/cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/brands.min.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="../../_assets/unpkg.com/purecss%402.0.3/build/pure-min.css" rel="stylesheet"/>
+<link href="../../_assets/fonts.googleapis.com/css_81f601ca.css" rel="stylesheet"/>
+<link href="../../static/css/main.css" rel="stylesheet"/>
+<link href="../../static/css/highlight.min.css" rel="stylesheet"/>
+<script defer="" src="../../static/js/base.js"></script>
+</link></meta></head>
+<body>
+<div class="with-sidebar">
+<div class="fill-height">
+<div class="sidebar" id="menu">
+<div class="header">
+<h1 class="brand-title">
+<a class="logo" href="../../index.html">
+<img alt="LUHack logo" src="../../static/images/luhack_logo.png" width="100%"/>
+</a>
+</h1>
+<nav class="nav">
+<ul class="nav-list">
+<li class="nav-item">
+<a class="button" href="../../index.html">Home</a>
+</li>
+<li class="nav-item">
+<a class="button" href="../index.html">Writeups</a>
+</li>
+<li class="nav-item">
+<a class="button" href="../../challenges/index.html">Challenges</a>
+</li>
+<br/>
+<li class="nav-item">
+<a class="button" href="../tags.html">Tag List</a>
+</li>
+<li class="nav-item">
+<a class="button" href="../new.html">New Writeup</a>
+</li>
+</ul>
+</nav>
+<br/>
+<form action="../index.html" class="pure-form" method="GET">
+<input autocomplete="off" class="search-bar" id="search-bar" name="search" placeholder="Search writeups" type="search" value=""/>
+</form>
+<div class="header-content">
+<div class="article-meta">
+<h2>You can't hear me</h2>
+<h4 class="author">By: <a href="../user/simmsb.html">simmsb</a></h4>
+<h4 class="date">2022-07-27 23:05:12.287616</h4>
+<div class="tags">
+<a class="post-category" href="../tag/hardware.html">hardware</a>
+<a class="post-category" href="../tag/hacky-holidays.html">hacky-holidays</a>
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+<div class="legal">
+<div class="">
+<a href="#" title="Sign In">Sign In</a>
+</div>
+</div>
+</div>
+</div>
+<div class="not-sidebar">
+<main>
+<h1>You can't hear me</h1>
+<blockquote>
+<p>"We've found this piece of hardware, it seems to be trying to tell us something."</p>
+</blockquote>
+<h2>Exploration</h2>
+<p>This challenge presents us with a website containing a video of a circuit board,
+a picture of a logic analyzer, and a 'terminal'.</p>
+<p><img alt="" class="pure-img" src="../../images/2e4b9ffe-b8eb-40fc-8dff-df12d6ba4581.png"/></p>
+<p>After some clicking around we find that clicking the 'probe' cycles the colour,
+the pads at the top left of the circuit board can then be clicked on. With the
+below configuration we are able to run <code>./analyze.sh</code> in the terminal, which
+causes the file <code>sample_0x731BC42.sal</code> to be downloaded.</p>
+<p><img alt="" class="pure-img" src="../../images/5bc2f28f-b75a-4f96-9e24-8f60d39f8e0d.png"/></p>
+<h2>Analysis</h2>
+<p>This .sal file is a dump created by Salea Logic 2, opening it reveals a 190
+second trace of three channels. The first two appear to be clocks, and the third
+appears to be data.</p>
+<p><img alt="" class="pure-img" src="../../images/f337f31f-33ae-4aa9-ba67-28aa58f157e1.jpeg"/></p>
+<p>Looking at the circuit board we see <code>TODO: ADD MAX98357A TO BOARD</code>, searching
+for this chip reveals it is a <a href="https://www.adafruit.com/product/3006">3W i2s
+amplifier</a></p>
+<p>I2S is a three channel protocol with a clock, a channel select, and a PCM
+channel. Which checks out with the trace.</p>
+<p><img alt="" class="pure-img" src="../../_assets/upload.wikimedia.org/wikipedia/commons/a/a7/I2S_Timing.svg"/></p>
+<h2>Extraction</h2>
+<p>Conveniently Salea also has an i2s decoder.</p>
+<p>Annoyingly the Linux version crashes when decoding large traces...</p>
+<p>Luckily the windows version does not appear to have these issues.</p>
+<p>Unfortunately the Salea i2s decoder doesn't support exporting a wave file,
+instead it exports a CSV looking like the following:</p>
+<pre><code>Time [s],Channel,Value
+145.572849249999990,2,0xF62F
+145.572859749999992,1,0x103B
+145.572869999999995,2,0xF642
+145.572880499999997,1,0x0F20
+145.572890999999998,2,0xF60B
+145.572901250000001,1,0x0C1A
+145.572911750000003,2,0xF58F
+145.572922250000005,1,0x0919
+145.572932500000007,2,0xF4A7
+145.572943000000009,1,0x06E3
+145.572953500000011,2,0xF381
+145.572963750000014,1,0x0541
+145.572974249999987,2,0xF2BA
+145.572984749999989,1,0x0499
+145.572994999999992,2,0xF332
+145.573005499999994,1,0x0525
+145.573015749999996,2,0xF511
+145.573026249999998,1,0x05A0
+145.573036750000000,2,0xF760
+145.573047000000003,1,0x0504
+145.573057500000004,2,0xF996
+145.573068000000006,1,0x0424
+145.573078250000009,2,0xFBF5
+145.573088750000011,1,0x03C2
+145.573099250000013,2,0xFE07
+</code></pre>
+<p>After some searching, I found the
+<a href="https://github.com/roel0/PCM2Wav-py/">PCM2Wav-py</a> library which was capable of
+converting this CSV exported by Salea, with a bit of modification I was able to
+get it to convert correctly!</p>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">PCM2Wav</span> <span class="kn">import</span> <span class="n">PCM2Wav</span>
+<span class="kn">from</span> <span class="nn">PCM2Wav.PCM</span> <span class="kn">import</span> <span class="n">PCM</span>
+
+<span class="k">class</span> <span class="nc">I2S</span><span class="p">(</span><span class="n">PCM</span><span class="o">.</span><span class="n">PCM</span><span class="p">):</span>
+    <span class="n">TIME_LOC</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">VALUE_LOC</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+    <span class="n">CHANNEL_LOC</span> <span class="o">=</span> <span class="o">-</span><span class="mi">2</span>
+    <span class="n">FIRST_D</span> <span class="o">=</span> <span class="mi">1</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">csv_file</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">','</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">I2S</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">csv_file</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">FIRST_D</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">delimiter</span> <span class="o">=</span> <span class="n">delimiter</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">start_time</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">extract_value</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">start_time</span><span class="p">,</span>
+                                                   <span class="bp">self</span><span class="o">.</span><span class="n">TIME_LOC</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">end_time</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">extract_value</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">end_time</span><span class="p">,</span>
+                                                 <span class="bp">self</span><span class="o">.</span><span class="n">TIME_LOC</span><span class="p">))</span>
+
+    <span class="k">def</span> <span class="nf">extract_value</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">line</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
+        <span class="n">line</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">delimiter</span><span class="p">)</span>
+        <span class="n">line</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">line</span>
+
+    <span class="k">def</span> <span class="nf">determine_sample_rate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">I2S</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">determine_sample_rate</span><span class="p">()</span>
+        <span class="c1"># 2 samples per period</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sample_rate</span> <span class="o">/=</span> <span class="mi">2</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">I2S</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+        <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sample_rate</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">pop_data</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">I2S</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">pop_data</span><span class="p">()</span>
+        <span class="c1"># Skip header</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">sample_count</span> <span class="o">&lt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">FIRST_D</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">pop_data</span><span class="p">()</span>
+
+        <span class="n">value</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">extract_value</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">line</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">VALUE_LOC</span><span class="p">),</span> <span class="mi">16</span><span class="p">)</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="n">to_bytes</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">byteorder</span><span class="o">=</span><span class="s1">'big'</span><span class="p">,</span> <span class="n">signed</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="nb">int</span><span class="o">.</span><span class="n">from_bytes</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">byteorder</span><span class="o">=</span><span class="s1">'big'</span><span class="p">,</span> <span class="n">signed</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">channel</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">extract_value</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">line</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">CHANNEL_LOC</span><span class="p">),</span> <span class="mi">16</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">sample_count</span> <span class="o">&lt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">FIRST_D</span> <span class="o">+</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">if</span> <span class="nb">int</span><span class="p">(</span><span class="n">channel</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">pop_data</span><span class="p">()</span>
+
+        <span class="k">return</span> <span class="n">channel</span><span class="p">,</span> <span class="n">value</span>
+
+    <span class="k">def</span> <span class="nf">close</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sample_count</span> <span class="o">-=</span> <span class="bp">self</span><span class="o">.</span><span class="n">FIRST_D</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">I2S</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="n">PCM2Wav</span><span class="p">(</span><span class="n">I2S</span><span class="p">,</span> <span class="s2">"wav2.csv"</span><span class="p">,</span> <span class="s2">"full.wav"</span><span class="p">)</span>
+</pre></div>
+<p>Running this gets us the following audio:</p>
+<p><audio controls="controls" src="../../_assets/cdn.discordapp.com/attachments/246735978616586240/1001986457315053578/full.mp3"></audio></p>
+<h2>Head scratching</h2>
+<p>We are told that <code>"The flag format is CTF{decimal numbers}"</code>, the song in the
+clip appears to be the single version of 'one' by 'three dog night'.</p>
+<p>After a while of trying different combinations of the numbers appearing in the
+lyrics, I realized that the video of the circuit board on the website has a
+blinking light, and has the exact same length as the song... With a quick ffmpeg
+command I merged these together to get the following video:</p>
+<p><video controls="controls" src="../../_assets/cdn.discordapp.com/attachments/246735978616586240/1001987994087071774/merged.mp4"></video></p>
+<p>If you write down the numbers said in the lyrics at the same time as the led
+being on (with any non-number lyric mapping to zero) you get 1211001121111111,
+which is the flag.</p>
+</main>
+</div>
+</div>
+</div>
+</body>
+</html>

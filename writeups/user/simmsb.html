@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="KxBie6T6uw1Iexm0-tldr4zEIM4zAUdDLF9N_t97cIE" name="google-site-verification"/>
+<meta content="CTF writeups made by LUHack members." name="description">
+<meta content="LUHack Writeups" property="og:title"/>
+<meta content="website" property="og:type"/>
+<meta content="../../static/images/logo_small.png" property="og:image"/>
+<meta content="" property="og:url"/>
+<meta content="LUHack" property="og:site_name"/>
+<meta content="CTF writeups made by LUHack members." property="og:description"/>
+<link href="../../static/images/apple-touch-icon-57x57.png" rel="apple-touch-icon-precomposed" sizes="57x57"/>
+<link href="../../static/images/apple-touch-icon-114x114.png" rel="apple-touch-icon-precomposed" sizes="114x114">
+<link href="../../static/images/apple-touch-icon-72x72.png" rel="apple-touch-icon-precomposed" sizes="72x72"/>
+<link href="../../static/images/apple-touch-icon-144x144.png" rel="apple-touch-icon-precomposed" sizes="144x144"/>
+<link href="../../static/images/apple-touch-icon-60x60.png" rel="apple-touch-icon-precomposed" sizes="60x60"/>
+<link href="../../static/images/apple-touch-icon-120x120.png" rel="apple-touch-icon-precomposed" sizes="120x120"/>
+<link href="../../static/images/apple-touch-icon-76x76.png" rel="apple-touch-icon-precomposed" sizes="76x76"/>
+<link href="../../static/images/apple-touch-icon-152x152.png" rel="apple-touch-icon-precomposed" sizes="152x152"/>
+<link href="../../static/images/favicon-196x196.png" rel="icon" sizes="196x196" type="image/png"/>
+<link href="../../static/images/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+<link href="../../static/images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="../../static/images/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="../../static/images/favicon-128.png" rel="icon" sizes="128x128" type="image/png"/>
+<meta content="LUHack" name="application-name"/>
+<meta content="#FFFFFF" name="msapplication-TileColor"/>
+<meta content="../../static/images/mstile-144x144.png" name="msapplication-TileImage"/>
+<meta content="../../static/images/mstile-70x70.png" name="msapplication-square70x70logo"/>
+<meta content="../../static/images/mstile-150x150.png" name="msapplication-square150x150logo"/>
+<meta content="../../static/images/mstile-310x150.png" name="msapplication-wide310x150logo"/>
+<meta content="../../static/images/mstile-310x310.png" name="msapplication-square310x310logo"/>
+<title>LUHack Writeups</title>
+<link href="../../_assets/cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/fontawesome.min.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="../../_assets/cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/solid.min.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="../../_assets/cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/brands.min.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="../../_assets/unpkg.com/purecss%402.0.3/build/pure-min.css" rel="stylesheet"/>
+<link href="../../_assets/fonts.googleapis.com/css_81f601ca.css" rel="stylesheet"/>
+<link href="../../static/css/main.css" rel="stylesheet"/>
+<link href="../../static/css/highlight.min.css" rel="stylesheet"/>
+</link></meta></head>
+<body>
+<div class="with-sidebar">
+<div class="fill-height">
+<div class="sidebar" id="menu">
+<div class="header">
+<h1 class="brand-title">
+<a class="logo" href="../../index.html">
+<img alt="LUHack logo" src="../../static/images/luhack_logo.png" width="100%"/>
+</a>
+</h1>
+<nav class="nav">
+<ul class="nav-list">
+<li class="nav-item">
+<a class="button" href="../../index.html">Home</a>
+</li>
+<li class="nav-item">
+<a class="button" href="../index.html">Writeups</a>
+</li>
+<li class="nav-item">
+<a class="button" href="../../challenges/index.html">Challenges</a>
+</li>
+<br/>
+<li class="nav-item">
+<a class="button" href="../tags.html">Tag List</a>
+</li>
+<li class="nav-item">
+<a class="button" href="../new.html">New Writeup</a>
+</li>
+</ul>
+</nav>
+<br/>
+<form action="../index.html" class="pure-form" method="GET">
+<input autocomplete="off" class="search-bar" id="search-bar" name="search" placeholder="Search writeups" type="search" value=""/>
+</form>
+<div class="header-content">
+</div>
+</div>
+<div class="footer">
+<div class="legal">
+<div class="">
+<a href="#" title="Sign In">Sign In</a>
+</div>
+</div>
+</div>
+</div>
+<div class="not-sidebar">
+<main>
+<div class="posts">
+<section class="post">
+<header class="post-header">
+<h2 class="post-title"><a href="../view/city-control.html">City Control</a></h2>
+<p class="post-meta">
+                
+                    Posted by <a href="simmsb.html">simmsb</a> on 2022-07-31 00:26:06.595331
+                
+                
+                        under
+                    
+                    <a class="post-category" href="../tag/botting.html">botting</a>
+<a class="post-category" href="../tag/hacky-holidays.html">hacky-holidays</a>
+</p>
+</header>
+<div class="post-description">
+<p>
+                A programming challenge from the Hacky Holidays CTF. This challenge is intended to be run on a badge from the MCH 2022 conference, however it can also be run inside an emulator [here].   The RPI emulator provided allows us to explore the micropython code loaded on the badge. Poking around reveals the file <code>app/secret.py</code>: If we run this code we get the first flag: ... 
+            </p>
+</div>
+</section>
+<section class="post">
+<header class="post-header">
+<h2 class="post-title"><a href="../view/you-cant-hear-me.html">You can't hear me</a></h2>
+<p class="post-meta">
+                
+                    Posted by <a href="simmsb.html">simmsb</a> on 2022-07-27 23:05:12.287616
+                
+                
+                        under
+                    
+                    <a class="post-category" href="../tag/hardware.html">hardware</a>
+<a class="post-category" href="../tag/hacky-holidays.html">hacky-holidays</a>
+</p>
+</header>
+<div class="post-description">
+<p>
+                This challenge presents us with a website containing a video of a circuit board, a picture of a logic analyzer, and a 'terminal'.   After some clicking around we find that clicking the 'probe' cycles the colour, the pads at the top left of the circuit board can then be clicked on. With the below configuration we are able to run <code>./analyze.sh</code> in the terminal, which causes the file <code>sample_0x731BC42.sal</code> to be downloaded. ... 
+            </p>
+</div>
+</section>
+<section class="post">
+<header class="post-header">
+<h2 class="post-title"><a href="../view/hidden.html">Hidden</a></h2>
+<p class="post-meta">
+                
+                    Posted by <a href="simmsb.html">simmsb</a> on 2021-05-02 05:36:56.308573
+                
+                
+                        under
+                    
+                    <a class="post-category" href="../tag/hardware.html">hardware</a>
+<a class="post-category" href="../tag/htb-cyber-apocalypse.html">htb-cyber-apocalypse</a>
+</p>
+</header>
+<div class="post-description">
+<p>
+                For this challenge we are given two files: Taking a look at the executable first, we see that it's a fairly simple program that appears to be XORing a pre-existing flag and then writing it to a file. Since it appears the flag is hard coded in the binary, with a dummy flag being present in the binary given to us, the first step is to extract the XORed output since we can use the following property of XOR to calculate the flag: <code>(key XOR flag) XOR (key XOR dummyflag) XOR dummyflag = flag</code> ... 
+            </p>
+</div>
+</section>
+<section class="post">
+<header class="post-header">
+<h2 class="post-title"><a href="../view/off-the-grid.html">Off the grid</a></h2>
+<p class="post-meta">
+                
+                    Posted by <a href="simmsb.html">simmsb</a> on 2021-04-21 00:11:16.595672
+                
+                
+                        under
+                    
+                    <a class="post-category" href="../tag/hardware.html">hardware</a>
+<a class="post-category" href="../tag/htb-cyber-apocalypse.html">htb-cyber-apocalypse</a>
+</p>
+</header>
+<div class="post-description">
+<p>
+                Again, we are given a capture. This time it's the communication between a device an an OLED screen. We've also been given a schematic showing which channels go to which pins on the device.   After a quick search we find that this OLED screen communicates over both i2c and SPI, with the pins in the schematic matching a 3-wire SPI interface. Loading an analyzer up in Saleae Logic we see this:   To... 
+            </p>
+</div>
+</section>
+<section class="post">
+<header class="post-header">
+<h2 class="post-title"><a href="../view/secure.html">secure</a></h2>
+<p class="post-meta">
+                
+                    Posted by <a href="simmsb.html">simmsb</a> on 2021-04-20 21:36:16.275892
+                
+                
+                        under
+                    
+                    <a class="post-category" href="../tag/hardware.html">hardware</a>
+<a class="post-category" href="../tag/htb-cyber-apocalypse.html">htb-cyber-apocalypse</a>
+</p>
+</header>
+<div class="post-description">
+<p>
+                Once again we have a capture of some wire protocol, supposedly this is a capture of a device communicating with a micro SD card. Opening it up in Saleae Logic shows the following:   After having a bit of a google we find that SD cards communicate over a protocol known as Serial Peripheral Interface (SPI), so we use the analyzer on the capture.   Deciding which channels in the capture map to... 
+            </p>
+</div>
+</section>
+<section class="post">
+<header class="post-header">
+<h2 class="post-title"><a href="../view/compromised.html">compromised</a></h2>
+<p class="post-meta">
+                
+                    Posted by <a href="simmsb.html">simmsb</a> on 2021-04-19 15:12:54.000989
+                
+                
+                        under
+                    
+                    <a class="post-category" href="../tag/hardware.html">hardware</a>
+<a class="post-category" href="../tag/htb-cyber-apocalypse.html">htb-cyber-apocalypse</a>
+</p>
+</header>
+<div class="post-description">
+<p>
+                Similarly to [serial_logs] we've been given a <code>.sal</code> file. Opening this up in Saleae Logic we see two channels with data in:   When playing around with the analyzers earlier I noticed that the I2C analyzer takes input from two channels, so I tried that. It seemed to decode correctly and showed a sequence of writes to two different addresses. | | | |-|-| |... 
+            </p>
+</div>
+</section>
+<section class="post">
+<header class="post-header">
+<h2 class="post-title"><a href="../view/serial_logs.html">serial_logs</a></h2>
+<p class="post-meta">
+                
+                    Posted by <a href="simmsb.html">simmsb</a> on 2021-04-19 14:46:16.308382
+                
+                
+                        under
+                    
+                    <a class="post-category" href="../tag/hardware.html">hardware</a>
+<a class="post-category" href="../tag/htb-cyber-apocalypse.html">htb-cyber-apocalypse</a>
+</p>
+</header>
+<div class="post-description">
+<p>
+                We've been given a file supposedly containing serial logs, a <code>sal</code> file. Since there was a similar challenge in the previous CTF: [block]  I guessed that I'd be able to open this in Saleae Logic (which has been updated to version 2 since the last writeup). Opening up this file in Logic we see the captured communications in 'channel 1':   To decode this we can use the 'async serial' analyzer.... 
+            </p>
+</div>
+</section>
+<section class="post">
+<header class="post-header">
+<h2 class="post-title"><a href="../view/pwned-prectf-part-5.html">PwnEd: PreCTF part 5</a></h2>
+<p class="post-meta">
+                
+                    Posted by <a href="simmsb.html">simmsb</a> on 2021-02-28 18:26:39.330704
+                
+                
+                        under
+                    
+                    <a class="post-category" href="../tag/pwned.html">pwned</a>
+</p>
+</header>
+<div class="post-description">
+<p>
+                Once we have access to the webserver, we find a SUID binary owned by root and the source code: This is a classic TOC/TOU vulnerability, if we pass it a symlink we can change what the symlink points to after the program checks file access, but before reading the file, we can have it read any file.  So with a simple program that rapidly exchanges two symlinks: Then, while running this program at the same time as spamming the SUID program: The flag is eventually printed. 
+            </p>
+</div>
+</section>
+<section class="post">
+<header class="post-header">
+<h2 class="post-title"><a href="../view/simulation.html">Simulation</a></h2>
+<p class="post-meta">
+                
+                    Posted by <a href="simmsb.html">simmsb</a> on 2021-02-28 18:07:37.061126
+                
+                
+                        under
+                    
+                    <a class="post-category" href="../tag/pwned.html">pwned</a>
+<a class="post-category" href="../tag/reverse-engineering.html">reverse-engineering</a>
+</p>
+</header>
+<div class="post-description">
+<p>
+                Another binary cheesed by angr: 
+            </p>
+</div>
+</section>
+<section class="post">
+<header class="post-header">
+<h2 class="post-title"><a href="../view/plug.html">PLUG</a></h2>
+<p class="post-meta">
+                
+                    Posted by <a href="simmsb.html">simmsb</a> on 2020-12-01 21:24:02.837205
+                
+                
+                        under
+                    
+                    <a class="post-category" href="../tag/htbctf.html">htbctf</a>
+<a class="post-category" href="../tag/forensics.html">forensics</a>
+</p>
+</header>
+<div class="post-description">
+<p>
+                We are given a packet capture containing USB packets:   We can use tshark to extract the packet data to a file: Running binwalk: We can use [PCRT] to extract the png: ||| |-|-| | | | The QR code contains the flag: <code>HTB{IN73R3S7iNG_Us8_s7UFf}</code>
+</p>
+</div>
+</section>
+<section class="post">
+<header class="post-header">
+<h2 class="post-title"><a href="../view/block.html">Block</a></h2>
+<p class="post-meta">
+                
+                    Posted by <a href="simmsb.html">simmsb</a> on 2020-11-26 15:36:11.445920
+                
+                
+                        under
+                    
+                    <a class="post-category" href="../tag/hardware.html">hardware</a>
+<a class="post-category" href="../tag/htbctf.html">htbctf</a>
+</p>
+</header>
+<div class="post-description">
+<p>
+                Block provides us with a binary dump named <code>dump.bin</code> and a capture of a serial communication <code>sequence.logicdata</code>. We can use Saleae Logic to open the <code>sequence.logicdata</code> file and analyze it. After interpreting the file as an 'async serial' communication with even parity bits we see some useful data:   Which can then be formatted into the following: Which, after some fiddling I found that the first digit of each number represented the sector... 
+            </p>
+</div>
+</section>
+<section class="post">
+<header class="post-header">
+<h2 class="post-title"><a href="../view/ircware.html">IRCWare</a></h2>
+<p class="post-meta">
+                
+                    Posted by <a href="simmsb.html">simmsb</a> on 2020-11-26 01:51:35.408530
+                
+                
+                        under
+                    
+                    <a class="post-category" href="../tag/angr.html">angr</a>
+<a class="post-category" href="../tag/htbctf.html">htbctf</a>
+<a class="post-category" href="../tag/reverse-engineering.html">reverse-engineering</a>
+</p>
+</header>
+<div class="post-description">
+<p>
+                IRCWare is a program that connects to <code>127.0.0.1:8000</code> and acts as an IRC Client, when it first connects it sends the following 'commands': Analyzing the program in radare2 we see that it uses no library functions, and does all IO by making syscalls itself:   After connecting to the socket and printing it's opening message, the program enters a loop of reading input into a buffer, and processing the input: ![](/images/39aa89ec-9b1b-48da-8225-... 
+            </p>
+</div>
+</section>
+<section class="post">
+<header class="post-header">
+<h2 class="post-title"><a href="../view/patch-of-the-ninja.html">Patch of the ninja</a></h2>
+<p class="post-meta">
+                
+                    Posted by <a href="simmsb.html">simmsb</a> on 2020-11-26 01:07:10.033241
+                
+                
+                        under
+                    
+                    <a class="post-category" href="../tag/htbctf.html">htbctf</a>
+<a class="post-category" href="../tag/reverse-engineering.html">reverse-engineering</a>
+</p>
+</header>
+<div class="post-description">
+<p>
+                Patch of the ninja is a nice gameboy advance game where you have to 'patch the evil spirits away'. ||| |-|-| | | | However the flag was just in the binary unmodified.   
+            </p>
+</div>
+</section>
+<section class="post">
+<header class="post-header">
+<h2 class="post-title"><a href="../view/my-name-is-what.html">My name is (what?)</a></h2>
+<p class="post-meta">
+                
+                    Posted by <a href="simmsb.html">simmsb</a> on 2020-11-24 21:05:29.168915
+                
+                
+                        under
+                    
+                    <a class="post-category" href="../tag/htbctf.html">htbctf</a>
+<a class="post-category" href="../tag/reverse-engineering.html">reverse-engineering</a>
+</p>
+</header>
+<div class="post-description">
+<p>
+<code>my_name_is</code> is a 32 bit linux executable. Upon opening it in radare2 we find that it first checks if a debugger is attached by calling <code>ptrace</code> and checking the result:   However we can just patch the binary to ignore this check lol.   By tracing the library calls with <code>ltrace</code> we see that the program fetches our user id with <code>geteuid</code>, then gets the passwd field (which contains our username,... 
+            </p>
+</div>
+</section>
+<section class="post">
+<header class="post-header">
+<h2 class="post-title"><a href="../view/vvvv8.html">VVVV8</a></h2>
+<p class="post-meta">
+                
+                    Posted by <a href="simmsb.html">simmsb</a> on 2020-11-23 19:44:50.787619
+                
+                
+                        under
+                    
+                    <a class="post-category" href="../tag/htbctf.html">htbctf</a>
+<a class="post-category" href="../tag/pwn.html">pwn</a>
+<a class="post-category" href="../tag/reverse-engineering.html">reverse-engineering</a>
+</p>
+</header>
+<div class="post-description">
+<p>
+                VVVV8 is a patch to [V8] that adds a fourth parameter to <code>TypedArray.copyWithin</code>. [TypedArray] is an interface used by objects such as [Uint8Array] These objects can be used to wrap [ArrayBuffer]([https://developer.mozilla.org/en-]... 
+            </p>
+</div>
+</section>
+<section class="post">
+<header class="post-header">
+<h2 class="post-title"><a href="../view/borderlands.html">Borderlands</a></h2>
+<p class="post-meta">
+                
+                    Posted by <a href="simmsb.html">simmsb</a> on 2019-10-29 18:25:59.726196
+                
+                
+                        under
+                    
+                    <a class="post-category" href="../tag/pivoting.html">pivoting</a>
+<a class="post-category" href="../tag/sqli.html">sqli</a>
+<a class="post-category" href="../tag/hackback2.html">hackback2</a>
+</p>
+</header>
+<div class="post-description">
+<p>
+                For borderlands we are given the IP of a web application running inside a network named <code>network 1</code>. Upon running an application scan with <code>nmap -A</code> we observe that there is an exposed git repository: We can use [git-dumper] to dump this repo: Now we can see the source of the website: Inside <code>home.php</code> we find the first flag: Inside the git log there is a commit with the message: We can use <code>git diff</code> to show us the changes in that commit: Which gives us... 
+            </p>
+</div>
+</section>
+<section class="post">
+<header class="post-header">
+<h2 class="post-title"><a href="../view/checks.html">Checks</a></h2>
+<p class="post-meta">
+                
+                    Posted by <a href="simmsb.html">simmsb</a> on 2019-10-27 00:00:32.668154
+                
+                
+                        under
+                    
+                    <a class="post-category" href="../tag/reverse-engineering.html">reverse-engineering</a>
+<a class="post-category" href="../tag/hackback2.html">hackback2</a>
+</p>
+</header>
+<div class="post-description">
+<p>
+                Checks is a rather simple program, it performs a few simple checks but took a while to fully understand as it is statically linked, preventing use of <code>ltrace</code> to trace libc calls. The first check the program performs is to retrieve the username of the user running the program.   And to then compare it with the string '800'.   To bypass this check, I opted to replace the username string with... 
+            </p>
+</div>
+</section>
+<section class="post">
+<header class="post-header">
+<h2 class="post-title"><a href="../view/aegypius-monachus.html">Aegypius Monachus</a></h2>
+<p class="post-meta">
+                
+                    Posted by <a href="simmsb.html">simmsb</a> on 2019-04-16 22:10:34.959282
+                
+                
+                        under
+                    
+                    <a class="post-category" href="../tag/ciphers.html">ciphers</a>
+<a class="post-category" href="../tag/rail-fence-cipher.html">rail-fence-cipher</a>
+<a class="post-category" href="../tag/panad-ctf.html">panad-ctf</a>
+</p>
+</header>
+<div class="post-description">
+<p>
+                This challenge gives us the ciphertext: <code>prnea{43clscfif3u}tlr</code>. After trying several ciphers I found that it was a rail fence cipher with 4 rails. To decode we write out how the string would be encoded To encrypt the string, the characters of the string would be written down in the order given above, then read off left to right, to to bottom (1,7,13,19,2,6,...) So, to decode we just write in the characters of the ciphertext left to right, and read off in the zigzag pattern. Giving us the flag:... 
+            </p>
+</div>
+</section>
+<section class="post">
+<header class="post-header">
+<h2 class="post-title"><a href="../view/flag-calculator.html">Flag Calculator</a></h2>
+<p class="post-meta">
+                
+                    Posted by <a href="simmsb.html">simmsb</a> on 2019-04-11 03:02:54.057613
+                
+                
+                        under
+                    
+                    <a class="post-category" href="../tag/reverse-engineering.html">reverse-engineering</a>
+<a class="post-category" href="../tag/dot-net.html">dot-net</a>
+<a class="post-category" href="../tag/panad-ctf.html">panad-ctf</a>
+</p>
+</header>
+<div class="post-description">
+<p>
+                First we decompiled the program using dnSpy, yielding: I made a guess that not much was being done, and that the program was only slow due to c# being slow. And rewrote it into C. The result is: <code>pactf{dot4019346342N3T}</code>
+</p>
+</div>
+</section>
+<section class="post">
+<header class="post-header">
+<h2 class="post-title"><a href="../view/secret-service-online.html">Secret Service Online</a></h2>
+<p class="post-meta">
+                
+                    Posted by <a href="simmsb.html">simmsb</a> on 2019-04-11 03:01:09.548573
+                
+                
+                        under
+                    
+                    <a class="post-category" href="../tag/reverse-engineering.html">reverse-engineering</a>
+<a class="post-category" href="../tag/angr.html">angr</a>
+<a class="post-category" href="../tag/pwn.html">pwn</a>
+<a class="post-category" href="../tag/panad-ctf.html">panad-ctf</a>
+</p>
+</header>
+<div class="post-description">
+<p>
+                We were provided with an assembly file that seems to be the result of having GCC dump the assembly of a C program. First I assembled the assembly into an executable program using <code>gcc sso.s -o sso</code> Then the assembled program was inspected with radare2 to find the address of the final branches that either displays 'FAIL' or the flag, these were noted down and used in a simple angr script to find an input string that results in the success state being reached. This results in: After finding a valid... 
+            </p>
+</div>
+</section>
+<section class="post">
+<header class="post-header">
+<h2 class="post-title"><a href="../view/kangaroo-jack.html">Kangaroo Jack</a></h2>
+<p class="post-meta">
+                
+                    Posted by <a href="simmsb.html">simmsb</a> on 2019-04-11 01:45:42.832641
+                
+                
+                        under
+                    
+                    <a class="post-category" href="../tag/pwn.html">pwn</a>
+<a class="post-category" href="../tag/reverse-engineering.html">reverse-engineering</a>
+<a class="post-category" href="../tag/buffer-overflows.html">buffer-overflows</a>
+<a class="post-category" href="../tag/panad-ctf.html">panad-ctf</a>
+</p>
+</header>
+<div class="post-description">
+<p>
+                Kangaroo jack is a simple buffer overflow, we start by opening up the program in radare2   Here we can see that there is a function named <code>flag</code>, I take a guess that we need to jump to this function and then the flag will be printed. I take a look into main to see how large the buffer is, seems it's <code>0x400</code> bytes (1024)   Once I know the rough offset, I open the... 
+            </p>
+</div>
+</section>
+</div>
+</main>
+</div>
+</div>
+</div>
+</body>
+</html>

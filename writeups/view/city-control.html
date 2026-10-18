@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="KxBie6T6uw1Iexm0-tldr4zEIM4zAUdDLF9N_t97cIE" name="google-site-verification"/>
+<meta content="CTF writeups made by LUHack members." name="description">
+<meta content="City Control" property="og:title"/>
+<meta content="website" property="og:type"/>
+<meta content="../../static/images/logo_small.png" property="og:image"/>
+<meta content="" property="og:url"/>
+<meta content="LUHack" property="og:site_name"/>
+<meta content="CTF writeups made by LUHack members." property="og:description"/>
+<link href="../../static/images/apple-touch-icon-57x57.png" rel="apple-touch-icon-precomposed" sizes="57x57"/>
+<link href="../../static/images/apple-touch-icon-114x114.png" rel="apple-touch-icon-precomposed" sizes="114x114">
+<link href="../../static/images/apple-touch-icon-72x72.png" rel="apple-touch-icon-precomposed" sizes="72x72"/>
+<link href="../../static/images/apple-touch-icon-144x144.png" rel="apple-touch-icon-precomposed" sizes="144x144"/>
+<link href="../../static/images/apple-touch-icon-60x60.png" rel="apple-touch-icon-precomposed" sizes="60x60"/>
+<link href="../../static/images/apple-touch-icon-120x120.png" rel="apple-touch-icon-precomposed" sizes="120x120"/>
+<link href="../../static/images/apple-touch-icon-76x76.png" rel="apple-touch-icon-precomposed" sizes="76x76"/>
+<link href="../../static/images/apple-touch-icon-152x152.png" rel="apple-touch-icon-precomposed" sizes="152x152"/>
+<link href="../../static/images/favicon-196x196.png" rel="icon" sizes="196x196" type="image/png"/>
+<link href="../../static/images/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+<link href="../../static/images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="../../static/images/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="../../static/images/favicon-128.png" rel="icon" sizes="128x128" type="image/png"/>
+<meta content="LUHack" name="application-name"/>
+<meta content="#FFFFFF" name="msapplication-TileColor"/>
+<meta content="../../static/images/mstile-144x144.png" name="msapplication-TileImage"/>
+<meta content="../../static/images/mstile-70x70.png" name="msapplication-square70x70logo"/>
+<meta content="../../static/images/mstile-150x150.png" name="msapplication-square150x150logo"/>
+<meta content="../../static/images/mstile-310x150.png" name="msapplication-wide310x150logo"/>
+<meta content="../../static/images/mstile-310x310.png" name="msapplication-square310x310logo"/>
+<script type="application/ld+json">
+     {
+         "@context": "https://schema.org",
+         "@type": "Article",
+         "author": "simmsb",
+         "name": "City Control",
+         "about": "Cyber Security",
+         "url": "",
+         "datePublished": "2022-07-31T00:26:06.595331",
+         "dateModified": "2022-07-31T00:26:06.595331",
+         "publsher": {
+             "@type": "Organization",
+             "name": "LUHack"
+         }
+     }
+    </script>
+<title>LUHack Writeup: City Control</title>
+<link href="../../_assets/cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/fontawesome.min.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="../../_assets/cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/solid.min.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="../../_assets/cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/brands.min.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="../../_assets/unpkg.com/purecss%402.0.3/build/pure-min.css" rel="stylesheet"/>
+<link href="../../_assets/fonts.googleapis.com/css_81f601ca.css" rel="stylesheet"/>
+<link href="../../static/css/main.css" rel="stylesheet"/>
+<link href="../../static/css/highlight.min.css" rel="stylesheet"/>
+<script defer="" src="../../static/js/base.js"></script>
+</link></meta></head>
+<body>
+<div class="with-sidebar">
+<div class="fill-height">
+<div class="sidebar" id="menu">
+<div class="header">
+<h1 class="brand-title">
+<a class="logo" href="../../index.html">
+<img alt="LUHack logo" src="../../static/images/luhack_logo.png" width="100%"/>
+</a>
+</h1>
+<nav class="nav">
+<ul class="nav-list">
+<li class="nav-item">
+<a class="button" href="../../index.html">Home</a>
+</li>
+<li class="nav-item">
+<a class="button" href="../index.html">Writeups</a>
+</li>
+<li class="nav-item">
+<a class="button" href="../../challenges/index.html">Challenges</a>
+</li>
+<br/>
+<li class="nav-item">
+<a class="button" href="../tags.html">Tag List</a>
+</li>
+<li class="nav-item">
+<a class="button" href="../new.html">New Writeup</a>
+</li>
+</ul>
+</nav>
+<br/>
+<form action="../index.html" class="pure-form" method="GET">
+<input autocomplete="off" class="search-bar" id="search-bar" name="search" placeholder="Search writeups" type="search" value=""/>
+</form>
+<div class="header-content">
+<div class="article-meta">
+<h2>City Control</h2>
+<h4 class="author">By: <a href="../user/simmsb.html">simmsb</a></h4>
+<h4 class="date">2022-07-31 00:26:06.595331</h4>
+<div class="tags">
+<a class="post-category" href="../tag/botting.html">botting</a>
+<a class="post-category" href="../tag/hacky-holidays.html">hacky-holidays</a>
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+<div class="legal">
+<div class="">
+<a href="#" title="Sign In">Sign In</a>
+</div>
+</div>
+</div>
+</div>
+<div class="not-sidebar">
+<main>
+<h1>City Control</h1>
+<p>A programming challenge from the Hacky Holidays CTF. This challenge is intended
+to be run on a badge from the MCH 2022 conference, however it can also be run
+inside an emulator
+<a href="https://wokwi.com/projects/337469004278923860?hatchery=citycontrol_62da9c1500bd1">here</a>.</p>
+<p><img alt="" class="pure-img" src="../../images/b90ab402-8d0d-440a-99ab-247fadb27044.png"/></p>
+<h2>Flag 0: Find the easter egg</h2>
+<p>The RPI emulator provided allows us to explore the micropython code loaded on
+the badge. Poking around reveals the file <code>app/secret.py</code>:</p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_secret</span><span class="p">():</span>
+    <span class="n">s0</span> <span class="o">=</span> <span class="s2">"$hlWAF5qAbrAp4ek*N--4Gm0s"</span>
+    <span class="n">s1</span> <span class="o">=</span> <span class="s1">'g&lt;*,1?</span><span class="se">\x02\x19</span><span class="s1">q</span><span class="se">\x0c</span><span class="s1">-#</span><span class="se">\x05\x03</span><span class="s1">:XG,HIPt</span><span class="se">\t</span><span class="s1">M'</span>
+
+    <span class="k">return</span> <span class="s2">""</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="nb">chr</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="o">^</span> <span class="nb">ord</span><span class="p">(</span><span class="n">b</span><span class="p">))</span> <span class="k">for</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">s0</span><span class="p">,</span> <span class="n">s1</span><span class="p">)])</span>
+</pre></div>
+<p>If we run this code we get the first flag:</p>
+<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">get_secret</span><span class="p">()</span>
+<span class="s1">'CTF</span><span class="si">{py7h0n_bu7_3mbedd3d}</span><span class="s1">'</span>
+</pre></div>
+<h2>Flag 1: Control the City</h2>
+<p>Taking a look at the source code we find that the game communicates with a
+webserver using a websocket and the socket.IO protocol.</p>
+<p>The first thing I do is write a simple python program to connect to the
+websocket so we can see what the server sends us:</p>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">annotations</span>
+<span class="kn">import</span> <span class="nn">socketio</span>
+<span class="kn">import</span> <span class="nn">asyncio</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="s2">"http://portal.hackazon.org:17001"</span>
+<span class="n">sio</span> <span class="o">=</span> <span class="n">socketio</span><span class="o">.</span><span class="n">AsyncClient</span><span class="p">(</span><span class="n">logger</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="nd">@sio</span><span class="o">.</span><span class="n">event</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">connect</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Connected!"</span><span class="p">)</span>
+
+<span class="nd">@sio</span><span class="o">.</span><span class="n">on</span><span class="p">(</span><span class="s2">"*"</span><span class="p">)</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">log</span><span class="p">(</span><span class="n">event</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Fall through event (host) !"</span><span class="p">,</span> <span class="n">event</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="k">await</span> <span class="n">sio</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+    <span class="k">await</span> <span class="n">sio</span><span class="o">.</span><span class="n">wait</span><span class="p">()</span>
+
+<span class="n">asyncio</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">main</span><span class="p">())</span>
+</pre></div>
+<p>Running this prints the following:</p>
+<pre><code>λ python initial.py
+Engine.IO connection established
+Received event "welcome" [/]
+Fall through event (host) ! welcome {'uid': 1}
+Namespace / is connected
+Connected!
+</code></pre>
+<p>Great, we can now start figuring out what we need to send.</p>
+<h3>Websocket commands</h3>
+<p>Looking through the code, we find that the server can send the following
+messages to the client.</p>
+<table>
+<thead>
+<tr>
+<th>Message name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>welcome</code></td>
+<td>Sent when the client connects to the server, contains the uid of the client</td>
+</tr>
+<tr>
+<td><code>game_info</code></td>
+<td>Sent when the client creates or a player joins a game</td>
+</tr>
+<tr>
+<td><code>game_started</code></td>
+<td>Sent when the game starts, prompts the interface to show an instructional message</td>
+</tr>
+<tr>
+<td><code>game_over</code></td>
+<td>You failed to complete the game</td>
+</tr>
+<tr>
+<td><code>command</code></td>
+<td>Used to signal an action that should be performed by a player</td>
+</tr>
+<tr>
+<td><code>grid</code></td>
+<td>Updates the display with a set of switches and knobs to configure</td>
+</tr>
+<tr>
+<td><code>health_info</code></td>
+<td>Updates the current 'health' of the player</td>
+</tr>
+<tr>
+<td><code>next_level</code></td>
+<td>Notifies that a level was completed</td>
+</tr>
+</tbody>
+</table>
+<p>The client seems to send the following messages to the server:</p>
+<table>
+<thead>
+<tr>
+<th>Message name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>create_game</code></td>
+<td>Used to start a lobby</td>
+</tr>
+<tr>
+<td><code>join_game</code></td>
+<td>Used to join a lobby</td>
+</tr>
+<tr>
+<td><code>ready</code></td>
+<td>Marks the player as ready to start</td>
+</tr>
+<tr>
+<td><code>start_game</code></td>
+<td>If all players in a lobby are ready, start the game</td>
+</tr>
+<tr>
+<td><code>intro_done</code></td>
+<td>Seems to be a second 'ready up', the server only starts sending commands after all clients send this message</td>
+</tr>
+<tr>
+<td><code>command</code></td>
+<td>Used to update the value a switch or knob on the player's grid</td>
+</tr>
+<tr>
+<td><code>exception</code></td>
+<td>Seems to be used for reporting errors</td>
+</tr>
+</tbody>
+</table>
+<h3>Protocol deciphering</h3>
+<p>With some playing around and reading of the source code I began to piece
+together the protocol for the game.</p>
+<p>To play a game the following actions need to happen:</p>
+<ol>
+<li>An initial client creates a lobby, the server will send back a join code for
+the lobby.</li>
+<li>Another client then joins the lobby using the join code.</li>
+<li>Both players need to ready up.</li>
+<li>The creator of the lobby can then send a <code>start_game</code> command.</li>
+<li>Both players then send a <code>intro_done</code> message.</li>
+<li>The server will now begin to send <code>command</code> messages.</li>
+</ol>
+<p>I ended up with the following sequence of messages to get a game into a playing
+state:</p>
+<p><img alt="" class="pure-img" src="../../images/54143875-0ca3-4799-9c0c-9805dd640486.png"/></p>
+<h3>Playing the game</h3>
+<p>Now to playing the game. Once started the server will send <code>command</code> messages to
+each player with content such as <code>{'text': 'Increase park space to 5', 'time': 25, 'expired': False}</code>, which corresponds to sending the command <code>{'name': 'park space', 'value': 5}</code>. In the game this would be performed by pressing the button
+mapping to changing one of the knobs on the screen, however since we're
+automating this we can just cheat.</p>
+<p>There's just the one problem: the server sends commands to each client, however
+a client can only send back commands for controls that appear on its own grid.</p>
+<p>My solution is to build a map of controls to client sockets using the body of
+the <code>grid</code> message, which looks like this:</p>
+<div class="highlight"><pre><span></span><span class="p">[</span><span class="w"></span>
+<span class="w">  </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"flat it"</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BINARY_SWITCH"</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w"></span>
+<span class="w">  </span><span class="p">},</span><span class="w"></span>
+<span class="w">  </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"villa hungry"</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ROTARY_SWITCH"</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"min"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"max"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="w"></span>
+<span class="w">  </span><span class="p">},</span><span class="w"></span>
+<span class="w">  </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"file red"</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BINARY_SWITCH"</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w"></span>
+<span class="w">  </span><span class="p">},</span><span class="w"></span>
+<span class="w">  </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"park space"</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"VERTICAL_SLIDER"</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"min"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"max"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">]</span><span class="w"></span>
+</pre></div>
+<p>By building a mapping shared between each client, we can just have each client
+respond to a command with the socket from the correct client, which the server
+happily accepts.</p>
+<h3>Understanding english</h3>
+<p>Commands sent to clients are a English sentence, luckily there's only a few
+different sentences the server is able to send, so we can just bruteforce it...</p>
+<div class="highlight"><pre><span></span><span class="n">GridMap</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">GridEntry</span><span class="p">,</span> <span class="n">Any</span><span class="p">]]</span>
+
+<span class="nd">@dataclass</span>
+<span class="k">class</span> <span class="nc">Activate</span><span class="p">(</span><span class="n">Emittable</span><span class="p">):</span>
+    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">value</span><span class="p">:</span> <span class="nb">bool</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">parse</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">cmd</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">grid</span><span class="p">:</span> <span class="n">GridMap</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Activate</span><span class="p">]:</span>
+        <span class="n">regexes</span> <span class="o">=</span> <span class="p">[</span><span class="sa">r</span><span class="s2">"Activate (?&lt;name&gt;[a-zA-Z ]+)"</span><span class="p">,</span>
+                   <span class="sa">r</span><span class="s2">"Turn on (?&lt;name&gt;[a-zA-Z ]+)"</span><span class="p">,</span>
+                   <span class="sa">r</span><span class="s2">"Switch on (?&lt;name&gt;[a-zA-Z ]+)"</span><span class="p">,</span>
+                   <span class="sa">r</span><span class="s2">"Engage (?&lt;name&gt;[a-zA-Z ]+)"</span><span class="p">,</span>
+                   <span class="p">]</span>
+        <span class="k">for</span> <span class="n">pat</span> <span class="ow">in</span> <span class="n">regexes</span><span class="p">:</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">match</span> <span class="o">:=</span> <span class="n">regex</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">pat</span><span class="p">,</span> <span class="n">cmd</span><span class="p">))</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">Activate</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">match</span><span class="p">[</span><span class="s2">"name"</span><span class="p">],</span> <span class="n">value</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">regexes</span> <span class="o">=</span> <span class="p">[</span><span class="sa">r</span><span class="s2">"Deactivate (?&lt;name&gt;[a-zA-Z ]+)"</span><span class="p">,</span>
+                   <span class="sa">r</span><span class="s2">"Turn off (?&lt;name&gt;[a-zA-Z ]+)"</span><span class="p">,</span>
+                   <span class="sa">r</span><span class="s2">"Switch off (?&lt;name&gt;[a-zA-Z ]+)"</span><span class="p">,</span>
+                   <span class="sa">r</span><span class="s2">"Disengage (?&lt;name&gt;[a-zA-Z ]+)"</span><span class="p">,</span>
+                   <span class="p">]</span>
+        <span class="k">for</span> <span class="n">pat</span> <span class="ow">in</span> <span class="n">regexes</span><span class="p">:</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">match</span> <span class="o">:=</span> <span class="n">regex</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">pat</span><span class="p">,</span> <span class="n">cmd</span><span class="p">))</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">Activate</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">match</span><span class="p">[</span><span class="s2">"name"</span><span class="p">],</span> <span class="n">value</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">emit</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">{</span><span class="s2">"name"</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="s2">"value"</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">value</span><span class="p">}</span>
+
+<span class="nd">@dataclass</span>
+<span class="k">class</span> <span class="nc">Change</span><span class="p">(</span><span class="n">Emittable</span><span class="p">):</span>
+    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">to</span><span class="p">:</span> <span class="nb">int</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">parse</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">cmd</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">grid</span><span class="p">:</span> <span class="n">GridMap</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Change</span><span class="p">]:</span>
+        <span class="n">regexes</span> <span class="o">=</span> <span class="p">[</span><span class="sa">r</span><span class="s2">"Set (?&lt;name&gt;[a-zA-Z ]+) to (?&lt;to&gt;[0-9]+)"</span><span class="p">,</span>
+                   <span class="sa">r</span><span class="s2">"Change (?&lt;name&gt;[a-zA-Z ]+) to (?&lt;to&gt;[0-9]+)"</span><span class="p">,</span>
+                   <span class="sa">r</span><span class="s2">"Increase (?&lt;name&gt;[a-zA-Z ]+) to (?&lt;to&gt;[0-9]+)"</span><span class="p">,</span>
+                   <span class="sa">r</span><span class="s2">"Position (?&lt;name&gt;[a-zA-Z ]+) at (?&lt;to&gt;[0-9]+)"</span><span class="p">,</span>
+                   <span class="sa">r</span><span class="s2">"Reduce (?&lt;name&gt;[a-zA-Z ]+) to (?&lt;to&gt;[0-9]+)"</span><span class="p">,</span>
+                   <span class="sa">r</span><span class="s2">"Diminish (?&lt;name&gt;[a-zA-Z ]+) to (?&lt;to&gt;[0-9]+)"</span><span class="p">,</span>
+                   <span class="p">]</span>
+        <span class="k">for</span> <span class="n">pat</span> <span class="ow">in</span> <span class="n">regexes</span><span class="p">:</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">match</span> <span class="o">:=</span> <span class="n">regex</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">pat</span><span class="p">,</span> <span class="n">cmd</span><span class="p">))</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">Change</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">match</span><span class="p">[</span><span class="s2">"name"</span><span class="p">],</span> <span class="n">to</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">match</span><span class="p">[</span><span class="s2">"to"</span><span class="p">]))</span>
+        <span class="n">regexes</span> <span class="o">=</span> <span class="p">[</span><span class="sa">r</span><span class="s2">"Set (?&lt;name&gt;[a-zA-Z ]+) to maximum"</span><span class="p">,</span>
+                   <span class="sa">r</span><span class="s2">"Increase (?&lt;name&gt;[a-zA-Z ]+) to the max"</span><span class="p">,</span>
+                   <span class="p">]</span>
+        <span class="k">for</span> <span class="n">pat</span> <span class="ow">in</span> <span class="n">regexes</span><span class="p">:</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">match</span> <span class="o">:=</span> <span class="n">regex</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">pat</span><span class="p">,</span> <span class="n">cmd</span><span class="p">))</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">val</span> <span class="o">=</span> <span class="n">grid</span><span class="p">[</span><span class="n">match</span><span class="p">[</span><span class="s2">"name"</span><span class="p">]][</span><span class="mi">0</span><span class="p">][</span><span class="s2">"max"</span><span class="p">]</span>
+                <span class="k">assert</span> <span class="n">val</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+                <span class="k">return</span> <span class="n">Change</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">match</span><span class="p">[</span><span class="s2">"name"</span><span class="p">],</span> <span class="n">to</span><span class="o">=</span><span class="n">val</span><span class="p">)</span>
+        <span class="n">regexes</span> <span class="o">=</span> <span class="p">[</span><span class="sa">r</span><span class="s2">"Set (?&lt;name&gt;[a-zA-Z ]+) to minimum"</span><span class="p">,</span>
+                   <span class="sa">r</span><span class="s2">"Reduce (?&lt;name&gt;[a-zA-Z ]+) to the minimum"</span><span class="p">,</span>
+                   <span class="p">]</span>
+        <span class="k">for</span> <span class="n">pat</span> <span class="ow">in</span> <span class="n">regexes</span><span class="p">:</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">match</span> <span class="o">:=</span> <span class="n">regex</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">pat</span><span class="p">,</span> <span class="n">cmd</span><span class="p">))</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">val</span> <span class="o">=</span> <span class="n">grid</span><span class="p">[</span><span class="n">match</span><span class="p">[</span><span class="s2">"name"</span><span class="p">]][</span><span class="mi">0</span><span class="p">][</span><span class="s2">"min"</span><span class="p">]</span>
+                <span class="k">assert</span> <span class="n">val</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+                <span class="k">return</span> <span class="n">Change</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">match</span><span class="p">[</span><span class="s2">"name"</span><span class="p">],</span> <span class="n">to</span><span class="o">=</span><span class="n">val</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">emit</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">{</span><span class="s2">"name"</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="s2">"value"</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">to</span><span class="p">}</span>
+
+
+<span class="k">def</span> <span class="nf">parse_command</span><span class="p">(</span><span class="n">command</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">grid</span><span class="p">:</span> <span class="n">GridMap</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">tuple</span><span class="p">[</span><span class="nb">dict</span><span class="p">,</span> <span class="n">Any</span><span class="p">]]:</span>
+    <span class="k">if</span> <span class="s2">"Prepare"</span> <span class="ow">in</span> <span class="n">command</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span>
+    <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="p">[</span><span class="n">Activate</span><span class="p">,</span> <span class="n">Change</span><span class="p">]:</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">r</span> <span class="o">:=</span> <span class="n">c</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">command</span><span class="p">,</span> <span class="n">grid</span><span class="p">))</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">emit</span><span class="p">()</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"sending command </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">s</span> <span class="o">=</span> <span class="n">grid</span><span class="p">[</span><span class="n">r</span><span class="o">.</span><span class="n">name</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+            <span class="k">except</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">"what?? grid:"</span><span class="p">,</span>  <span class="n">grid</span><span class="p">)</span>
+                <span class="k">raise</span>
+            <span class="k">return</span> <span class="n">x</span><span class="p">,</span> <span class="n">s</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"!!!!!!!Unknown command!!!! </span><span class="si">{</span><span class="n">command</span><span class="si">=}</span><span class="s2">"</span><span class="p">)</span>
+</pre></div>
+<p>Simple enough, our <code>command</code> event handler then just looks like this:</p>
+<div class="highlight"><pre><span></span><span class="nd">@sio</span><span class="o">.</span><span class="n">event</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">command</span><span class="p">(</span><span class="n">data</span><span class="p">:</span> <span class="n">CommandRequest</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Got command (other)"</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">cmd</span> <span class="o">:=</span> <span class="n">parse_command</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s2">"text"</span><span class="p">],</span> <span class="n">shared_grid</span><span class="p">))</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">await</span> <span class="n">cmd</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">emit</span><span class="p">(</span><span class="s2">"command"</span><span class="p">,</span> <span class="n">cmd</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+<p>Now we just need to wait for a couple of minutes for the bots to get to level 60
+something and the server will send us our flag!</p>
+<p>You can find the full solution <a href="https://gist.github.com/simmsb/8860d3d84506b65a27d3b8e14990fd93">here</a>.</p>
+</main>
+</div>
+</div>
+</div>
+</body>
+</html>

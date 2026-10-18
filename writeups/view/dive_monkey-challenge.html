@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="KxBie6T6uw1Iexm0-tldr4zEIM4zAUdDLF9N_t97cIE" name="google-site-verification"/>
+<meta content="CTF writeups made by LUHack members." name="description">
+<meta content="@Dive_Monkey challenge" property="og:title"/>
+<meta content="website" property="og:type"/>
+<meta content="../../static/images/logo_small.png" property="og:image"/>
+<meta content="" property="og:url"/>
+<meta content="LUHack" property="og:site_name"/>
+<meta content="CTF writeups made by LUHack members." property="og:description"/>
+<link href="../../static/images/apple-touch-icon-57x57.png" rel="apple-touch-icon-precomposed" sizes="57x57"/>
+<link href="../../static/images/apple-touch-icon-114x114.png" rel="apple-touch-icon-precomposed" sizes="114x114">
+<link href="../../static/images/apple-touch-icon-72x72.png" rel="apple-touch-icon-precomposed" sizes="72x72"/>
+<link href="../../static/images/apple-touch-icon-144x144.png" rel="apple-touch-icon-precomposed" sizes="144x144"/>
+<link href="../../static/images/apple-touch-icon-60x60.png" rel="apple-touch-icon-precomposed" sizes="60x60"/>
+<link href="../../static/images/apple-touch-icon-120x120.png" rel="apple-touch-icon-precomposed" sizes="120x120"/>
+<link href="../../static/images/apple-touch-icon-76x76.png" rel="apple-touch-icon-precomposed" sizes="76x76"/>
+<link href="../../static/images/apple-touch-icon-152x152.png" rel="apple-touch-icon-precomposed" sizes="152x152"/>
+<link href="../../static/images/favicon-196x196.png" rel="icon" sizes="196x196" type="image/png"/>
+<link href="../../static/images/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+<link href="../../static/images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="../../static/images/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="../../static/images/favicon-128.png" rel="icon" sizes="128x128" type="image/png"/>
+<meta content="LUHack" name="application-name"/>
+<meta content="#FFFFFF" name="msapplication-TileColor"/>
+<meta content="../../static/images/mstile-144x144.png" name="msapplication-TileImage"/>
+<meta content="../../static/images/mstile-70x70.png" name="msapplication-square70x70logo"/>
+<meta content="../../static/images/mstile-150x150.png" name="msapplication-square150x150logo"/>
+<meta content="../../static/images/mstile-310x150.png" name="msapplication-wide310x150logo"/>
+<meta content="../../static/images/mstile-310x310.png" name="msapplication-square310x310logo"/>
+<script type="application/ld+json">
+     {
+         "@context": "https://schema.org",
+         "@type": "Article",
+         "author": "Anonymous",
+         "name": "@Dive_Monkey challenge",
+         "about": "Cyber Security",
+         "url": "",
+         "datePublished": "2020-01-16T00:49:08.771621",
+         "dateModified": "2020-01-16T00:49:08.771621",
+         "publsher": {
+             "@type": "Organization",
+             "name": "LUHack"
+         }
+     }
+    </script>
+<title>LUHack Writeup: @Dive_Monkey challenge</title>
+<link href="../../_assets/cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/fontawesome.min.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="../../_assets/cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/solid.min.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="../../_assets/cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/brands.min.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="../../_assets/unpkg.com/purecss%402.0.3/build/pure-min.css" rel="stylesheet"/>
+<link href="../../_assets/fonts.googleapis.com/css_81f601ca.css" rel="stylesheet"/>
+<link href="../../static/css/main.css" rel="stylesheet"/>
+<link href="../../static/css/highlight.min.css" rel="stylesheet"/>
+<script defer="" src="../../static/js/base.js"></script>
+</link></meta></head>
+<body>
+<div class="with-sidebar">
+<div class="fill-height">
+<div class="sidebar" id="menu">
+<div class="header">
+<h1 class="brand-title">
+<a class="logo" href="../../index.html">
+<img alt="LUHack logo" src="../../static/images/luhack_logo.png" width="100%"/>
+</a>
+</h1>
+<nav class="nav">
+<ul class="nav-list">
+<li class="nav-item">
+<a class="button" href="../../index.html">Home</a>
+</li>
+<li class="nav-item">
+<a class="button" href="../index.html">Writeups</a>
+</li>
+<li class="nav-item">
+<a class="button" href="../../challenges/index.html">Challenges</a>
+</li>
+<br/>
+<li class="nav-item">
+<a class="button" href="../tags.html">Tag List</a>
+</li>
+<li class="nav-item">
+<a class="button" href="../new.html">New Writeup</a>
+</li>
+</ul>
+</nav>
+<br/>
+<form action="../index.html" class="pure-form" method="GET">
+<input autocomplete="off" class="search-bar" id="search-bar" name="search" placeholder="Search writeups" type="search" value=""/>
+</form>
+<div class="header-content">
+<div class="article-meta">
+<h2>@Dive_Monkey challenge</h2>
+<h4 class="date">2020-01-16 00:49:08.771621</h4>
+<div class="tags">
+<a class="post-category" href="../tag/steganography.html">steganography</a>
+<a class="post-category" href="../tag/zsteg.html">zsteg</a>
+<a class="post-category" href="../tag/vigenere.html">vigenere</a>
+<a class="post-category" href="../tag/wireshark.html">wireshark</a>
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+<div class="legal">
+<div class="">
+<a href="#" title="Sign In">Sign In</a>
+</div>
+</div>
+</div>
+</div>
+<div class="not-sidebar">
+<main>
+<h1>Dive Monkey Cyber Challenge</h1>
+<p>Completed using Kali Linux OS, Wireshark, zsteg tool and GCHQ’s Cyber Chef. 
+First, we are presented with the file, LUHack.pcapng. pcapng is a filetype packet capture format which holds a data dump that has been collected over a network. In order to find what we want to from this file, we had to export as a HTTP.</p>
+<p><img alt="" class="pure-img" src="../../images/022cbcdd-70a2-4041-ada5-bbf376dda402.png"/></p>
+<p>By exporting the objects on the PCAPNG file as HTTP we are given a ZIP file containing a image of the matrix. This was unzipped with the terminal</p>
+<p><img alt="" class="pure-img" src="../../images/0840f55e-b6dd-4bc1-9acc-cb2ab0f9b4d1.png"/></p>
+<p>After trying to change the colours, to see if there was anything hidden on the image itself, reverse searching it to find if it was used elsewhere as a clue, I eventually used zsteg to open it. This is a tool used on the Linux terminal.</p>
+<p><img alt="" class="pure-img" src="../../images/b88dda5f-2f4f-47b7-b2ca-7a0338ac3790.png"/></p>
+<p>This clearly showed a scrambled link in the red text, so using CyberChef I was able to find that it had been encrypted with a ROT13 Cipher. It now produced a link to a download file</p>
+<p><img alt="" class="pure-img" src="../../images/5fd89881-6268-4bc7-bd4d-eaf42b0518d6.png"/></p>
+<p>Inside of this file we had a ‘copyright.html’ locked under a password. We know from the information given in the zsteg of the matrix.png file the password is Neo’s full real name (Thomas A. Anderson) and the year he appeared (1999). Neo is a reference to the film the matrix, where the png image was taken/inspired from. So by entering Thomas A. Anderson1999 we are given access to the HTML file once again.</p>
+<p><img alt="" class="pure-img" src="../../images/57d7169c-24b9-4295-8956-591e0ab8c4a8.png"/></p>
+<p>This file then revealed a webcomic, as well as a reference to the Matrix.</p>
+<p><img alt="" class="pure-img" src="../../images/6c263095-82d9-4012-85c6-a9b65e65c526.png"/></p>
+<p>So with zsteg used before in the challenge, I assumed the best option would be to download the image and do such again.</p>
+<p><img alt="" class="pure-img" src="../../images/988cf8b0-d8a3-48a0-8d51-3d8d7cdb1eb4.png"/></p>
+<p>Following this, I noticed all red text so far has been useful. The second string found was put into CyberChef and using the wand tool it was able to recognise that it was actually from base32, which gave us a lot of hex values in return, so by applying a from hex (turning it into ascii) the message was half decrypted.</p>
+<p><img alt="" class="pure-img" src="../../images/56353a3d-d91d-40bd-badc-8dcf7127a366.png"/></p>
+<p>So, in order to decrypt the last string, I paid attention to the original zsteg of the site image and recognised that the first one would more than likely be a key. So, I searched across what different cyphers would require a key and found the Vigenére cipher. 
+I added the key to the decode area, and the final part was decoded:</p>
+<p><img alt="" class="pure-img" src="../../images/831f8aa9-ca12-4d11-8d00-66be3674a641.png"/></p>
+</main>
+</div>
+</div>
+</div>
+</body>
+</html>

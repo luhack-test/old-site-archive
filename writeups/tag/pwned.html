@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="KxBie6T6uw1Iexm0-tldr4zEIM4zAUdDLF9N_t97cIE" name="google-site-verification"/>
+<meta content="CTF writeups made by LUHack members." name="description">
+<meta content="LUHack Writeups" property="og:title"/>
+<meta content="website" property="og:type"/>
+<meta content="../../static/images/logo_small.png" property="og:image"/>
+<meta content="" property="og:url"/>
+<meta content="LUHack" property="og:site_name"/>
+<meta content="CTF writeups made by LUHack members." property="og:description"/>
+<link href="../../static/images/apple-touch-icon-57x57.png" rel="apple-touch-icon-precomposed" sizes="57x57"/>
+<link href="../../static/images/apple-touch-icon-114x114.png" rel="apple-touch-icon-precomposed" sizes="114x114">
+<link href="../../static/images/apple-touch-icon-72x72.png" rel="apple-touch-icon-precomposed" sizes="72x72"/>
+<link href="../../static/images/apple-touch-icon-144x144.png" rel="apple-touch-icon-precomposed" sizes="144x144"/>
+<link href="../../static/images/apple-touch-icon-60x60.png" rel="apple-touch-icon-precomposed" sizes="60x60"/>
+<link href="../../static/images/apple-touch-icon-120x120.png" rel="apple-touch-icon-precomposed" sizes="120x120"/>
+<link href="../../static/images/apple-touch-icon-76x76.png" rel="apple-touch-icon-precomposed" sizes="76x76"/>
+<link href="../../static/images/apple-touch-icon-152x152.png" rel="apple-touch-icon-precomposed" sizes="152x152"/>
+<link href="../../static/images/favicon-196x196.png" rel="icon" sizes="196x196" type="image/png"/>
+<link href="../../static/images/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+<link href="../../static/images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="../../static/images/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="../../static/images/favicon-128.png" rel="icon" sizes="128x128" type="image/png"/>
+<meta content="LUHack" name="application-name"/>
+<meta content="#FFFFFF" name="msapplication-TileColor"/>
+<meta content="../../static/images/mstile-144x144.png" name="msapplication-TileImage"/>
+<meta content="../../static/images/mstile-70x70.png" name="msapplication-square70x70logo"/>
+<meta content="../../static/images/mstile-150x150.png" name="msapplication-square150x150logo"/>
+<meta content="../../static/images/mstile-310x150.png" name="msapplication-wide310x150logo"/>
+<meta content="../../static/images/mstile-310x310.png" name="msapplication-square310x310logo"/>
+<title>LUHack Writeups</title>
+<link href="../../_assets/cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/fontawesome.min.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="../../_assets/cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/solid.min.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="../../_assets/cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/brands.min.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="../../_assets/unpkg.com/purecss%402.0.3/build/pure-min.css" rel="stylesheet"/>
+<link href="../../_assets/fonts.googleapis.com/css_81f601ca.css" rel="stylesheet"/>
+<link href="../../static/css/main.css" rel="stylesheet"/>
+<link href="../../static/css/highlight.min.css" rel="stylesheet"/>
+</link></meta></head>
+<body>
+<div class="with-sidebar">
+<div class="fill-height">
+<div class="sidebar" id="menu">
+<div class="header">
+<h1 class="brand-title">
+<a class="logo" href="../../index.html">
+<img alt="LUHack logo" src="../../static/images/luhack_logo.png" width="100%"/>
+</a>
+</h1>
+<nav class="nav">
+<ul class="nav-list">
+<li class="nav-item">
+<a class="button" href="../../index.html">Home</a>
+</li>
+<li class="nav-item">
+<a class="button" href="../index.html">Writeups</a>
+</li>
+<li class="nav-item">
+<a class="button" href="../../challenges/index.html">Challenges</a>
+</li>
+<br/>
+<li class="nav-item">
+<a class="button" href="../tags.html">Tag List</a>
+</li>
+<li class="nav-item">
+<a class="button" href="../new.html">New Writeup</a>
+</li>
+</ul>
+</nav>
+<br/>
+<form action="../index.html" class="pure-form" method="GET">
+<input autocomplete="off" class="search-bar" id="search-bar" name="search" placeholder="Search writeups" type="search" value=""/>
+</form>
+<div class="header-content">
+</div>
+</div>
+<div class="footer">
+<div class="legal">
+<div class="">
+<a href="#" title="Sign In">Sign In</a>
+</div>
+</div>
+</div>
+</div>
+<div class="not-sidebar">
+<main>
+<div class="posts">
+<section class="post">
+<header class="post-header">
+<h2 class="post-title"><a href="../view/pwned-crypto-scuffed_rsa.html">pwnEd Crypto: scuffed_rsa</a></h2>
+<p class="post-meta">
+                
+                    Posted by <a href="../user/theforkbomber.html">theforkbomber</a> on 2021-03-01 01:28:15.832680
+                
+                
+                        under
+                    
+                    <a class="post-category" href="pwned.html">pwned</a>
+<a class="post-category" href="crypto.html">crypto</a>
+</p>
+</header>
+<div class="post-description">
+<p>
+                We're given a broken implementation of RSA in Python: The first things to notice are that e isn't the usual 65537, and isn't prime either. Then n evaluates to just p instead of pq, so the output we're given: uses the wrong private key. So, we're given n which is prime, thus there isn't really a p or q, the ciphertext c and e. Using sources to [work out how RSA works] and [calculate the correct value for d]([https://whiteheadsoftware.dev/rsa-]... 
+            </p>
+</div>
+</section>
+<section class="post">
+<header class="post-header">
+<h2 class="post-title"><a href="../view/pwned-prectf-part-5.html">PwnEd: PreCTF part 5</a></h2>
+<p class="post-meta">
+                
+                    Posted by <a href="../user/simmsb.html">simmsb</a> on 2021-02-28 18:26:39.330704
+                
+                
+                        under
+                    
+                    <a class="post-category" href="pwned.html">pwned</a>
+</p>
+</header>
+<div class="post-description">
+<p>
+                Once we have access to the webserver, we find a SUID binary owned by root and the source code: This is a classic TOC/TOU vulnerability, if we pass it a symlink we can change what the symlink points to after the program checks file access, but before reading the file, we can have it read any file.  So with a simple program that rapidly exchanges two symlinks: Then, while running this program at the same time as spamming the SUID program: The flag is eventually printed. 
+            </p>
+</div>
+</section>
+<section class="post">
+<header class="post-header">
+<h2 class="post-title"><a href="../view/simulation.html">Simulation</a></h2>
+<p class="post-meta">
+                
+                    Posted by <a href="../user/simmsb.html">simmsb</a> on 2021-02-28 18:07:37.061126
+                
+                
+                        under
+                    
+                    <a class="post-category" href="pwned.html">pwned</a>
+<a class="post-category" href="reverse-engineering.html">reverse-engineering</a>
+</p>
+</header>
+<div class="post-description">
+<p>
+                Another binary cheesed by angr: 
+            </p>
+</div>
+</section>
+</div>
+</main>
+</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="KxBie6T6uw1Iexm0-tldr4zEIM4zAUdDLF9N_t97cIE" name="google-site-verification"/>
+<meta content="CTF writeups made by LUHack members." name="description">
+<meta content="LUHack Writeups" property="og:title"/>
+<meta content="website" property="og:type"/>
+<meta content="../../static/images/logo_small.png" property="og:image"/>
+<meta content="" property="og:url"/>
+<meta content="LUHack" property="og:site_name"/>
+<meta content="CTF writeups made by LUHack members." property="og:description"/>
+<link href="../../static/images/apple-touch-icon-57x57.png" rel="apple-touch-icon-precomposed" sizes="57x57"/>
+<link href="../../static/images/apple-touch-icon-114x114.png" rel="apple-touch-icon-precomposed" sizes="114x114">
+<link href="../../static/images/apple-touch-icon-72x72.png" rel="apple-touch-icon-precomposed" sizes="72x72"/>
+<link href="../../static/images/apple-touch-icon-144x144.png" rel="apple-touch-icon-precomposed" sizes="144x144"/>
+<link href="../../static/images/apple-touch-icon-60x60.png" rel="apple-touch-icon-precomposed" sizes="60x60"/>
+<link href="../../static/images/apple-touch-icon-120x120.png" rel="apple-touch-icon-precomposed" sizes="120x120"/>
+<link href="../../static/images/apple-touch-icon-76x76.png" rel="apple-touch-icon-precomposed" sizes="76x76"/>
+<link href="../../static/images/apple-touch-icon-152x152.png" rel="apple-touch-icon-precomposed" sizes="152x152"/>
+<link href="../../static/images/favicon-196x196.png" rel="icon" sizes="196x196" type="image/png"/>
+<link href="../../static/images/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+<link href="../../static/images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="../../static/images/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="../../static/images/favicon-128.png" rel="icon" sizes="128x128" type="image/png"/>
+<meta content="LUHack" name="application-name"/>
+<meta content="#FFFFFF" name="msapplication-TileColor"/>
+<meta content="../../static/images/mstile-144x144.png" name="msapplication-TileImage"/>
+<meta content="../../static/images/mstile-70x70.png" name="msapplication-square70x70logo"/>
+<meta content="../../static/images/mstile-150x150.png" name="msapplication-square150x150logo"/>
+<meta content="../../static/images/mstile-310x150.png" name="msapplication-wide310x150logo"/>
+<meta content="../../static/images/mstile-310x310.png" name="msapplication-square310x310logo"/>
+<title>LUHack Writeups</title>
+<link href="../../_assets/cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/fontawesome.min.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="../../_assets/cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/solid.min.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="../../_assets/cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/brands.min.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="../../_assets/unpkg.com/purecss%402.0.3/build/pure-min.css" rel="stylesheet"/>
+<link href="../../_assets/fonts.googleapis.com/css_81f601ca.css" rel="stylesheet"/>
+<link href="../../static/css/main.css" rel="stylesheet"/>
+<link href="../../static/css/highlight.min.css" rel="stylesheet"/>
+</link></meta></head>
+<body>
+<div class="with-sidebar">
+<div class="fill-height">
+<div class="sidebar" id="menu">
+<div class="header">
+<h1 class="brand-title">
+<a class="logo" href="../../index.html">
+<img alt="LUHack logo" src="../../static/images/luhack_logo.png" width="100%"/>
+</a>
+</h1>
+<nav class="nav">
+<ul class="nav-list">
+<li class="nav-item">
+<a class="button" href="../../index.html">Home</a>
+</li>
+<li class="nav-item">
+<a class="button" href="../index.html">Writeups</a>
+</li>
+<li class="nav-item">
+<a class="button" href="../../challenges/index.html">Challenges</a>
+</li>
+<br/>
+<li class="nav-item">
+<a class="button" href="../tags.html">Tag List</a>
+</li>
+<li class="nav-item">
+<a class="button" href="../new.html">New Writeup</a>
+</li>
+</ul>
+</nav>
+<br/>
+<form action="../index.html" class="pure-form" method="GET">
+<input autocomplete="off" class="search-bar" id="search-bar" name="search" placeholder="Search writeups" type="search" value=""/>
+</form>
+<div class="header-content">
+</div>
+</div>
+<div class="footer">
+<div class="legal">
+<div class="">
+<a href="#" title="Sign In">Sign In</a>
+</div>
+</div>
+</div>
+</div>
+<div class="not-sidebar">
+<main>
+<div class="posts">
+<section class="post">
+<header class="post-header">
+<h2 class="post-title"><a href="../view/phasestream-3.html">PhaseStream 3</a></h2>
+<p class="post-meta">
+                
+                    Posted by <a href="../user/henry5534.html">henry5534</a> on 2021-04-22 23:23:57.296237
+                
+                
+                        under
+                    
+                    <a class="post-category" href="crypto.html">crypto</a>
+<a class="post-category" href="htb-cyber-apocalypse.html">htb-cyber-apocalypse</a>
+</p>
+</header>
+<div class="post-description">
+<p>
+                We are given the following Python code which encrypts two messages with the <em>SAME KEY</em> in AES Counter mode, we know of the the plaintexts. Because the key is reused, it is actually fairly easy to decrypt the flag. (See [here] for someone who knows what they're on about, and a program to do it, but I'm going to do it in CyberChef.) If you're interested, it's called a known-plaintext attack. Succinctly, because the key is reused in Counter mode: <code>p1</code> xor... 
+            </p>
+</div>
+</section>
+<section class="post">
+<header class="post-header">
+<h2 class="post-title"><a href="../view/phasestream-4.html">PhaseStream 4</a></h2>
+<p class="post-meta">
+                
+                    Posted by <a href="../user/henry5534.html">henry5534</a> on 2021-04-22 22:56:52.505075
+                
+                
+                        under
+                    
+                    <a class="post-category" href="crypto.html">crypto</a>
+<a class="post-category" href="htb-cyber-apocalypse.html">htb-cyber-apocalypse</a>
+</p>
+</header>
+<div class="post-description">
+<p>
+                We are given the following code, a slight advance on the previous PhaseStream challenges as we are only given two ciphertexts, and no plaintext. The code encrypts two messages with <em>the same key</em> using AES in Counter mode. As we established in the previous PhaseStream challenges <em>counter mode is bad</em>! Because these two plaintexts are encrypted with the same key in counter mode, it essentially becomes an XOR...apparently. Borrowing from... 
+            </p>
+</div>
+</section>
+<section class="post">
+<header class="post-header">
+<h2 class="post-title"><a href="../view/pwned-crypto-scuffed_rsa.html">pwnEd Crypto: scuffed_rsa</a></h2>
+<p class="post-meta">
+                
+                    Posted by <a href="../user/theforkbomber.html">theforkbomber</a> on 2021-03-01 01:28:15.832680
+                
+                
+                        under
+                    
+                    <a class="post-category" href="pwned.html">pwned</a>
+<a class="post-category" href="crypto.html">crypto</a>
+</p>
+</header>
+<div class="post-description">
+<p>
+                We're given a broken implementation of RSA in Python: The first things to notice are that e isn't the usual 65537, and isn't prime either. Then n evaluates to just p instead of pq, so the output we're given: uses the wrong private key. So, we're given n which is prime, thus there isn't really a p or q, the ciphertext c and e. Using sources to [work out how RSA works] and [calculate the correct value for d]([https://whiteheadsoftware.dev/rsa-]... 
+            </p>
+</div>
+</section>
+<section class="post">
+<header class="post-header">
+<h2 class="post-title"><a href="../view/weak-rsa.html">Weak RSA</a></h2>
+<p class="post-meta">
+                
+                    Posted by <a href="../user/henry5534.html">henry5534</a> on 2020-11-28 20:32:40.560061
+                
+                
+                        under
+                    
+                    <a class="post-category" href="htbctf.html">htbctf</a>
+<a class="post-category" href="crypto.html">crypto</a>
+</p>
+</header>
+<div class="post-description">
+<p>
+                This crypto challenge is also relatively straightforward, it's a copy of another crypto challenge. We are given a Public Key and an enciphered message, we can use the [RsaCtfTool.py] and it <em>somehow</em> manages to derive the private key from the public key, and then decipher the encrypted message using this private key. The flag is <code>HTB{b16_e_5m4ll_d_3qu4l5_w31n3r_4774ck}</code>. ⚡ Magic ⚡ 
+            </p>
+</div>
+</section>
+<section class="post">
+<header class="post-header">
+<h2 class="post-title"><a href="../view/nuclear-disaster.html">Nuclear Disaster</a></h2>
+<p class="post-meta">
+                
+                    Posted by <a href="../user/henry5534.html">henry5534</a> on 2020-11-28 20:25:21.340951
+                
+                
+                        under
+                    
+                    <a class="post-category" href="htbctf.html">htbctf</a>
+<a class="post-category" href="crypto.html">crypto</a>
+</p>
+</header>
+<div class="post-description">
+<p>
+                In this crypto challenge, we are given a file with 5 different parameters in: <code>n</code>, <code>e</code>, <code>a</code>, <code>g</code>, <code>c</code>, and <code>c2</code>: Googling for similar challenges gives us [this], we can just use the script from there to solve ours. It gives us the output: <code>3xtr4H34t1nr34ct0r</code>. This is the password for the root user on the box, so we can just <code>su root</code>, enter the password and then grab the flag! ... 
+            </p>
+</div>
+</section>
+<section class="post">
+<header class="post-header">
+<h2 class="post-title"><a href="../view/buggy-time-machine.html">Buggy Time Machine</a></h2>
+<p class="post-meta">
+                
+                    Posted by <a href="../user/henry5534.html">henry5534</a> on 2020-11-23 23:54:02.179323
+                
+                
+                        under
+                    
+                    <a class="post-category" href="htbctf.html">htbctf</a>
+<a class="post-category" href="crypto.html">crypto</a>
+</p>
+</header>
+<div class="post-description">
+<p>
+                We are given the code to a random number generator (RNG) and the goal is to determine the internal state of the RNG so that we provide it with a seed such that it will produce a given output (2020) - doing so gives us the flag! From the code, we can determine the it uses a [Linear congruential generator (LCG)], which is known to be weak; this uses a multiplier (<code>m</code>), addition (<code>c</code>) and modular value (<code>n</code>) to compute the next state,... 
+            </p>
+</div>
+</section>
+</div>
+</main>
+</div>
+</div>
+</div>
+</body>
+</html>

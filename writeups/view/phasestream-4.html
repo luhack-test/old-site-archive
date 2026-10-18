@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="KxBie6T6uw1Iexm0-tldr4zEIM4zAUdDLF9N_t97cIE" name="google-site-verification"/>
+<meta content="CTF writeups made by LUHack members." name="description">
+<meta content="PhaseStream 4" property="og:title"/>
+<meta content="website" property="og:type"/>
+<meta content="../../static/images/logo_small.png" property="og:image"/>
+<meta content="" property="og:url"/>
+<meta content="LUHack" property="og:site_name"/>
+<meta content="CTF writeups made by LUHack members." property="og:description"/>
+<link href="../../static/images/apple-touch-icon-57x57.png" rel="apple-touch-icon-precomposed" sizes="57x57"/>
+<link href="../../static/images/apple-touch-icon-114x114.png" rel="apple-touch-icon-precomposed" sizes="114x114">
+<link href="../../static/images/apple-touch-icon-72x72.png" rel="apple-touch-icon-precomposed" sizes="72x72"/>
+<link href="../../static/images/apple-touch-icon-144x144.png" rel="apple-touch-icon-precomposed" sizes="144x144"/>
+<link href="../../static/images/apple-touch-icon-60x60.png" rel="apple-touch-icon-precomposed" sizes="60x60"/>
+<link href="../../static/images/apple-touch-icon-120x120.png" rel="apple-touch-icon-precomposed" sizes="120x120"/>
+<link href="../../static/images/apple-touch-icon-76x76.png" rel="apple-touch-icon-precomposed" sizes="76x76"/>
+<link href="../../static/images/apple-touch-icon-152x152.png" rel="apple-touch-icon-precomposed" sizes="152x152"/>
+<link href="../../static/images/favicon-196x196.png" rel="icon" sizes="196x196" type="image/png"/>
+<link href="../../static/images/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+<link href="../../static/images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="../../static/images/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="../../static/images/favicon-128.png" rel="icon" sizes="128x128" type="image/png"/>
+<meta content="LUHack" name="application-name"/>
+<meta content="#FFFFFF" name="msapplication-TileColor"/>
+<meta content="../../static/images/mstile-144x144.png" name="msapplication-TileImage"/>
+<meta content="../../static/images/mstile-70x70.png" name="msapplication-square70x70logo"/>
+<meta content="../../static/images/mstile-150x150.png" name="msapplication-square150x150logo"/>
+<meta content="../../static/images/mstile-310x150.png" name="msapplication-wide310x150logo"/>
+<meta content="../../static/images/mstile-310x310.png" name="msapplication-square310x310logo"/>
+<script type="application/ld+json">
+     {
+         "@context": "https://schema.org",
+         "@type": "Article",
+         "author": "henry5534",
+         "name": "PhaseStream 4",
+         "about": "Cyber Security",
+         "url": "",
+         "datePublished": "2021-04-22T22:56:52.505075",
+         "dateModified": "2021-04-22T22:56:52.505075",
+         "publsher": {
+             "@type": "Organization",
+             "name": "LUHack"
+         }
+     }
+    </script>
+<title>LUHack Writeup: PhaseStream 4</title>
+<link href="../../_assets/cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/fontawesome.min.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="../../_assets/cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/solid.min.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="../../_assets/cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/brands.min.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="../../_assets/unpkg.com/purecss%402.0.3/build/pure-min.css" rel="stylesheet"/>
+<link href="../../_assets/fonts.googleapis.com/css_81f601ca.css" rel="stylesheet"/>
+<link href="../../static/css/main.css" rel="stylesheet"/>
+<link href="../../static/css/highlight.min.css" rel="stylesheet"/>
+<script defer="" src="../../static/js/base.js"></script>
+</link></meta></head>
+<body>
+<div class="with-sidebar">
+<div class="fill-height">
+<div class="sidebar" id="menu">
+<div class="header">
+<h1 class="brand-title">
+<a class="logo" href="../../index.html">
+<img alt="LUHack logo" src="../../static/images/luhack_logo.png" width="100%"/>
+</a>
+</h1>
+<nav class="nav">
+<ul class="nav-list">
+<li class="nav-item">
+<a class="button" href="../../index.html">Home</a>
+</li>
+<li class="nav-item">
+<a class="button" href="../index.html">Writeups</a>
+</li>
+<li class="nav-item">
+<a class="button" href="../../challenges/index.html">Challenges</a>
+</li>
+<br/>
+<li class="nav-item">
+<a class="button" href="../tags.html">Tag List</a>
+</li>
+<li class="nav-item">
+<a class="button" href="../new.html">New Writeup</a>
+</li>
+</ul>
+</nav>
+<br/>
+<form action="../index.html" class="pure-form" method="GET">
+<input autocomplete="off" class="search-bar" id="search-bar" name="search" placeholder="Search writeups" type="search" value=""/>
+</form>
+<div class="header-content">
+<div class="article-meta">
+<h2>PhaseStream 4</h2>
+<h4 class="author">By: <a href="../user/henry5534.html">henry5534</a></h4>
+<h4 class="date">2021-04-22 22:56:52.505075</h4>
+<div class="tags">
+<a class="post-category" href="../tag/crypto.html">crypto</a>
+<a class="post-category" href="../tag/htb-cyber-apocalypse.html">htb-cyber-apocalypse</a>
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+<div class="legal">
+<div class="">
+<a href="#" title="Sign In">Sign In</a>
+</div>
+</div>
+</div>
+</div>
+<div class="not-sidebar">
+<main>
+<p>We are given the following code, a slight advance on the previous PhaseStream challenges as we are only given two ciphertexts, and no plaintext.</p>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">Crypto.Cipher</span> <span class="kn">import</span> <span class="n">AES</span>
+<span class="kn">from</span> <span class="nn">Crypto.Util</span> <span class="kn">import</span> <span class="n">Counter</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="n">KEY</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">urandom</span><span class="p">(</span><span class="mi">16</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">encrypt</span><span class="p">(</span><span class="n">plaintext</span><span class="p">):</span>
+    <span class="n">cipher</span> <span class="o">=</span> <span class="n">AES</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">KEY</span><span class="p">,</span> <span class="n">AES</span><span class="o">.</span><span class="n">MODE_CTR</span><span class="p">,</span> <span class="n">counter</span><span class="o">=</span><span class="n">Counter</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">128</span><span class="p">))</span>
+    <span class="n">ciphertext</span> <span class="o">=</span> <span class="n">cipher</span><span class="o">.</span><span class="n">encrypt</span><span class="p">(</span><span class="n">plaintext</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">ciphertext</span><span class="o">.</span><span class="n">hex</span><span class="p">()</span>
+
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'test_quote.txt'</span><span class="p">,</span> <span class="s1">'rb'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">test_quote</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">encrypt</span><span class="p">(</span><span class="n">test_quote</span><span class="p">))</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'flag.txt'</span><span class="p">,</span> <span class="s1">'rb'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">flag</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">encrypt</span><span class="p">(</span><span class="n">flag</span><span class="p">))</span>
+</pre></div>
+<p>The code encrypts two messages with <em>the same key</em> using AES in Counter mode. As we established in the previous PhaseStream challenges <em>counter mode is bad</em>! Because these two plaintexts are encrypted with the same key in counter mode, it essentially becomes an XOR...apparently.</p>
+<p>Borrowing from <a href="https://cedricvanrompay.gitlab.io/cryptopals/challenges/19-and-20.html">someone</a> who actually knows what they're talking about:</p>
+<pre><code>Because the CTR nonce wasn't randomized for each encryption, each ciphertext has been encrypted against the same keystream. This is very bad.
+
+Understanding that, like most stream ciphers (including RC4, and obviously any block cipher run in CTR mode), the actual "encryption" of a byte of data boils down to a single XOR operation, it should be plain that:
+
+CIPHERTEXT-BYTE XOR PLAINTEXT-BYTE = KEYSTREAM-BYTE
+
+And since the keystream is the same for every ciphertext:
+
+CIPHERTEXT-BYTE XOR KEYSTREAM-BYTE = PLAINTEXT-BYTE (ie, "you don't say!")
+
+Attack this cryptosystem piecemeal: guess letters, use expected English language frequence to validate guesses, catch common English trigrams, and so on.
+</code></pre>
+<p>So, we have two unknown plaintexts, <code>p1</code> and <code>p2</code> that correspond to <code>test_quote.txt</code> and <code>flag.txt</code>, and two ciphertexts <code>c1</code> and <code>c2</code> which correspond to the encrypted versions of <code>p1</code> and <code>p2</code>, respectively. <em>They share the keystream, <code>k</code>.</em> Given this, we can work out the key and thus plaintext with the following operation:
+<code>p1</code> xor <code>k</code> == <code>c1</code> and <code>p2</code> xor <code>k</code> == <code>c2</code></p>
+<p>Therefore, 
+<code>c1</code> xor <code>p1</code> == <code>k</code>, and once we know <code>k</code> we can easily get <code>p2</code> by doing <code>c2</code> xor <code>k</code>.</p>
+<p><a href="https://gchq.github.io/CyberChef/#recipe=From_Hex(%27None%27)XOR(%7B%27option%27:%27UTF8%27,%27string%27:%27%3CP1%20HERE%3E%27%7D,%27Standard%27,false)XOR(%7B%27option%27:%27Hex%27,%27string%27:%27%3CC2%20HERE%3E%27%7D,%27Standard%27,false)&amp;input=PFBVVCBDMSBIRVJFPg">This</a> CyberChef recipe demonstrates that, which we'll use later.</p>
+<p>But how to we do this? We just, <em>just</em>, need to guess the plaintext, which will allow us to recover the key and hence the plaintext of both messages.</p>
+<p>We will start from <a href="https://gchq.github.io/CyberChef/#recipe=From_Hex(%27None%27)XOR(%7B%27option%27:%27UTF8%27,%27string%27:%27%27%7D,%27Standard%27,false)XOR(%7B%27option%27:%27Hex%27,%27string%27:%272d0fb3a56aa66e1e44cffc97f3a2e030feab144124e73c76d5d22f6ce01c46e73a50b0edc1a2bd243f9578b745438b00720870e3118194cbb438149e3cc9c0844d640ecdb1e71754c24bf43bf3fd0f9719f74c7179b6816e687fa576abad1955%27%7D,%27Standard%27,false)&amp;input=Mjc2Nzg2OGI3ZWJiN2Y0YzQyY2ZmZmE2ZmZiZmIwM2JmM2I4MDk3OTM2YWUzYzc2ZWY4MDNkNzZlMTE1NDY5NDcxNTdiY2VhOTU5OWY4MjYzMzg4MDdiNTU2NTVhMDU2NjY0NDZkZjIwYzhlOTM4N2IwMDQxMjllMTBkMThlOWY1MjZmNzFjYWJjZjIxYjQ4OTY1YWUzNmZjZmVlMWU4MjBjZjEwNzZmNjU">this</a> recipe. <a href="https://gchq.github.io/CyberChef/#recipe=From_Hex(%27None%27)XOR(%7B%27option%27:%27UTF8%27,%27string%27:%27%27%7D,%27Standard%27,false)XOR(%7B%27option%27:%27Hex%27,%27string%27:%272767868b7ebb7f4c42cfffa6ffbfb03bf3b8097936ae3c76ef803d76e11546947157bcea9599f826338807b55655a05666446df20c8e9387b004129e10d18e9f526f71cabcf21b48965ae36fcfee1e820cf1076f65%27%7D,%27Standard%27,false)&amp;input=MmQwZmIzYTU2YWE2NmUxZTQ0Y2ZmYzk3ZjNhMmUwMzBmZWFiMTQ0MTI0ZTczYzc2ZDVkMjJmNmNlMDFjNDZlNzNhNTBiMGVkYzFhMmJkMjQzZjk1NzhiNzQ1NDM4YjAwNzIwODcwZTMxMTgxOTRjYmI0MzgxNDllM2NjOWMwODQ0ZDY0MGVjZGIxZTcxNzU0YzI0YmY0M2JmM2ZkMGY5NzE5Zjc0YzcxNzliNjgxNmU2ODdmYTU3NmFiYWQxOTU1">This</a> recipe is the same, but swaps the plaintext we're guessing.</p>
+<p>A decent starting point for guessing the plaintext is that the flag starts with <code>CHTB{</code>, so we enter this into the recipe with the encrypted flag (<code>c2</code>) as the input.</p>
+<p>So, when we enter the key as <code>CHTB{</code>, the output begins with <code>I alo</code> (only the first 5 characters are relevant because we've only entered 5 characters of key!).  We're looking for English words, and <code>I alo</code> looks like English! The rest of this is going to continue making educated guesses about either plaintext. This is shown in <a href="https://gchq.github.io/CyberChef/#recipe=From_Hex(%27None%27)XOR(%7B%27option%27:%27UTF8%27,%27string%27:%27CHTB%7B%27%7D,%27Standard%27,false)XOR(%7B%27option%27:%27Hex%27,%27string%27:%272d0fb3a56aa66e1e44cffc97f3a2e030feab144124e73c76d5d22f6ce01c46e73a50b0edc1a2bd243f9578b745438b00720870e3118194cbb438149e3cc9c0844d640ecdb1e71754c24bf43bf3fd0f9719f74c7179b6816e687fa576abad1955%27%7D,%27Standard%27,false)&amp;input=Mjc2Nzg2OGI3ZWJiN2Y0YzQyY2ZmZmE2ZmZiZmIwM2JmM2I4MDk3OTM2YWUzYzc2ZWY4MDNkNzZlMTE1NDY5NDcxNTdiY2VhOTU5OWY4MjYzMzg4MDdiNTU2NTVhMDU2NjY0NDZkZjIwYzhlOTM4N2IwMDQxMjllMTBkMThlOWY1MjZmNzFjYWJjZjIxYjQ4OTY1YWUzNmZjZmVlMWU4MjBjZjEwNzZmNjU">this</a> recipe.</p>
+<p>(Also, given the filename of <code>test_quote.txt</code> for the non-flag plaintext, it should definitely be English)</p>
+<p>Now, given the output of us guessing the plaintext of the flag is the plaintext of the quote <code>p1</code>, we can now guess the rest of the second word of this plaintext by copying the <code>I alo</code> to the start of the key for this recipe. We can guess that the second word might be <code>alone</code>, so let's put that in and see what happens! This might get confusing because we keep swapping between the plaintext we are guessing, but it's easy. This is shown <a href="https://gchq.github.io/CyberChef/#recipe=From_Hex(%27None%27)XOR(%7B%27option%27:%27UTF8%27,%27string%27:%27I%20alone%20%27%7D,%27Standard%27,false)XOR(%7B%27option%27:%27Hex%27,%27string%27:%272767868b7ebb7f4c42cfffa6ffbfb03bf3b8097936ae3c76ef803d76e11546947157bcea9599f826338807b55655a05666446df20c8e9387b004129e10d18e9f526f71cabcf21b48965ae36fcfee1e820cf1076f65%27%7D,%27Standard%27,false)&amp;input=MmQwZmIzYTU2YWE2NmUxZTQ0Y2ZmYzk3ZjNhMmUwMzBmZWFiMTQ0MTI0ZTczYzc2ZDVkMjJmNmNlMDFjNDZlNzNhNTBiMGVkYzFhMmJkMjQzZjk1NzhiNzQ1NDM4YjAwNzIwODcwZTMxMTgxOTRjYmI0MzgxNDllM2NjOWMwODQ0ZDY0MGVjZGIxZTcxNzU0YzI0YmY0M2JmM2ZkMGY5NzE5Zjc0YzcxNzliNjgxNmU2ODdmYTU3NmFiYWQxOTU1">here</a>, with a key (actually the plaintext, but ignore that) of <code>I alone</code>, we get an output of <code>CHTB{str</code> - which looks good. We make a sensible guess until we make a word, or part of a word in the plaintext output, then copy the key that got that into the other recipe and keep guessing.</p>
+<p>This word might be <code>stream</code>, given that that is the kind of cipher we're performing cryptoanalysis on! So we go back to the other recipe, use a key of <code>CHTB{stream_</code>, and get an output for the quote of <code>I alone cann</code>. This still looks good, could it be the word 'cannot'? Spoiler. It is! I'm not going to carry on showing the various stages with recipes, but the stages I went through of both plaintexts are below.</p>
+<p>QUOTE: <code>I alone cann</code>
+FLAG: <code>CHTB{stream_</code></p>
+<p>QUOTE: <code>I alone cannot</code>
+FLAG: <code>CHTB{stream_cip</code></p>
+<p>QUOTE: <code>I alone cannot chang</code>
+FLAG: <code>CHTB{stream_ciphers_</code></p>
+<p>QUOTE: <code>I alone cannot change</code>
+FLAG: <code>CHTB{stream_ciphers_wi</code></p>
+<p>Okay, I actually just googled <code>I alone cannot change</code> at this point and got the following full quote <code>I alone cannot change the world, but I can cast a stone across the water to create many ripples</code>. Sticking this in gives <code>CHTB{stream_ciphers_with_reused_keystreams_are_vulnerable_to_known_plaintext_attacks}</code> - which is the flag!</p>
+<p>In summary, AES in Counter mode is bascially a stream cipher - for cryptograhy reasons this is bad. This is <em>super bad</em> if we've encrypted multiple messages with the same key! So, don't do that.</p>
+<p>I did the math!</p>
+</main>
+</div>
+</div>
+</div>
+</body>
+</html>

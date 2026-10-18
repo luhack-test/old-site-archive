@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="KxBie6T6uw1Iexm0-tldr4zEIM4zAUdDLF9N_t97cIE" name="google-site-verification"/>
+<meta content="CTF writeups made by LUHack members." name="description">
+<meta content="Creating a Kali VM" property="og:title"/>
+<meta content="website" property="og:type"/>
+<meta content="../../static/images/logo_small.png" property="og:image"/>
+<meta content="" property="og:url"/>
+<meta content="LUHack" property="og:site_name"/>
+<meta content="CTF writeups made by LUHack members." property="og:description"/>
+<link href="../../static/images/apple-touch-icon-57x57.png" rel="apple-touch-icon-precomposed" sizes="57x57"/>
+<link href="../../static/images/apple-touch-icon-114x114.png" rel="apple-touch-icon-precomposed" sizes="114x114">
+<link href="../../static/images/apple-touch-icon-72x72.png" rel="apple-touch-icon-precomposed" sizes="72x72"/>
+<link href="../../static/images/apple-touch-icon-144x144.png" rel="apple-touch-icon-precomposed" sizes="144x144"/>
+<link href="../../static/images/apple-touch-icon-60x60.png" rel="apple-touch-icon-precomposed" sizes="60x60"/>
+<link href="../../static/images/apple-touch-icon-120x120.png" rel="apple-touch-icon-precomposed" sizes="120x120"/>
+<link href="../../static/images/apple-touch-icon-76x76.png" rel="apple-touch-icon-precomposed" sizes="76x76"/>
+<link href="../../static/images/apple-touch-icon-152x152.png" rel="apple-touch-icon-precomposed" sizes="152x152"/>
+<link href="../../static/images/favicon-196x196.png" rel="icon" sizes="196x196" type="image/png"/>
+<link href="../../static/images/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+<link href="../../static/images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="../../static/images/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="../../static/images/favicon-128.png" rel="icon" sizes="128x128" type="image/png"/>
+<meta content="LUHack" name="application-name"/>
+<meta content="#FFFFFF" name="msapplication-TileColor"/>
+<meta content="../../static/images/mstile-144x144.png" name="msapplication-TileImage"/>
+<meta content="../../static/images/mstile-70x70.png" name="msapplication-square70x70logo"/>
+<meta content="../../static/images/mstile-150x150.png" name="msapplication-square150x150logo"/>
+<meta content="../../static/images/mstile-310x150.png" name="msapplication-wide310x150logo"/>
+<meta content="../../static/images/mstile-310x310.png" name="msapplication-square310x310logo"/>
+<script type="application/ld+json">
+     {
+         "@context": "https://schema.org",
+         "@type": "Article",
+         "author": "maxafriedrich",
+         "name": "Creating a Kali VM",
+         "about": "Cyber Security",
+         "url": "",
+         "datePublished": "2023-09-13T21:39:11.859037",
+         "dateModified": "2023-09-13T21:39:11.859037",
+         "publsher": {
+             "@type": "Organization",
+             "name": "LUHack"
+         }
+     }
+    </script>
+<title>LUHack Writeup: Creating a Kali VM</title>
+<link href="../../_assets/cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/fontawesome.min.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="../../_assets/cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/solid.min.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="../../_assets/cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/brands.min.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="../../_assets/unpkg.com/purecss%402.0.3/build/pure-min.css" rel="stylesheet"/>
+<link href="../../_assets/fonts.googleapis.com/css_81f601ca.css" rel="stylesheet"/>
+<link href="../../static/css/main.css" rel="stylesheet"/>
+<link href="../../static/css/highlight.min.css" rel="stylesheet"/>
+<script defer="" src="../../static/js/base.js"></script>
+</link></meta></head>
+<body>
+<div class="with-sidebar">
+<div class="fill-height">
+<div class="sidebar" id="menu">
+<div class="header">
+<h1 class="brand-title">
+<a class="logo" href="../../index.html">
+<img alt="LUHack logo" src="../../static/images/luhack_logo.png" width="100%"/>
+</a>
+</h1>
+<nav class="nav">
+<ul class="nav-list">
+<li class="nav-item">
+<a class="button" href="../../index.html">Home</a>
+</li>
+<li class="nav-item">
+<a class="button" href="../index.html">Writeups</a>
+</li>
+<li class="nav-item">
+<a class="button" href="../../challenges/index.html">Challenges</a>
+</li>
+<br/>
+<li class="nav-item">
+<a class="button" href="../tags.html">Tag List</a>
+</li>
+<li class="nav-item">
+<a class="button" href="../new.html">New Writeup</a>
+</li>
+</ul>
+</nav>
+<br/>
+<form action="../index.html" class="pure-form" method="GET">
+<input autocomplete="off" class="search-bar" id="search-bar" name="search" placeholder="Search writeups" type="search" value=""/>
+</form>
+<div class="header-content">
+<div class="article-meta">
+<h2>Creating a Kali VM</h2>
+<h4 class="author">By: <a href="../user/maxafriedrich.html">maxafriedrich</a></h4>
+<h4 class="date">2023-09-13 21:39:11.859037</h4>
+<div class="tags">
+<a class="post-category" href="../tag/how-to.html">how-to</a>
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+<div class="legal">
+<div class="">
+<a href="#" title="Sign In">Sign In</a>
+</div>
+</div>
+</div>
+</div>
+<div class="not-sidebar">
+<main>
+<h1>How to Create a Kali Linux Virtual Machine</h1>
+<p>One of the easiest ways to get started with hacking stuff is to use a Linux environment with all the tools that you will need pre-installed. Although you may wish to run the tools on your own Linux/macOS machine natively, it can be easier to have everything already set up, especially if you are just getting started with hacking.</p>
+<p>If you don't fancy setting all this up, and you are a LUHack member, then you can just use our virtual machines. However, they can be a bit slow, so if you want the best experience, it is worth trying to get a virtual machine running on your computer. But if you do want to use them you can get started by looking at <a href="creating-a-kali-vm.html#">this page instead</a>.</p>
+<p>How you get up and running with Kali depends on the hardware and OS that you are running.</p>
+<h2>Prerequisites for both Windows and Linux</h2>
+<p>To use a virtual machine on a Windows or Linux computer, you need to enable virtualization in your BIOS. This is generally not too hard, is completely reversible, and should not void your warranty.</p>
+<p>Intel generally calls this something like "Intel Virtualization Technology," in a BIOS, it may be written as "Intel VT" or "Intel VT-d." AMD generally calls this "AMD-V." If you want more information, you may want to look <a href="https://support.microsoft.com/en-us/windows/enable-virtualization-on-windows-11-pcs-c5578302-6e43-4b4b-a449-8ced115f58e1">here</a> or <a href="https://www.bleepingcomputer.com/tutorials/how-to-enable-cpu-virtualization-in-your-computer-bios/">here</a>.</p>
+<p>If you do not do this, you will not get virtualization working.</p>
+<h2>Windows</h2>
+<p><strong>⚠️ WARNING: You must enable virtualization in your BIOS before you get started with setting up virtualization on Windows.(<a href="creating-a-kali-vm.html#">Do this bit first if you have not already.</a>)⚠️</strong></p>
+<p>The most user-friendly option is VirtualBox.</p>
+<p>To get started, get the following things:</p>
+<ul>
+<li>VirtualBox <a href="https://download.virtualbox.org/virtualbox/7.0.10/VirtualBox-7.0.10-158379-Win.exe">download it here</a></li>
+<li>Kali Linux virtual machine <a href="https://cdimage.kali.org/kali-2023.3/kali-linux-2023.3-virtualbox-amd64.7z">download it here</a></li>
+<li>7-Zip to extract the virtual machine disk from the archive you download <a href="https://www.7-zip.org/a/7z2301-x64.exe">download it here</a></li>
+</ul>
+<ol>
+<li>Install VirtualBox using the VirtualBox installer that you downloaded.</li>
+<li>Install 7-Zip if you have not got another way of opening <code>.7z</code> files on your computer. You can do this by running the installer linked above.</li>
+<li>Use 7-Zip to extract the Kali image.</li>
+<li>Open VirtualBox.</li>
+<li>Click the green add(+) button at the top.</li>
+<li>Select the <code>.vbox</code> you extracted from the archive.</li>
+<li>You can now start the virtual machine and check it out!</li>
+</ol>
+<h2>Linux</h2>
+<p>If you are running Debian or one of its derivatives, e.g.,</p>
+<ul>
+<li>Ubuntu</li>
+<li>Linux Mint</li>
+<li>Pop OS!</li>
+</ul>
+<p>You may want to skip using a virtual machine for now and just use <a href="https://github.com/LionSec/katoolin">this</a> handy project which installs all the tools from Kali directly on your system.</p>
+<p>There is a similar project for Arch/Manjaro users: you can add the BlackArch repos with <a href="https://blackarch.org/strap.sh">this script</a>, which will allow you to install any packages you need that come in Kali.</p>
+<p>If you have a different distribution, it is always worth trying to just install the packages if they are in your repos.</p>
+<p>If you still want to use a VM on Linux, then the best option is Virt-Manager.</p>
+<p><strong>⚠️ WARNING: You must enable virtualization in your BIOS before you get started with setting up virtualization on Linux.(<a href="creating-a-kali-vm.html#">Do this bit first if you have not already.</a>)⚠️</strong></p>
+<p>To get started, you will need to grab a Kali Linux ISO from <a href="https://cdimage.kali.org/kali-2023.3/kali-linux-2023.3-installer-amd64.iso">here</a>.</p>
+<ol>
+<li>Install Virt-Manager for your distro.<ul>
+<li><a href="https://christitus.com/vm-setup-in-linux/">Debian</a></li>
+<li><a href="https://fedoramagazine.org/full-virtualization-system-on-fedora-workstation-30/">Fedora</a></li>
+<li><a href="https://christitus.com/setup-qemu-in-archlinux/">Arch</a></li>
+</ul>
+</li>
+<li>Click the add(+) button at the top.</li>
+<li>Select local install media, then click next.</li>
+<li>Click browse and select the ISO you just downloaded.</li>
+<li>Set your operating system to Debian 11 and click forward.</li>
+<li>Set the amount of memory and the number of CPU cores you would like your VM to have. Make sure it has at least 2048 MiB and 2 CPU cores. Then click next.</li>
+<li>Select how much storage you want to give it; it needs to be at least 20 GiB. Then, press forward, followed by finish.</li>
+<li>If the virtual machine does not start and open automatically, you will need to press open and then press the start button.</li>
+<li>Once you see the Kali logo and get presented with a list of options, select the default option of <code>graphical install</code> by pressing enter/return.</li>
+<li>You should be able to follow the steps on screen; it is all pretty intuitive. Remember, that because this is a virtual machine, if you break anything you can always delete the virtual machine and try again.</li>
+</ol>
+<h2>MacOS</h2>
+<p>Your options depend on if have an old mac or a new mac.</p>
+<h3>ARM/M1/M2 Macs</h3>
+<p>You have two options here, UTM and Parallels. This guide uses UTM because it is free. Download it <a href="https://mac.getutm.app/">here</a>. You will also need the Kali ISO which you can get <a href="https://cdimage.kali.org/kali-2023.3/kali-linux-2023.3-installer-arm64.iso">here</a>.</p>
+<ol>
+<li>Install UTM either through the app store or just download the <code>.dmg</code> and use it for free. If you go for the latter just download the file and open it it, then drag the UTM app into your Applications folder. You may need to jump through some hoops depnding on your setting to run a "untrusted" application that you downloaded from the internet.</li>
+<li>Click create a new VM.</li>
+<li>Select virtualize.</li>
+<li>Select other.</li>
+<li>Select browse and then select your ISO that you just downloaded. Then click continue.</li>
+<li>If you want, you can change the memory and CPU allocation here, but you can just click continue if you want.</li>
+<li>Set the storage to at least 20 GiB and then click continue.</li>
+<li>Click continue once again and then click save.</li>
+<li>Open the virtual machine settings at the top right of the page. <img alt="UTM Kali setting screenshot" class="pure-img" src="../../_assets/www.kali.org/docs/virtualization/install-utm-guest-vm/utm-setup-9.png"/></li>
+<li>Select new at the bottom left of the page and then select serial device.</li>
+<li>Click save and then start the VM.</li>
+<li>Follow the install instructions. Remember, that because this is a virtual machine, if you break anything you can always delete the virtual machine and try again.</li>
+<li>Once the install has finished, you can go back into the setting page for the virtual machine and remove the serial device by right-clicking and selecting "remove".</li>
+<li>You can now start the VM and begin exploring Kali.</li>
+</ol>
+<h3>X86_64/Intel Macs</h3>
+<p>The easiest way to get started here is to install VirtualBox.</p>
+<p>Start by getting:</p>
+<ul>
+<li>the VirtualBox DMG <a href="https://download.virtualbox.org/virtualbox/7.0.10/VirtualBox-7.0.10a-158379-OSX.dmg">here</a></li>
+<li>Kali Linux virtual machine <a href="https://cdimage.kali.org/kali-2023.3/kali-linux-2023.3-virtualbox-amd64.7z">download it here</a></li>
+</ul>
+<ol>
+<li>Open the <code>VirtualBox-7.0.10a-158379-OSX.dmg</code> that you just downloaded, then drag the VirtualBox app into your Applications folder. You may need to go through some hoops depending on your settings to run an "untrusted" application that you downloaded from the internet.</li>
+<li>Extract the <code>kali-linux-2023.3-virtualbox-amd64.7z</code>; the built-in archive utility should be able to do it.</li>
+<li>Open VirtualBox.</li>
+<li>Click the green add(+) button at the top.</li>
+<li>Select the <code>.vbox</code> you extracted from the archive.</li>
+<li>You can now start the virtual machine and check it out!</li>
+</ol>
+<h2>Next Steps</h2>
+<p>If you want to connect to our infrastructure in Kali Linux, you may want to follow <a href="creating-a-kali-vm.html#">this guide</a>.</p>
+<h2>More Information</h2>
+<p>If you want more detail or options, then you can take a look at the <a href="https://www.kali.org/docs/virtualization">Kali docs</a>.</p>
+</main>
+</div>
+</div>
+</div>
+</body>
+</html>

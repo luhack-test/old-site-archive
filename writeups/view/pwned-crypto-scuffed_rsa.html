@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="KxBie6T6uw1Iexm0-tldr4zEIM4zAUdDLF9N_t97cIE" name="google-site-verification"/>
+<meta content="CTF writeups made by LUHack members." name="description">
+<meta content="pwnEd Crypto: scuffed_rsa" property="og:title"/>
+<meta content="website" property="og:type"/>
+<meta content="../../static/images/logo_small.png" property="og:image"/>
+<meta content="" property="og:url"/>
+<meta content="LUHack" property="og:site_name"/>
+<meta content="CTF writeups made by LUHack members." property="og:description"/>
+<link href="../../static/images/apple-touch-icon-57x57.png" rel="apple-touch-icon-precomposed" sizes="57x57"/>
+<link href="../../static/images/apple-touch-icon-114x114.png" rel="apple-touch-icon-precomposed" sizes="114x114">
+<link href="../../static/images/apple-touch-icon-72x72.png" rel="apple-touch-icon-precomposed" sizes="72x72"/>
+<link href="../../static/images/apple-touch-icon-144x144.png" rel="apple-touch-icon-precomposed" sizes="144x144"/>
+<link href="../../static/images/apple-touch-icon-60x60.png" rel="apple-touch-icon-precomposed" sizes="60x60"/>
+<link href="../../static/images/apple-touch-icon-120x120.png" rel="apple-touch-icon-precomposed" sizes="120x120"/>
+<link href="../../static/images/apple-touch-icon-76x76.png" rel="apple-touch-icon-precomposed" sizes="76x76"/>
+<link href="../../static/images/apple-touch-icon-152x152.png" rel="apple-touch-icon-precomposed" sizes="152x152"/>
+<link href="../../static/images/favicon-196x196.png" rel="icon" sizes="196x196" type="image/png"/>
+<link href="../../static/images/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+<link href="../../static/images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="../../static/images/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="../../static/images/favicon-128.png" rel="icon" sizes="128x128" type="image/png"/>
+<meta content="LUHack" name="application-name"/>
+<meta content="#FFFFFF" name="msapplication-TileColor"/>
+<meta content="../../static/images/mstile-144x144.png" name="msapplication-TileImage"/>
+<meta content="../../static/images/mstile-70x70.png" name="msapplication-square70x70logo"/>
+<meta content="../../static/images/mstile-150x150.png" name="msapplication-square150x150logo"/>
+<meta content="../../static/images/mstile-310x150.png" name="msapplication-wide310x150logo"/>
+<meta content="../../static/images/mstile-310x310.png" name="msapplication-square310x310logo"/>
+<script type="application/ld+json">
+     {
+         "@context": "https://schema.org",
+         "@type": "Article",
+         "author": "theforkbomber",
+         "name": "pwnEd Crypto: scuffed_rsa",
+         "about": "Cyber Security",
+         "url": "",
+         "datePublished": "2021-03-01T01:28:15.832680",
+         "dateModified": "2021-03-01T01:28:15.832680",
+         "publsher": {
+             "@type": "Organization",
+             "name": "LUHack"
+         }
+     }
+    </script>
+<title>LUHack Writeup: pwnEd Crypto: scuffed_rsa</title>
+<link href="../../_assets/cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/fontawesome.min.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="../../_assets/cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/solid.min.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="../../_assets/cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/brands.min.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="../../_assets/unpkg.com/purecss%402.0.3/build/pure-min.css" rel="stylesheet"/>
+<link href="../../_assets/fonts.googleapis.com/css_81f601ca.css" rel="stylesheet"/>
+<link href="../../static/css/main.css" rel="stylesheet"/>
+<link href="../../static/css/highlight.min.css" rel="stylesheet"/>
+<script defer="" src="../../static/js/base.js"></script>
+</link></meta></head>
+<body>
+<div class="with-sidebar">
+<div class="fill-height">
+<div class="sidebar" id="menu">
+<div class="header">
+<h1 class="brand-title">
+<a class="logo" href="../../index.html">
+<img alt="LUHack logo" src="../../static/images/luhack_logo.png" width="100%"/>
+</a>
+</h1>
+<nav class="nav">
+<ul class="nav-list">
+<li class="nav-item">
+<a class="button" href="../../index.html">Home</a>
+</li>
+<li class="nav-item">
+<a class="button" href="../index.html">Writeups</a>
+</li>
+<li class="nav-item">
+<a class="button" href="../../challenges/index.html">Challenges</a>
+</li>
+<br/>
+<li class="nav-item">
+<a class="button" href="../tags.html">Tag List</a>
+</li>
+<li class="nav-item">
+<a class="button" href="../new.html">New Writeup</a>
+</li>
+</ul>
+</nav>
+<br/>
+<form action="../index.html" class="pure-form" method="GET">
+<input autocomplete="off" class="search-bar" id="search-bar" name="search" placeholder="Search writeups" type="search" value=""/>
+</form>
+<div class="header-content">
+<div class="article-meta">
+<h2>pwnEd Crypto: scuffed_rsa</h2>
+<h4 class="author">By: <a href="../user/theforkbomber.html">theforkbomber</a></h4>
+<h4 class="date">2021-03-01 01:28:15.832680</h4>
+<div class="tags">
+<a class="post-category" href="../tag/pwned.html">pwned</a>
+<a class="post-category" href="../tag/crypto.html">crypto</a>
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+<div class="legal">
+<div class="">
+<a href="#" title="Sign In">Sign In</a>
+</div>
+</div>
+</div>
+</div>
+<div class="not-sidebar">
+<main>
+<p>We're given a broken implementation of RSA in Python:</p>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">Crypto.Util.number</span> <span class="kn">import</span> <span class="n">getPrime</span><span class="p">,</span> <span class="n">inverse</span><span class="p">,</span> <span class="n">bytes_to_long</span><span class="p">,</span> <span class="n">long_to_bytes</span>
+
+<span class="n">e</span> <span class="o">=</span> <span class="mi">65536</span>
+
+<span class="k">def</span> <span class="nf">gen_key</span><span class="p">():</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="n">getPrime</span><span class="p">(</span><span class="mi">1024</span><span class="p">)</span>
+    <span class="n">q</span> <span class="o">=</span> <span class="n">getPrime</span><span class="p">(</span><span class="mi">1024</span><span class="p">)</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="n">p</span> <span class="c1"># q</span>
+    <span class="n">t</span> <span class="o">=</span> <span class="p">(</span><span class="n">p</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">q</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">d</span> <span class="o">=</span> <span class="n">inverse</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">n</span><span class="p">,</span> <span class="n">d</span>
+
+<span class="k">def</span> <span class="nf">encrypt</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">m</span><span class="p">):</span>
+    <span class="n">c</span> <span class="o">=</span> <span class="nb">pow</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">c</span>
+
+<span class="c1"># for some reason my decrypt function doesn't work!</span>
+<span class="c1"># can you help me recover the message?</span>
+<span class="k">def</span> <span class="nf">decrypt</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
+    <span class="n">m</span> <span class="o">=</span> <span class="nb">pow</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">m</span>
+
+<span class="n">FLAG</span> <span class="o">=</span> <span class="sa">b</span><span class="s1">'pwnEd{???...?}'</span>
+
+<span class="n">n</span><span class="p">,</span> <span class="n">d</span> <span class="o">=</span> <span class="n">gen_key</span><span class="p">()</span>
+<span class="n">m</span>    <span class="o">=</span> <span class="n">bytes_to_long</span><span class="p">(</span><span class="n">FLAG</span><span class="p">)</span>
+
+<span class="n">c</span>    <span class="o">=</span> <span class="n">encrypt</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">m</span><span class="p">)</span>
+<span class="n">m</span>    <span class="o">=</span> <span class="n">decrypt</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'n = </span><span class="si">{</span><span class="n">n</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Encrypted flag: </span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'It just doesn</span><span class="se">\'</span><span class="s1">t work!: </span><span class="si">{</span><span class="n">long_to_bytes</span><span class="p">(</span><span class="n">m</span><span class="p">)</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
+</pre></div>
+<p>The first things to notice are that e isn't the usual 65537, and isn't prime either. Then n evaluates to just p instead of pq, so the output we're given:</p>
+<pre><code>n = 158956010976836742521330254087275425096501583054825136137040889728364290468342445750425376148898452284963095323948276435573809460871703413808672473157217817381946017879464498512288960101002405275174672926496400917470509079465025417877720664744491054992376496575684398645703346912039046842844204816524282238459
+Encrypted flag: 17696325213195819360084027228862087546075383230711834052302081670404491942278399339165629822030797913121661625273125782635636475385580385239446207346095935362399429412825040827923795088154904762207215060766109368707427481633970394393914176132798637385151502305355038711511174834777689397585730318578634645332
+It just doesn't work!: b'\xb1s\xacL\x841\xff\r\xfd\x9e\x9e\xe29\xb2\xfd\xf7I\xe2?\x1bb\xd4\x8dZ\xce\xa0\x18\xc4\x040\x8c\xe1\xd2\x81B\xb1\xda\x9av\xd5Np\xf4m\xeb\xdc\xfd\xcc0\xe3\xa9h\x86\xb8c\x86\x84\xb7\xda\x99uJ\x0b\xbe\x1d@\xbf\x98\x95\x92\xc7\x04\xef,,\xd4\tt\x82\xba\xd8\x17O\x9bI\xf6\xe8j\x8a\xb3H5n\x0cEA|\x1d\xab(\xd4\x9dU&amp;=\x8aVA\x04\xa62\x11\xa1\xdb\xf0\xf5\xd4%\xde+\xa3+\xe6\xc8*\xffv\xad'
+</code></pre>
+<p>uses the wrong private key. So, we're given n which is prime, thus there isn't really a p or q, the ciphertext c and e. Using sources to <a href="https://brilliant.org/wiki/rsa-encryption/">work out how RSA works</a> and <a href="https://whiteheadsoftware.dev/rsa-cryptography-behind-the-scenes/">calculate the correct value for d</a>, the totient φ(n) is n-1 since n is prime. Typically this is all that should be done, and RsaCtfTool managed to decrypt the ciphertext with <code>python3 RsaCtfTool.py -n &lt;N&gt; -e 65536 --uncipher &lt;CIPHER&gt; --attack ecm2</code>, but this was all we could get to during the CTF. Afterwards, it's revealed that since e isn't coprime with φ(n) we can't decrypt the message as you usually would.</p>
+<p>One reason RSA works is that ed = 1 (mod φ(n)) holds, it follows that c^d = m^ed = m (mod n), proof <a href="https://crypto.stackexchange.com/a/68821">here</a>. Since the decryption isn't working even with the correct d then ed = x (mod φ(n)) where x isn't 1. Finding this x is rather simple, we just evaluate <code>e*d%n</code>, which gives us 2. Recall that m^ed = m (mod n), so we've got the message squared. To find the modular square root, we use the <a href="https://en.wikipedia.org/wiki/Tonelli%E2%80%93Shanks_algorithm">Tonelli-Shanks algorithm</a>. Since there's an <a href="http://www.numbertheory.org/php/tonelli.php">online implementation</a>, we just enter our m^2 for a and n for p, convert this long into bytes and we get the flag.</p>
+</main>
+</div>
+</div>
+</div>
+</body>
+</html>

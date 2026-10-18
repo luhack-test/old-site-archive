@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="KxBie6T6uw1Iexm0-tldr4zEIM4zAUdDLF9N_t97cIE" name="google-site-verification"/>
+<meta content="CTF writeups made by LUHack members." name="description">
+<meta content="Flag Calculator" property="og:title"/>
+<meta content="website" property="og:type"/>
+<meta content="../../static/images/logo_small.png" property="og:image"/>
+<meta content="" property="og:url"/>
+<meta content="LUHack" property="og:site_name"/>
+<meta content="CTF writeups made by LUHack members." property="og:description"/>
+<link href="../../static/images/apple-touch-icon-57x57.png" rel="apple-touch-icon-precomposed" sizes="57x57"/>
+<link href="../../static/images/apple-touch-icon-114x114.png" rel="apple-touch-icon-precomposed" sizes="114x114">
+<link href="../../static/images/apple-touch-icon-72x72.png" rel="apple-touch-icon-precomposed" sizes="72x72"/>
+<link href="../../static/images/apple-touch-icon-144x144.png" rel="apple-touch-icon-precomposed" sizes="144x144"/>
+<link href="../../static/images/apple-touch-icon-60x60.png" rel="apple-touch-icon-precomposed" sizes="60x60"/>
+<link href="../../static/images/apple-touch-icon-120x120.png" rel="apple-touch-icon-precomposed" sizes="120x120"/>
+<link href="../../static/images/apple-touch-icon-76x76.png" rel="apple-touch-icon-precomposed" sizes="76x76"/>
+<link href="../../static/images/apple-touch-icon-152x152.png" rel="apple-touch-icon-precomposed" sizes="152x152"/>
+<link href="../../static/images/favicon-196x196.png" rel="icon" sizes="196x196" type="image/png"/>
+<link href="../../static/images/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+<link href="../../static/images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="../../static/images/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="../../static/images/favicon-128.png" rel="icon" sizes="128x128" type="image/png"/>
+<meta content="LUHack" name="application-name"/>
+<meta content="#FFFFFF" name="msapplication-TileColor"/>
+<meta content="../../static/images/mstile-144x144.png" name="msapplication-TileImage"/>
+<meta content="../../static/images/mstile-70x70.png" name="msapplication-square70x70logo"/>
+<meta content="../../static/images/mstile-150x150.png" name="msapplication-square150x150logo"/>
+<meta content="../../static/images/mstile-310x150.png" name="msapplication-wide310x150logo"/>
+<meta content="../../static/images/mstile-310x310.png" name="msapplication-square310x310logo"/>
+<script type="application/ld+json">
+     {
+         "@context": "https://schema.org",
+         "@type": "Article",
+         "author": "simmsb",
+         "name": "Flag Calculator",
+         "about": "Cyber Security",
+         "url": "",
+         "datePublished": "2019-04-11T03:02:54.057613",
+         "dateModified": "2019-04-11T03:02:54.057613",
+         "publsher": {
+             "@type": "Organization",
+             "name": "LUHack"
+         }
+     }
+    </script>
+<title>LUHack Writeup: Flag Calculator</title>
+<link href="../../_assets/cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/fontawesome.min.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="../../_assets/cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/solid.min.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="../../_assets/cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/brands.min.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="../../_assets/unpkg.com/purecss%402.0.3/build/pure-min.css" rel="stylesheet"/>
+<link href="../../_assets/fonts.googleapis.com/css_81f601ca.css" rel="stylesheet"/>
+<link href="../../static/css/main.css" rel="stylesheet"/>
+<link href="../../static/css/highlight.min.css" rel="stylesheet"/>
+<script defer="" src="../../static/js/base.js"></script>
+</link></meta></head>
+<body>
+<div class="with-sidebar">
+<div class="fill-height">
+<div class="sidebar" id="menu">
+<div class="header">
+<h1 class="brand-title">
+<a class="logo" href="../../index.html">
+<img alt="LUHack logo" src="../../static/images/luhack_logo.png" width="100%"/>
+</a>
+</h1>
+<nav class="nav">
+<ul class="nav-list">
+<li class="nav-item">
+<a class="button" href="../../index.html">Home</a>
+</li>
+<li class="nav-item">
+<a class="button" href="../index.html">Writeups</a>
+</li>
+<li class="nav-item">
+<a class="button" href="../../challenges/index.html">Challenges</a>
+</li>
+<br/>
+<li class="nav-item">
+<a class="button" href="../tags.html">Tag List</a>
+</li>
+<li class="nav-item">
+<a class="button" href="../new.html">New Writeup</a>
+</li>
+</ul>
+</nav>
+<br/>
+<form action="../index.html" class="pure-form" method="GET">
+<input autocomplete="off" class="search-bar" id="search-bar" name="search" placeholder="Search writeups" type="search" value=""/>
+</form>
+<div class="header-content">
+<div class="article-meta">
+<h2>Flag Calculator</h2>
+<h4 class="author">By: <a href="../user/simmsb.html">simmsb</a></h4>
+<h4 class="date">2019-04-11 03:02:54.057613</h4>
+<div class="tags">
+<a class="post-category" href="../tag/reverse-engineering.html">reverse-engineering</a>
+<a class="post-category" href="../tag/dot-net.html">dot-net</a>
+<a class="post-category" href="../tag/panad-ctf.html">panad-ctf</a>
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+<div class="legal">
+<div class="">
+<a href="#" title="Sign In">Sign In</a>
+</div>
+</div>
+</div>
+</div>
+<div class="not-sidebar">
+<main>
+<p>First we decompiled the program using dnSpy, yielding:</p>
+<div class="highlight"><pre><span></span><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span><span class="w"></span>
+<span class="k">using</span><span class="w"> </span><span class="nn">System.CodeDom.Compiler</span><span class="p">;</span><span class="w"></span>
+<span class="k">using</span><span class="w"> </span><span class="nn">System.ComponentModel</span><span class="p">;</span><span class="w"></span>
+<span class="k">using</span><span class="w"> </span><span class="nn">System.Diagnostics</span><span class="p">;</span><span class="w"></span>
+<span class="k">using</span><span class="w"> </span><span class="nn">System.Threading</span><span class="p">;</span><span class="w"></span>
+<span class="k">using</span><span class="w"> </span><span class="nn">System.Windows</span><span class="p">;</span><span class="w"></span>
+<span class="k">using</span><span class="w"> </span><span class="nn">System.Windows.Controls</span><span class="p">;</span><span class="w"></span>
+<span class="k">using</span><span class="w"> </span><span class="nn">System.Windows.Markup</span><span class="p">;</span><span class="w"></span>
+
+<span class="k">namespace</span><span class="w"> </span><span class="nn">FlagCalculatorApp</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// Token: 0x02000003 RID: 3</span>
+<span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">MainWindow</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Window</span><span class="p">,</span><span class="w"> </span><span class="n">IComponentConnector</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="c1">// Token: 0x06000004 RID: 4 RVA: 0x0000207E File Offset: 0x0000027E</span>
+<span class="w">                </span><span class="k">public</span><span class="w"> </span><span class="nf">MainWindow</span><span class="p">()</span><span class="w"></span>
+<span class="w">                </span><span class="p">{</span><span class="w"></span>
+<span class="w">                        </span><span class="k">this</span><span class="p">.</span><span class="n">InitializeComponent</span><span class="p">();</span><span class="w"></span>
+<span class="w">                </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">                </span><span class="c1">// Token: 0x06000005 RID: 5 RVA: 0x0000208C File Offset: 0x0000028C</span>
+<span class="w">                </span><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Calc</span><span class="p">(</span><span class="n">ProgressBar</span><span class="w"> </span><span class="n">progress</span><span class="p">,</span><span class="w"> </span><span class="n">TextBox</span><span class="w"> </span><span class="n">flag</span><span class="p">,</span><span class="w"> </span><span class="n">Label</span><span class="w"> </span><span class="n">info</span><span class="p">)</span><span class="w"></span>
+<span class="w">                </span><span class="p">{</span><span class="w"></span>
+<span class="w">                        </span><span class="n">MainWindow</span><span class="p">.&lt;&gt;</span><span class="n">c__DisplayClass1_0</span><span class="w"> </span><span class="n">CS</span><span class="err">$</span><span class="p">&lt;&gt;</span><span class="m">8</span><span class="n">__locals1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MainWindow</span><span class="p">.&lt;&gt;</span><span class="n">c__DisplayClass1_0</span><span class="p">();</span><span class="w"></span>
+<span class="w">                        </span><span class="n">CS</span><span class="err">$</span><span class="p">&lt;&gt;</span><span class="m">8</span><span class="n">__locals1</span><span class="p">.</span><span class="n">progress</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">progress</span><span class="p">;</span><span class="w"></span>
+<span class="w">                        </span><span class="n">CS</span><span class="err">$</span><span class="p">&lt;&gt;</span><span class="m">8</span><span class="n">__locals1</span><span class="p">.</span><span class="n">flag</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">flag</span><span class="p">;</span><span class="w"></span>
+<span class="w">                        </span><span class="n">CS</span><span class="err">$</span><span class="p">&lt;&gt;</span><span class="m">8</span><span class="n">__locals1</span><span class="p">.</span><span class="n">info</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">info</span><span class="p">;</span><span class="w"></span>
+<span class="w">                        </span><span class="n">CS</span><span class="err">$</span><span class="p">&lt;&gt;</span><span class="m">8</span><span class="n">__locals1</span><span class="p">.&lt;&gt;</span><span class="m">4</span><span class="n">__this</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">this</span><span class="p">;</span><span class="w"></span>
+<span class="w">                        </span><span class="n">CS</span><span class="err">$</span><span class="p">&lt;&gt;</span><span class="m">8</span><span class="n">__locals1</span><span class="p">.</span><span class="n">val</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">0</span><span class="n">u</span><span class="p">;</span><span class="w"></span>
+<span class="w">                        </span><span class="kt">uint</span><span class="w"> </span><span class="n">i</span><span class="p">;</span><span class="w"></span>
+<span class="w">                        </span><span class="kt">uint</span><span class="w"> </span><span class="n">j</span><span class="p">;</span><span class="w"></span>
+<span class="w">                        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">0</span><span class="n">u</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="p">&lt;</span><span class="w"> </span><span class="m">12852275</span><span class="n">u</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="p">+</span><span class="w"> </span><span class="m">1</span><span class="n">u</span><span class="p">)</span><span class="w"></span>
+<span class="w">                        </span><span class="p">{</span><span class="w"></span>
+<span class="w">                                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="p">%</span><span class="w"> </span><span class="m">1000</span><span class="n">u</span><span class="w"> </span><span class="p">==</span><span class="w"> </span><span class="m">0</span><span class="n">u</span><span class="p">)</span><span class="w"></span>
+<span class="w">                                </span><span class="p">{</span><span class="w"></span>
+<span class="w">                                        </span><span class="k">base</span><span class="p">.</span><span class="n">Dispatcher</span><span class="p">.</span><span class="n">Invoke</span><span class="p">(</span><span class="k">delegate</span><span class="p">()</span><span class="w"></span>
+<span class="w">                                        </span><span class="p">{</span><span class="w"></span>
+<span class="w">                                                </span><span class="n">CS</span><span class="err">$</span><span class="p">&lt;&gt;</span><span class="m">8</span><span class="n">__locals1</span><span class="p">.</span><span class="n">progress</span><span class="p">.</span><span class="n">Value</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">1</span><span class="n">u</span><span class="w"> </span><span class="p">+</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="p">*</span><span class="w"> </span><span class="m">99</span><span class="n">u</span><span class="w"> </span><span class="p">/</span><span class="w"> </span><span class="m">12852275</span><span class="n">u</span><span class="p">;</span><span class="w"></span>
+<span class="w">                                        </span><span class="p">});</span><span class="w"></span>
+<span class="w">                                </span><span class="p">}</span><span class="w"></span>
+<span class="w">                                </span><span class="n">CS</span><span class="err">$</span><span class="p">&lt;&gt;</span><span class="m">8</span><span class="n">__locals1</span><span class="p">.</span><span class="n">val</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="n">Calc5</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="n">Calc3</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="n">Calc6</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="m">13</span><span class="n">u</span><span class="p">),</span><span class="w"> </span><span class="n">CS</span><span class="err">$</span><span class="p">&lt;&gt;</span><span class="m">8</span><span class="n">__locals1</span><span class="p">.</span><span class="n">val</span><span class="p">),</span><span class="w"> </span><span class="n">i</span><span class="p">);</span><span class="w"></span>
+<span class="w">                                </span><span class="n">j</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">i</span><span class="p">;</span><span class="w"></span>
+<span class="w">                        </span><span class="p">}</span><span class="w"></span>
+<span class="w">                        </span><span class="k">base</span><span class="p">.</span><span class="n">Dispatcher</span><span class="p">.</span><span class="n">Invoke</span><span class="p">(</span><span class="k">delegate</span><span class="p">()</span><span class="w"></span>
+<span class="w">                        </span><span class="p">{</span><span class="w"></span>
+<span class="w">                                </span><span class="n">CS</span><span class="err">$</span><span class="p">&lt;&gt;</span><span class="m">8</span><span class="n">__locals1</span><span class="p">.</span><span class="n">progress</span><span class="p">.</span><span class="n">Value</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">100.0</span><span class="p">;</span><span class="w"></span>
+<span class="w">                                </span><span class="n">CS</span><span class="err">$</span><span class="p">&lt;&gt;</span><span class="m">8</span><span class="n">__locals1</span><span class="p">.</span><span class="n">flag</span><span class="p">.</span><span class="n">Text</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">"pactf{dot"</span><span class="w"> </span><span class="p">+</span><span class="w"> </span><span class="n">CS</span><span class="err">$</span><span class="p">&lt;&gt;</span><span class="m">8</span><span class="n">__locals1</span><span class="p">.</span><span class="n">val</span><span class="w"> </span><span class="p">+</span><span class="w"> </span><span class="s">"N3T}"</span><span class="p">;</span><span class="w"></span>
+<span class="w">                                </span><span class="n">CS</span><span class="err">$</span><span class="p">&lt;&gt;</span><span class="m">8</span><span class="n">__locals1</span><span class="p">.</span><span class="n">info</span><span class="p">.</span><span class="n">Content</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">"flag calculated!"</span><span class="p">;</span><span class="w"></span>
+<span class="w">                                </span><span class="n">CS</span><span class="err">$</span><span class="p">&lt;&gt;</span><span class="m">8</span><span class="n">__locals1</span><span class="p">.&lt;&gt;</span><span class="m">4</span><span class="n">__this</span><span class="p">.</span><span class="n">button</span><span class="p">.</span><span class="n">IsEnabled</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">true</span><span class="p">;</span><span class="w"></span>
+<span class="w">                        </span><span class="p">});</span><span class="w"></span>
+<span class="w">                </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">                </span><span class="c1">// Token: 0x06000006 RID: 6 RVA: 0x00002168 File Offset: 0x00000368</span>
+<span class="w">                </span><span class="k">private</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Button_Click</span><span class="p">(</span><span class="kt">object</span><span class="w"> </span><span class="n">sender</span><span class="p">,</span><span class="w"> </span><span class="n">RoutedEventArgs</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"></span>
+<span class="w">                </span><span class="p">{</span><span class="w"></span>
+<span class="w">                        </span><span class="k">this</span><span class="p">.</span><span class="n">button</span><span class="p">.</span><span class="n">IsEnabled</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">false</span><span class="p">;</span><span class="w"></span>
+<span class="w">                        </span><span class="k">this</span><span class="p">.</span><span class="n">flag</span><span class="p">.</span><span class="n">Text</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">""</span><span class="p">;</span><span class="w"></span>
+<span class="w">                        </span><span class="k">this</span><span class="p">.</span><span class="n">info</span><span class="p">.</span><span class="n">Content</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">"calculating flag..."</span><span class="p">;</span><span class="w"></span>
+<span class="w">                        </span><span class="k">this</span><span class="p">.</span><span class="n">progress</span><span class="p">.</span><span class="n">Value</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">1.0</span><span class="p">;</span><span class="w"></span>
+<span class="w">                        </span><span class="k">new</span><span class="w"> </span><span class="nf">Thread</span><span class="p">(</span><span class="k">delegate</span><span class="p">()</span><span class="w"></span>
+<span class="w">                        </span><span class="p">{</span><span class="w"></span>
+<span class="w">                                </span><span class="k">this</span><span class="p">.</span><span class="n">Calc</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="n">progress</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="n">flag</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="n">info</span><span class="p">);</span><span class="w"></span>
+<span class="w">                        </span><span class="p">}).</span><span class="n">Start</span><span class="p">();</span><span class="w"></span>
+<span class="w">                </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">                </span><span class="c1">// Token: 0x06000007 RID: 7 RVA: 0x000021CB File Offset: 0x000003CB</span>
+<span class="w">                </span><span class="k">private</span><span class="w"> </span><span class="kt">uint</span><span class="w"> </span><span class="nf">Calc1</span><span class="p">(</span><span class="kt">uint</span><span class="w"> </span><span class="n">a</span><span class="p">)</span><span class="w"></span>
+<span class="w">                </span><span class="p">{</span><span class="w"></span>
+<span class="w">                        </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="p">+</span><span class="w"> </span><span class="m">1337</span><span class="n">u</span><span class="w"> </span><span class="p">-</span><span class="w"> </span><span class="m">1336</span><span class="n">u</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">                </span><span class="c1">// Token: 0x06000008 RID: 8 RVA: 0x000021DA File Offset: 0x000003DA</span>
+<span class="w">                </span><span class="k">private</span><span class="w"> </span><span class="kt">uint</span><span class="w"> </span><span class="nf">Calc2</span><span class="p">(</span><span class="kt">uint</span><span class="w"> </span><span class="n">a</span><span class="p">)</span><span class="w"></span>
+<span class="w">                </span><span class="p">{</span><span class="w"></span>
+<span class="w">                        </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="p">*</span><span class="w"> </span><span class="m">9</span><span class="n">u</span><span class="w"> </span><span class="p">-</span><span class="w"> </span><span class="p">(</span><span class="m">8</span><span class="n">u</span><span class="w"> </span><span class="p">*</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="p">+</span><span class="w"> </span><span class="m">200</span><span class="n">u</span><span class="p">)</span><span class="w"> </span><span class="p">+</span><span class="w"> </span><span class="m">199</span><span class="n">u</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">                </span><span class="c1">// Token: 0x06000009 RID: 9 RVA: 0x000021F0 File Offset: 0x000003F0</span>
+<span class="w">                </span><span class="k">private</span><span class="w"> </span><span class="kt">uint</span><span class="w"> </span><span class="nf">Calc3</span><span class="p">(</span><span class="kt">uint</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">uint</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"></span>
+<span class="w">                </span><span class="p">{</span><span class="w"></span>
+<span class="w">                        </span><span class="kt">uint</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">0</span><span class="n">u</span><span class="p">;</span><span class="w"></span>
+<span class="w">                        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">uint</span><span class="w"> </span><span class="n">num2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">0</span><span class="n">u</span><span class="p">;</span><span class="w"> </span><span class="n">num2</span><span class="w"> </span><span class="p">&lt;</span><span class="w"> </span><span class="n">a</span><span class="p">;</span><span class="w"> </span><span class="n">num2</span><span class="w"> </span><span class="p">+=</span><span class="w"> </span><span class="m">1</span><span class="n">u</span><span class="p">)</span><span class="w"></span>
+<span class="w">                        </span><span class="p">{</span><span class="w"></span>
+<span class="w">                                </span><span class="n">num</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="n">Calc1</span><span class="p">(</span><span class="n">num</span><span class="p">);</span><span class="w"></span>
+<span class="w">                        </span><span class="p">}</span><span class="w"></span>
+<span class="w">                        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">uint</span><span class="w"> </span><span class="n">num3</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">0</span><span class="n">u</span><span class="p">;</span><span class="w"> </span><span class="n">num3</span><span class="w"> </span><span class="p">&lt;</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"> </span><span class="n">num3</span><span class="w"> </span><span class="p">+=</span><span class="w"> </span><span class="m">1</span><span class="n">u</span><span class="p">)</span><span class="w"></span>
+<span class="w">                        </span><span class="p">{</span><span class="w"></span>
+<span class="w">                                </span><span class="n">num</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="n">Calc1</span><span class="p">(</span><span class="n">num</span><span class="p">);</span><span class="w"></span>
+<span class="w">                        </span><span class="p">}</span><span class="w"></span>
+<span class="w">                        </span><span class="k">return</span><span class="w"> </span><span class="n">num</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">                </span><span class="c1">// Token: 0x0600000A RID: 10 RVA: 0x00002228 File Offset: 0x00000428</span>
+<span class="w">                </span><span class="k">private</span><span class="w"> </span><span class="kt">uint</span><span class="w"> </span><span class="nf">Calc4</span><span class="p">(</span><span class="kt">uint</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">uint</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"></span>
+<span class="w">                </span><span class="p">{</span><span class="w"></span>
+<span class="w">                        </span><span class="kt">uint</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="n">Calc3</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="n">u</span><span class="p">);</span><span class="w"></span>
+<span class="w">                        </span><span class="kt">int</span><span class="w"> </span><span class="n">num2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">                        </span><span class="k">while</span><span class="w"> </span><span class="p">((</span><span class="kt">long</span><span class="p">)</span><span class="n">num2</span><span class="w"> </span><span class="p">&lt;</span><span class="w"> </span><span class="p">(</span><span class="kt">long</span><span class="p">)((</span><span class="kt">ulong</span><span class="p">)</span><span class="n">b</span><span class="p">))</span><span class="w"></span>
+<span class="w">                        </span><span class="p">{</span><span class="w"></span>
+<span class="w">                                </span><span class="n">num</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="n">Calc2</span><span class="p">(</span><span class="n">num</span><span class="p">);</span><span class="w"></span>
+<span class="w">                                </span><span class="n">num2</span><span class="p">++;</span><span class="w"></span>
+<span class="w">                        </span><span class="p">}</span><span class="w"></span>
+<span class="w">                        </span><span class="k">return</span><span class="w"> </span><span class="n">num</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">                </span><span class="c1">// Token: 0x0600000B RID: 11 RVA: 0x00002258 File Offset: 0x00000458</span>
+<span class="w">                </span><span class="k">private</span><span class="w"> </span><span class="kt">uint</span><span class="w"> </span><span class="nf">Calc5</span><span class="p">(</span><span class="kt">uint</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">uint</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"></span>
+<span class="w">                </span><span class="p">{</span><span class="w"></span>
+<span class="w">                        </span><span class="kt">uint</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">0</span><span class="n">u</span><span class="p">;</span><span class="w"></span>
+<span class="w">                        </span><span class="kt">int</span><span class="w"> </span><span class="n">num2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">                        </span><span class="k">while</span><span class="w"> </span><span class="p">((</span><span class="kt">long</span><span class="p">)</span><span class="n">num2</span><span class="w"> </span><span class="p">&lt;</span><span class="w"> </span><span class="p">(</span><span class="kt">long</span><span class="p">)((</span><span class="kt">ulong</span><span class="p">)</span><span class="n">b</span><span class="p">))</span><span class="w"></span>
+<span class="w">                        </span><span class="p">{</span><span class="w"></span>
+<span class="w">                                </span><span class="n">num</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="n">Calc3</span><span class="p">(</span><span class="n">num</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="p">);</span><span class="w"></span>
+<span class="w">                                </span><span class="n">num2</span><span class="p">++;</span><span class="w"></span>
+<span class="w">                        </span><span class="p">}</span><span class="w"></span>
+<span class="w">                        </span><span class="k">return</span><span class="w"> </span><span class="n">num</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">                </span><span class="c1">// Token: 0x0600000C RID: 12 RVA: 0x00002280 File Offset: 0x00000480</span>
+<span class="w">                </span><span class="k">private</span><span class="w"> </span><span class="kt">uint</span><span class="w"> </span><span class="nf">Calc6</span><span class="p">(</span><span class="kt">uint</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">uint</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"></span>
+<span class="w">                </span><span class="p">{</span><span class="w"></span>
+<span class="w">                        </span><span class="kt">uint</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">a</span><span class="p">;</span><span class="w"></span>
+<span class="w">                        </span><span class="kt">int</span><span class="w"> </span><span class="n">num2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">                        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">num</span><span class="w"> </span><span class="p">&gt;=</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"></span>
+<span class="w">                        </span><span class="p">{</span><span class="w"></span>
+<span class="w">                                </span><span class="n">num</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="n">Calc4</span><span class="p">(</span><span class="n">num</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">);</span><span class="w"></span>
+<span class="w">                                </span><span class="n">num2</span><span class="p">++;</span><span class="w"></span>
+<span class="w">                        </span><span class="p">}</span><span class="w"></span>
+<span class="w">                        </span><span class="k">return</span><span class="w"> </span><span class="n">num</span><span class="p">;</span><span class="w"></span>
+<span class="w">                </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">                </span><span class="c1">// Token: 0x0600000D RID: 13 RVA: 0x000022A8 File Offset: 0x000004A8</span>
+<span class="w">                </span><span class="na">[DebuggerNonUserCode]</span><span class="w"></span>
+<span class="w">                </span><span class="na">[GeneratedCode("PresentationBuildTasks", "4.0.0.0")]</span><span class="w"></span>
+<span class="w">                </span><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">InitializeComponent</span><span class="p">()</span><span class="w"></span>
+<span class="w">                </span><span class="p">{</span><span class="w"></span>
+<span class="w">                        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="n">_contentLoaded</span><span class="p">)</span><span class="w"></span>
+<span class="w">                        </span><span class="p">{</span><span class="w"></span>
+<span class="w">                                </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+<span class="w">                        </span><span class="p">}</span><span class="w"></span>
+<span class="w">                        </span><span class="k">this</span><span class="p">.</span><span class="n">_contentLoaded</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">true</span><span class="p">;</span><span class="w"></span>
+<span class="w">                        </span><span class="n">Uri</span><span class="w"> </span><span class="n">resourceLocator</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Uri</span><span class="p">(</span><span class="s">"/FlagCalculatorApp;component/mainwindow.xaml"</span><span class="p">,</span><span class="w"> </span><span class="n">UriKind</span><span class="p">.</span><span class="n">Relative</span><span class="p">);</span><span class="w"></span>
+<span class="w">                        </span><span class="n">Application</span><span class="p">.</span><span class="n">LoadComponent</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="n">resourceLocator</span><span class="p">);</span><span class="w"></span>
+<span class="w">                </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">                </span><span class="c1">// Token: 0x0600000E RID: 14 RVA: 0x000022D8 File Offset: 0x000004D8</span>
+<span class="w">                </span><span class="na">[DebuggerNonUserCode]</span><span class="w"></span>
+<span class="w">                </span><span class="na">[GeneratedCode("PresentationBuildTasks", "4.0.0.0")]</span><span class="w"></span>
+<span class="w">                </span><span class="na">[EditorBrowsable(EditorBrowsableState.Never)]</span><span class="w"></span>
+<span class="w">                </span><span class="k">void</span><span class="w"> </span><span class="n">IComponentConnector</span><span class="p">.</span><span class="n">Connect</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">connectionId</span><span class="p">,</span><span class="w"> </span><span class="kt">object</span><span class="w"> </span><span class="n">target</span><span class="p">)</span><span class="w"></span>
+<span class="w">                </span><span class="p">{</span><span class="w"></span>
+<span class="w">                        </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">connectionId</span><span class="p">)</span><span class="w"></span>
+<span class="w">                        </span><span class="p">{</span><span class="w"></span>
+<span class="w">                        </span><span class="k">case</span><span class="w"> </span><span class="m">1</span><span class="p">:</span><span class="w"></span>
+<span class="w">                                </span><span class="k">this</span><span class="p">.</span><span class="n">flag</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">(</span><span class="n">TextBox</span><span class="p">)</span><span class="n">target</span><span class="p">;</span><span class="w"></span>
+<span class="w">                                </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+<span class="w">                        </span><span class="k">case</span><span class="w"> </span><span class="m">2</span><span class="p">:</span><span class="w"></span>
+<span class="w">                                </span><span class="k">this</span><span class="p">.</span><span class="n">label</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">(</span><span class="n">Label</span><span class="p">)</span><span class="n">target</span><span class="p">;</span><span class="w"></span>
+<span class="w">                                </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+<span class="w">                        </span><span class="k">case</span><span class="w"> </span><span class="m">3</span><span class="p">:</span><span class="w"></span>
+<span class="w">                                </span><span class="k">this</span><span class="p">.</span><span class="n">button</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">(</span><span class="n">Button</span><span class="p">)</span><span class="n">target</span><span class="p">;</span><span class="w"></span>
+<span class="w">                                </span><span class="k">this</span><span class="p">.</span><span class="n">button</span><span class="p">.</span><span class="n">Click</span><span class="w"> </span><span class="p">+=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="n">Button_Click</span><span class="p">;</span><span class="w"></span>
+<span class="w">                                </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+<span class="w">                        </span><span class="k">case</span><span class="w"> </span><span class="m">4</span><span class="p">:</span><span class="w"></span>
+<span class="w">                                </span><span class="k">this</span><span class="p">.</span><span class="n">progress</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">(</span><span class="n">ProgressBar</span><span class="p">)</span><span class="n">target</span><span class="p">;</span><span class="w"></span>
+<span class="w">                                </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+<span class="w">                        </span><span class="k">case</span><span class="w"> </span><span class="m">5</span><span class="p">:</span><span class="w"></span>
+<span class="w">                                </span><span class="k">this</span><span class="p">.</span><span class="n">info</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">(</span><span class="n">Label</span><span class="p">)</span><span class="n">target</span><span class="p">;</span><span class="w"></span>
+<span class="w">                                </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+<span class="w">                        </span><span class="k">case</span><span class="w"> </span><span class="m">6</span><span class="p">:</span><span class="w"></span>
+<span class="w">                                </span><span class="k">this</span><span class="p">.</span><span class="n">image</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">(</span><span class="n">Image</span><span class="p">)</span><span class="n">target</span><span class="p">;</span><span class="w"></span>
+<span class="w">                                </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+<span class="w">                        </span><span class="k">default</span><span class="p">:</span><span class="w"></span>
+<span class="w">                                </span><span class="k">this</span><span class="p">.</span><span class="n">_contentLoaded</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">true</span><span class="p">;</span><span class="w"></span>
+<span class="w">                                </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+<span class="w">                        </span><span class="p">}</span><span class="w"></span>
+<span class="w">                </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">                </span><span class="c1">// Token: 0x04000001 RID: 1</span>
+<span class="w">                </span><span class="k">internal</span><span class="w"> </span><span class="n">TextBox</span><span class="w"> </span><span class="n">flag</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">                </span><span class="c1">// Token: 0x04000002 RID: 2</span>
+<span class="w">                </span><span class="k">internal</span><span class="w"> </span><span class="n">Label</span><span class="w"> </span><span class="n">label</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">                </span><span class="c1">// Token: 0x04000003 RID: 3</span>
+<span class="w">                </span><span class="k">internal</span><span class="w"> </span><span class="n">Button</span><span class="w"> </span><span class="n">button</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">                </span><span class="c1">// Token: 0x04000004 RID: 4</span>
+<span class="w">                </span><span class="k">internal</span><span class="w"> </span><span class="n">ProgressBar</span><span class="w"> </span><span class="n">progress</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">                </span><span class="c1">// Token: 0x04000005 RID: 5</span>
+<span class="w">                </span><span class="k">internal</span><span class="w"> </span><span class="n">Label</span><span class="w"> </span><span class="n">info</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">                </span><span class="c1">// Token: 0x04000006 RID: 6</span>
+<span class="w">                </span><span class="k">internal</span><span class="w"> </span><span class="n">Image</span><span class="w"> </span><span class="n">image</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">                </span><span class="c1">// Token: 0x04000007 RID: 7</span>
+<span class="w">                </span><span class="k">private</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">_contentLoaded</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+<p>I made a guess that not much was being done, and that the program was only slow
+due to c# being slow. And rewrote it into C.</p>
+<div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
+
+<span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">calc1</span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">num</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1337u</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1336u</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kt">unsigned</span><span class="w"> </span><span class="nf">calc2</span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="n">a</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">9u</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="mi">8u</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">200u</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">199u</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kt">unsigned</span><span class="w"> </span><span class="nf">calc3</span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">num2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">num2</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">a</span><span class="p">;</span><span class="w"> </span><span class="n">num2</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">calc1</span><span class="p">(</span><span class="n">num</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">num3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">num3</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"> </span><span class="n">num3</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">calc1</span><span class="p">(</span><span class="n">num</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">num</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">calc4</span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">calc3</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">num2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">((</span><span class="kt">long</span><span class="p">)</span><span class="n">num2</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="p">(</span><span class="kt">long</span><span class="p">)((</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">long</span><span class="p">)</span><span class="n">b</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">calc2</span><span class="p">(</span><span class="n">num</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">num2</span><span class="o">++</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">num</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">calc5</span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">num2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">((</span><span class="kt">long</span><span class="p">)</span><span class="n">num2</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="p">(</span><span class="kt">long</span><span class="p">)((</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">long</span><span class="p">)</span><span class="n">b</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">calc3</span><span class="p">(</span><span class="n">num</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">num2</span><span class="o">++</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">num</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">calc6</span><span class="p">(</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">num2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">num</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">calc4</span><span class="p">(</span><span class="n">num</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">num2</span><span class="o">++</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">num</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">val</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">12852275</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">val</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">calc5</span><span class="p">(</span><span class="n">calc3</span><span class="p">(</span><span class="n">calc6</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="mi">13</span><span class="p">),</span><span class="w"> </span><span class="n">val</span><span class="p">),</span><span class="w"> </span><span class="n">i</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">"pactf{dot%uN3T}</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="w"> </span><span class="n">val</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+<p>The result is: <code>pactf{dot4019346342N3T}</code></p>
+</main>
+</div>
+</div>
+</div>
+</body>
+</html>

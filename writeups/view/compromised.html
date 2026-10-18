@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="KxBie6T6uw1Iexm0-tldr4zEIM4zAUdDLF9N_t97cIE" name="google-site-verification"/>
+<meta content="CTF writeups made by LUHack members." name="description">
+<meta content="compromised" property="og:title"/>
+<meta content="website" property="og:type"/>
+<meta content="../../static/images/logo_small.png" property="og:image"/>
+<meta content="" property="og:url"/>
+<meta content="LUHack" property="og:site_name"/>
+<meta content="CTF writeups made by LUHack members." property="og:description"/>
+<link href="../../static/images/apple-touch-icon-57x57.png" rel="apple-touch-icon-precomposed" sizes="57x57"/>
+<link href="../../static/images/apple-touch-icon-114x114.png" rel="apple-touch-icon-precomposed" sizes="114x114">
+<link href="../../static/images/apple-touch-icon-72x72.png" rel="apple-touch-icon-precomposed" sizes="72x72"/>
+<link href="../../static/images/apple-touch-icon-144x144.png" rel="apple-touch-icon-precomposed" sizes="144x144"/>
+<link href="../../static/images/apple-touch-icon-60x60.png" rel="apple-touch-icon-precomposed" sizes="60x60"/>
+<link href="../../static/images/apple-touch-icon-120x120.png" rel="apple-touch-icon-precomposed" sizes="120x120"/>
+<link href="../../static/images/apple-touch-icon-76x76.png" rel="apple-touch-icon-precomposed" sizes="76x76"/>
+<link href="../../static/images/apple-touch-icon-152x152.png" rel="apple-touch-icon-precomposed" sizes="152x152"/>
+<link href="../../static/images/favicon-196x196.png" rel="icon" sizes="196x196" type="image/png"/>
+<link href="../../static/images/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+<link href="../../static/images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="../../static/images/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="../../static/images/favicon-128.png" rel="icon" sizes="128x128" type="image/png"/>
+<meta content="LUHack" name="application-name"/>
+<meta content="#FFFFFF" name="msapplication-TileColor"/>
+<meta content="../../static/images/mstile-144x144.png" name="msapplication-TileImage"/>
+<meta content="../../static/images/mstile-70x70.png" name="msapplication-square70x70logo"/>
+<meta content="../../static/images/mstile-150x150.png" name="msapplication-square150x150logo"/>
+<meta content="../../static/images/mstile-310x150.png" name="msapplication-wide310x150logo"/>
+<meta content="../../static/images/mstile-310x310.png" name="msapplication-square310x310logo"/>
+<script type="application/ld+json">
+     {
+         "@context": "https://schema.org",
+         "@type": "Article",
+         "author": "simmsb",
+         "name": "compromised",
+         "about": "Cyber Security",
+         "url": "",
+         "datePublished": "2021-04-19T15:12:54.000989",
+         "dateModified": "2021-04-19T15:12:54.000989",
+         "publsher": {
+             "@type": "Organization",
+             "name": "LUHack"
+         }
+     }
+    </script>
+<title>LUHack Writeup: compromised</title>
+<link href="../../_assets/cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/fontawesome.min.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="../../_assets/cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/solid.min.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="../../_assets/cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/brands.min.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="../../_assets/unpkg.com/purecss%402.0.3/build/pure-min.css" rel="stylesheet"/>
+<link href="../../_assets/fonts.googleapis.com/css_81f601ca.css" rel="stylesheet"/>
+<link href="../../static/css/main.css" rel="stylesheet"/>
+<link href="../../static/css/highlight.min.css" rel="stylesheet"/>
+<script defer="" src="../../static/js/base.js"></script>
+</link></meta></head>
+<body>
+<div class="with-sidebar">
+<div class="fill-height">
+<div class="sidebar" id="menu">
+<div class="header">
+<h1 class="brand-title">
+<a class="logo" href="../../index.html">
+<img alt="LUHack logo" src="../../static/images/luhack_logo.png" width="100%"/>
+</a>
+</h1>
+<nav class="nav">
+<ul class="nav-list">
+<li class="nav-item">
+<a class="button" href="../../index.html">Home</a>
+</li>
+<li class="nav-item">
+<a class="button" href="../index.html">Writeups</a>
+</li>
+<li class="nav-item">
+<a class="button" href="../../challenges/index.html">Challenges</a>
+</li>
+<br/>
+<li class="nav-item">
+<a class="button" href="../tags.html">Tag List</a>
+</li>
+<li class="nav-item">
+<a class="button" href="../new.html">New Writeup</a>
+</li>
+</ul>
+</nav>
+<br/>
+<form action="../index.html" class="pure-form" method="GET">
+<input autocomplete="off" class="search-bar" id="search-bar" name="search" placeholder="Search writeups" type="search" value=""/>
+</form>
+<div class="header-content">
+<div class="article-meta">
+<h2>compromised</h2>
+<h4 class="author">By: <a href="../user/simmsb.html">simmsb</a></h4>
+<h4 class="date">2021-04-19 15:12:54.000989</h4>
+<div class="tags">
+<a class="post-category" href="../tag/hardware.html">hardware</a>
+<a class="post-category" href="../tag/htb-cyber-apocalypse.html">htb-cyber-apocalypse</a>
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+<div class="legal">
+<div class="">
+<a href="#" title="Sign In">Sign In</a>
+</div>
+</div>
+</div>
+</div>
+<div class="not-sidebar">
+<main>
+<h1>compromised</h1>
+<p>Similarly to <a href="serial_logs.html">serial_logs</a> we've been given a <code>.sal</code> file.</p>
+<p>Opening this up in Saleae Logic we see two channels with data in:</p>
+<p><img alt="" class="pure-img" src="../../images/4eb3c44e-ef97-47a8-ab99-e76e3391b55e.png"/></p>
+<p>When playing around with the analyzers earlier I noticed that the I2C analyzer takes input from two channels,
+so I tried that. It seemed to decode correctly and showed a sequence of writes to two different addresses.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="" class="pure-img" src="../../images/089815c1-f927-4703-87f1-fc14abd1e61b.png"/></td>
+<td><img alt="" class="pure-img" src="../../images/f7b118a2-76a5-4cae-a983-163cdc8e4b48.png"/></td>
+</tr>
+</tbody>
+</table>
+<p>Guessing that the data written should be grouped by the address written to, I wrote a quick python script to do this:</p>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">defaultdict</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x73</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x65</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x74</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x5F</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x6D</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x61</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x2C</span><span class="p">,</span> <span class="mh">0x43</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x78</span><span class="p">),</span> 
+    <span class="p">(</span><span class="mh">0x2C</span><span class="p">,</span> <span class="mh">0x48</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x5F</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x6C</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x2C</span><span class="p">,</span> <span class="mh">0x54</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x69</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x6D</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x2C</span><span class="p">,</span> <span class="mh">0x42</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x2C</span><span class="p">,</span> <span class="mh">0x7B</span><span class="p">),</span>
+    <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x69</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x74</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x2C</span><span class="p">,</span> <span class="mh">0x6E</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x5F</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x74</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x2C</span><span class="p">,</span> <span class="mh">0x75</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x6F</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x2C</span><span class="p">,</span> <span class="mh">0x31</span><span class="p">),</span>
+    <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x3A</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x2C</span><span class="p">,</span> <span class="mh">0x31</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x31</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x30</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x2C</span><span class="p">,</span> <span class="mh">0x5F</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x73</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x65</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x2C</span><span class="p">,</span> <span class="mh">0x37</span><span class="p">),</span>
+    <span class="p">(</span><span class="mh">0x2C</span><span class="p">,</span> <span class="mh">0x33</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x74</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x5F</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x2C</span><span class="p">,</span> <span class="mh">0x32</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x6D</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x69</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x2C</span><span class="p">,</span> <span class="mh">0x6D</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x6E</span><span class="p">),</span>
+    <span class="p">(</span><span class="mh">0x2C</span><span class="p">,</span> <span class="mh">0x31</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x5F</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x2C</span><span class="p">,</span> <span class="mh">0x6E</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x6C</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x69</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x2C</span><span class="p">,</span> <span class="mh">0x34</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x6D</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x69</span><span class="p">),</span>
+    <span class="p">(</span><span class="mh">0x2C</span><span class="p">,</span> <span class="mh">0x37</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x2C</span><span class="p">,</span> <span class="mh">0x30</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x74</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x5F</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x2C</span><span class="p">,</span> <span class="mh">0x32</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x74</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x6F</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x2C</span><span class="p">,</span> <span class="mh">0x35</span><span class="p">),</span>
+    <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x3A</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x2C</span><span class="p">,</span> <span class="mh">0x5F</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x31</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x2C</span><span class="p">,</span> <span class="mh">0x63</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x30</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x2B</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x1D</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x5D</span><span class="p">),</span>
+    <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x3C</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x2B</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x2F</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x2C</span><span class="p">,</span> <span class="mh">0x34</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x7E</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x2C</span><span class="p">,</span> <span class="mh">0x6E</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x72</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x5E</span><span class="p">),</span>
+    <span class="p">(</span><span class="mh">0x2C</span><span class="p">,</span> <span class="mh">0x5F</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x79</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x7A</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x2C</span><span class="p">,</span> <span class="mh">0x38</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x2C</span><span class="p">,</span> <span class="mh">0x32</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x47</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x62</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x2C</span><span class="p">,</span> <span class="mh">0x33</span><span class="p">),</span>
+    <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x62</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x22</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x2C</span><span class="p">,</span> <span class="mh">0x34</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x23</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x2C</span><span class="p">,</span> <span class="mh">0x6B</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x55</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x2C</span><span class="p">,</span> <span class="mh">0x5F</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x16</span><span class="p">),</span>
+    <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x03</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x2C</span><span class="p">,</span> <span class="mh">0x34</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x2B</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x4A</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x2C</span><span class="p">,</span> <span class="mh">0x5F</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x2C</span><span class="p">,</span> <span class="mh">0x35</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x01</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x0D</span><span class="p">),</span>
+    <span class="p">(</span><span class="mh">0x2C</span><span class="p">,</span> <span class="mh">0x33</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x4D</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x0E</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x2C</span><span class="p">,</span> <span class="mh">0x32</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x42</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x2C</span><span class="p">,</span> <span class="mh">0x31</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x2C</span><span class="p">,</span> <span class="mh">0x34</span><span class="p">),</span>
+    <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x42</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x12</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x2C</span><span class="p">,</span> <span class="mh">0x31</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x64</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x56</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x2C</span><span class="p">,</span> <span class="mh">0x5F</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x2C</span><span class="p">,</span> <span class="mh">0x35</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x07</span><span class="p">),</span>
+    <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x20</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x2C</span><span class="p">,</span> <span class="mh">0x79</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x53</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x05</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x2C</span><span class="p">,</span> <span class="mh">0x35</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x42</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x2C</span><span class="p">,</span> <span class="mh">0x37</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x6B</span><span class="p">),</span>
+    <span class="p">(</span><span class="mh">0x2C</span><span class="p">,</span> <span class="mh">0x33</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x1D</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x1A</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x31</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x56</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x05</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x51</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x78</span><span class="p">),</span>
+    <span class="p">(</span><span class="mh">0x2C</span><span class="p">,</span> <span class="mh">0x6D</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x14</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x2C</span><span class="p">,</span> <span class="mh">0x21</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x6A</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x16</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x2C</span><span class="p">,</span> <span class="mh">0x40</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x60</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x51</span><span class="p">),</span>
+    <span class="p">(</span><span class="mh">0x2C</span><span class="p">,</span> <span class="mh">0x35</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x2C</span><span class="p">,</span> <span class="mh">0x32</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x79</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x71</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x2C</span><span class="p">,</span> <span class="mh">0x29</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x74</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x25</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x2C</span><span class="p">,</span> <span class="mh">0x23</span><span class="p">),</span>
+    <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x20</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x2C</span><span class="p">,</span> <span class="mh">0x40</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x35</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x2C</span><span class="p">,</span> <span class="mh">0x25</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x6D</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x64</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x2C</span><span class="p">,</span> <span class="mh">0x7D</span><span class="p">),</span> <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x53</span><span class="p">),</span>
+    <span class="p">(</span><span class="mh">0x34</span><span class="p">,</span> <span class="mh">0x16</span><span class="p">),</span>
+<span class="p">]</span>
+
+<span class="n">d</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">x</span><span class="p">:</span>
+    <span class="n">d</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">chr</span><span class="p">(</span><span class="n">v</span><span class="p">))</span>
+
+<span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">d</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="s2">""</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">v</span><span class="p">))</span>
+</pre></div>
+<p>Running this prints the flag:</p>
+<pre><code>λ python lol.py
+MBBdV SBk1VQxj`Qyqt% 5mdS_min_limit_to:10+]&lt;+/~r^yzGbb"#U+J
+44 CHTB{nu11_732m1n47025_c4n_8234k_4_532141_5y573m!@52)#@%}
+</code></pre>
+</main>
+</div>
+</div>
+</div>
+</body>
+</html>

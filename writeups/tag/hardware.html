@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="KxBie6T6uw1Iexm0-tldr4zEIM4zAUdDLF9N_t97cIE" name="google-site-verification"/>
+<meta content="CTF writeups made by LUHack members." name="description">
+<meta content="LUHack Writeups" property="og:title"/>
+<meta content="website" property="og:type"/>
+<meta content="../../static/images/logo_small.png" property="og:image"/>
+<meta content="" property="og:url"/>
+<meta content="LUHack" property="og:site_name"/>
+<meta content="CTF writeups made by LUHack members." property="og:description"/>
+<link href="../../static/images/apple-touch-icon-57x57.png" rel="apple-touch-icon-precomposed" sizes="57x57"/>
+<link href="../../static/images/apple-touch-icon-114x114.png" rel="apple-touch-icon-precomposed" sizes="114x114">
+<link href="../../static/images/apple-touch-icon-72x72.png" rel="apple-touch-icon-precomposed" sizes="72x72"/>
+<link href="../../static/images/apple-touch-icon-144x144.png" rel="apple-touch-icon-precomposed" sizes="144x144"/>
+<link href="../../static/images/apple-touch-icon-60x60.png" rel="apple-touch-icon-precomposed" sizes="60x60"/>
+<link href="../../static/images/apple-touch-icon-120x120.png" rel="apple-touch-icon-precomposed" sizes="120x120"/>
+<link href="../../static/images/apple-touch-icon-76x76.png" rel="apple-touch-icon-precomposed" sizes="76x76"/>
+<link href="../../static/images/apple-touch-icon-152x152.png" rel="apple-touch-icon-precomposed" sizes="152x152"/>
+<link href="../../static/images/favicon-196x196.png" rel="icon" sizes="196x196" type="image/png"/>
+<link href="../../static/images/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+<link href="../../static/images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="../../static/images/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="../../static/images/favicon-128.png" rel="icon" sizes="128x128" type="image/png"/>
+<meta content="LUHack" name="application-name"/>
+<meta content="#FFFFFF" name="msapplication-TileColor"/>
+<meta content="../../static/images/mstile-144x144.png" name="msapplication-TileImage"/>
+<meta content="../../static/images/mstile-70x70.png" name="msapplication-square70x70logo"/>
+<meta content="../../static/images/mstile-150x150.png" name="msapplication-square150x150logo"/>
+<meta content="../../static/images/mstile-310x150.png" name="msapplication-wide310x150logo"/>
+<meta content="../../static/images/mstile-310x310.png" name="msapplication-square310x310logo"/>
+<title>LUHack Writeups</title>
+<link href="../../_assets/cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/fontawesome.min.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="../../_assets/cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/solid.min.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="../../_assets/cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/brands.min.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="../../_assets/unpkg.com/purecss%402.0.3/build/pure-min.css" rel="stylesheet"/>
+<link href="../../_assets/fonts.googleapis.com/css_81f601ca.css" rel="stylesheet"/>
+<link href="../../static/css/main.css" rel="stylesheet"/>
+<link href="../../static/css/highlight.min.css" rel="stylesheet"/>
+</link></meta></head>
+<body>
+<div class="with-sidebar">
+<div class="fill-height">
+<div class="sidebar" id="menu">
+<div class="header">
+<h1 class="brand-title">
+<a class="logo" href="../../index.html">
+<img alt="LUHack logo" src="../../static/images/luhack_logo.png" width="100%"/>
+</a>
+</h1>
+<nav class="nav">
+<ul class="nav-list">
+<li class="nav-item">
+<a class="button" href="../../index.html">Home</a>
+</li>
+<li class="nav-item">
+<a class="button" href="../index.html">Writeups</a>
+</li>
+<li class="nav-item">
+<a class="button" href="../../challenges/index.html">Challenges</a>
+</li>
+<br/>
+<li class="nav-item">
+<a class="button" href="../tags.html">Tag List</a>
+</li>
+<li class="nav-item">
+<a class="button" href="../new.html">New Writeup</a>
+</li>
+</ul>
+</nav>
+<br/>
+<form action="../index.html" class="pure-form" method="GET">
+<input autocomplete="off" class="search-bar" id="search-bar" name="search" placeholder="Search writeups" type="search" value=""/>
+</form>
+<div class="header-content">
+</div>
+</div>
+<div class="footer">
+<div class="legal">
+<div class="">
+<a href="#" title="Sign In">Sign In</a>
+</div>
+</div>
+</div>
+</div>
+<div class="not-sidebar">
+<main>
+<div class="posts">
+<section class="post">
+<header class="post-header">
+<h2 class="post-title"><a href="../view/you-cant-hear-me.html">You can't hear me</a></h2>
+<p class="post-meta">
+                
+                    Posted by <a href="../user/simmsb.html">simmsb</a> on 2022-07-27 23:05:12.287616
+                
+                
+                        under
+                    
+                    <a class="post-category" href="hardware.html">hardware</a>
+<a class="post-category" href="hacky-holidays.html">hacky-holidays</a>
+</p>
+</header>
+<div class="post-description">
+<p>
+                This challenge presents us with a website containing a video of a circuit board, a picture of a logic analyzer, and a 'terminal'.   After some clicking around we find that clicking the 'probe' cycles the colour, the pads at the top left of the circuit board can then be clicked on. With the below configuration we are able to run <code>./analyze.sh</code> in the terminal, which causes the file <code>sample_0x731BC42.sal</code> to be downloaded. ... 
+            </p>
+</div>
+</section>
+<section class="post">
+<header class="post-header">
+<h2 class="post-title"><a href="../view/hidden.html">Hidden</a></h2>
+<p class="post-meta">
+                
+                    Posted by <a href="../user/simmsb.html">simmsb</a> on 2021-05-02 05:36:56.308573
+                
+                
+                        under
+                    
+                    <a class="post-category" href="hardware.html">hardware</a>
+<a class="post-category" href="htb-cyber-apocalypse.html">htb-cyber-apocalypse</a>
+</p>
+</header>
+<div class="post-description">
+<p>
+                For this challenge we are given two files: Taking a look at the executable first, we see that it's a fairly simple program that appears to be XORing a pre-existing flag and then writing it to a file. Since it appears the flag is hard coded in the binary, with a dummy flag being present in the binary given to us, the first step is to extract the XORed output since we can use the following property of XOR to calculate the flag: <code>(key XOR flag) XOR (key XOR dummyflag) XOR dummyflag = flag</code> ... 
+            </p>
+</div>
+</section>
+<section class="post">
+<header class="post-header">
+<h2 class="post-title"><a href="../view/off-the-grid.html">Off the grid</a></h2>
+<p class="post-meta">
+                
+                    Posted by <a href="../user/simmsb.html">simmsb</a> on 2021-04-21 00:11:16.595672
+                
+                
+                        under
+                    
+                    <a class="post-category" href="hardware.html">hardware</a>
+<a class="post-category" href="htb-cyber-apocalypse.html">htb-cyber-apocalypse</a>
+</p>
+</header>
+<div class="post-description">
+<p>
+                Again, we are given a capture. This time it's the communication between a device an an OLED screen. We've also been given a schematic showing which channels go to which pins on the device.   After a quick search we find that this OLED screen communicates over both i2c and SPI, with the pins in the schematic matching a 3-wire SPI interface. Loading an analyzer up in Saleae Logic we see this:   To... 
+            </p>
+</div>
+</section>
+<section class="post">
+<header class="post-header">
+<h2 class="post-title"><a href="../view/secure.html">secure</a></h2>
+<p class="post-meta">
+                
+                    Posted by <a href="../user/simmsb.html">simmsb</a> on 2021-04-20 21:36:16.275892
+                
+                
+                        under
+                    
+                    <a class="post-category" href="hardware.html">hardware</a>
+<a class="post-category" href="htb-cyber-apocalypse.html">htb-cyber-apocalypse</a>
+</p>
+</header>
+<div class="post-description">
+<p>
+                Once again we have a capture of some wire protocol, supposedly this is a capture of a device communicating with a micro SD card. Opening it up in Saleae Logic shows the following:   After having a bit of a google we find that SD cards communicate over a protocol known as Serial Peripheral Interface (SPI), so we use the analyzer on the capture.   Deciding which channels in the capture map to... 
+            </p>
+</div>
+</section>
+<section class="post">
+<header class="post-header">
+<h2 class="post-title"><a href="../view/compromised.html">compromised</a></h2>
+<p class="post-meta">
+                
+                    Posted by <a href="../user/simmsb.html">simmsb</a> on 2021-04-19 15:12:54.000989
+                
+                
+                        under
+                    
+                    <a class="post-category" href="hardware.html">hardware</a>
+<a class="post-category" href="htb-cyber-apocalypse.html">htb-cyber-apocalypse</a>
+</p>
+</header>
+<div class="post-description">
+<p>
+                Similarly to [serial_logs] we've been given a <code>.sal</code> file. Opening this up in Saleae Logic we see two channels with data in:   When playing around with the analyzers earlier I noticed that the I2C analyzer takes input from two channels, so I tried that. It seemed to decode correctly and showed a sequence of writes to two different addresses. | | | |-|-| |... 
+            </p>
+</div>
+</section>
+<section class="post">
+<header class="post-header">
+<h2 class="post-title"><a href="../view/serial_logs.html">serial_logs</a></h2>
+<p class="post-meta">
+                
+                    Posted by <a href="../user/simmsb.html">simmsb</a> on 2021-04-19 14:46:16.308382
+                
+                
+                        under
+                    
+                    <a class="post-category" href="hardware.html">hardware</a>
+<a class="post-category" href="htb-cyber-apocalypse.html">htb-cyber-apocalypse</a>
+</p>
+</header>
+<div class="post-description">
+<p>
+                We've been given a file supposedly containing serial logs, a <code>sal</code> file. Since there was a similar challenge in the previous CTF: [block]  I guessed that I'd be able to open this in Saleae Logic (which has been updated to version 2 since the last writeup). Opening up this file in Logic we see the captured communications in 'channel 1':   To decode this we can use the 'async serial' analyzer.... 
+            </p>
+</div>
+</section>
+<section class="post">
+<header class="post-header">
+<h2 class="post-title"><a href="../view/block.html">Block</a></h2>
+<p class="post-meta">
+                
+                    Posted by <a href="../user/simmsb.html">simmsb</a> on 2020-11-26 15:36:11.445920
+                
+                
+                        under
+                    
+                    <a class="post-category" href="hardware.html">hardware</a>
+<a class="post-category" href="htbctf.html">htbctf</a>
+</p>
+</header>
+<div class="post-description">
+<p>
+                Block provides us with a binary dump named <code>dump.bin</code> and a capture of a serial communication <code>sequence.logicdata</code>. We can use Saleae Logic to open the <code>sequence.logicdata</code> file and analyze it. After interpreting the file as an 'async serial' communication with even parity bits we see some useful data:   Which can then be formatted into the following: Which, after some fiddling I found that the first digit of each number represented the sector... 
+            </p>
+</div>
+</section>
+</div>
+</main>
+</div>
+</div>
+</div>
+</body>
+</html>

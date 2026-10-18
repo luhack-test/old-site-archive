@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="KxBie6T6uw1Iexm0-tldr4zEIM4zAUdDLF9N_t97cIE" name="google-site-verification"/>
+<meta content="CTF writeups made by LUHack members." name="description">
+<meta content="Hotel" property="og:title"/>
+<meta content="website" property="og:type"/>
+<meta content="../../static/images/logo_small.png" property="og:image"/>
+<meta content="" property="og:url"/>
+<meta content="LUHack" property="og:site_name"/>
+<meta content="CTF writeups made by LUHack members." property="og:description"/>
+<link href="../../static/images/apple-touch-icon-57x57.png" rel="apple-touch-icon-precomposed" sizes="57x57"/>
+<link href="../../static/images/apple-touch-icon-114x114.png" rel="apple-touch-icon-precomposed" sizes="114x114">
+<link href="../../static/images/apple-touch-icon-72x72.png" rel="apple-touch-icon-precomposed" sizes="72x72"/>
+<link href="../../static/images/apple-touch-icon-144x144.png" rel="apple-touch-icon-precomposed" sizes="144x144"/>
+<link href="../../static/images/apple-touch-icon-60x60.png" rel="apple-touch-icon-precomposed" sizes="60x60"/>
+<link href="../../static/images/apple-touch-icon-120x120.png" rel="apple-touch-icon-precomposed" sizes="120x120"/>
+<link href="../../static/images/apple-touch-icon-76x76.png" rel="apple-touch-icon-precomposed" sizes="76x76"/>
+<link href="../../static/images/apple-touch-icon-152x152.png" rel="apple-touch-icon-precomposed" sizes="152x152"/>
+<link href="../../static/images/favicon-196x196.png" rel="icon" sizes="196x196" type="image/png"/>
+<link href="../../static/images/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+<link href="../../static/images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="../../static/images/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="../../static/images/favicon-128.png" rel="icon" sizes="128x128" type="image/png"/>
+<meta content="LUHack" name="application-name"/>
+<meta content="#FFFFFF" name="msapplication-TileColor"/>
+<meta content="../../static/images/mstile-144x144.png" name="msapplication-TileImage"/>
+<meta content="../../static/images/mstile-70x70.png" name="msapplication-square70x70logo"/>
+<meta content="../../static/images/mstile-150x150.png" name="msapplication-square150x150logo"/>
+<meta content="../../static/images/mstile-310x150.png" name="msapplication-wide310x150logo"/>
+<meta content="../../static/images/mstile-310x310.png" name="msapplication-square310x310logo"/>
+<script type="application/ld+json">
+     {
+         "@context": "https://schema.org",
+         "@type": "Article",
+         "author": "derbytron",
+         "name": "Hotel",
+         "about": "Cyber Security",
+         "url": "",
+         "datePublished": "2019-04-12T10:39:45.845624",
+         "dateModified": "2019-04-12T10:39:45.845624",
+         "publsher": {
+             "@type": "Organization",
+             "name": "LUHack"
+         }
+     }
+    </script>
+<title>LUHack Writeup: Hotel</title>
+<link href="../../_assets/cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/fontawesome.min.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="../../_assets/cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/solid.min.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="../../_assets/cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/brands.min.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="../../_assets/unpkg.com/purecss%402.0.3/build/pure-min.css" rel="stylesheet"/>
+<link href="../../_assets/fonts.googleapis.com/css_81f601ca.css" rel="stylesheet"/>
+<link href="../../static/css/main.css" rel="stylesheet"/>
+<link href="../../static/css/highlight.min.css" rel="stylesheet"/>
+<script defer="" src="../../static/js/base.js"></script>
+</link></meta></head>
+<body>
+<div class="with-sidebar">
+<div class="fill-height">
+<div class="sidebar" id="menu">
+<div class="header">
+<h1 class="brand-title">
+<a class="logo" href="../../index.html">
+<img alt="LUHack logo" src="../../static/images/luhack_logo.png" width="100%"/>
+</a>
+</h1>
+<nav class="nav">
+<ul class="nav-list">
+<li class="nav-item">
+<a class="button" href="../../index.html">Home</a>
+</li>
+<li class="nav-item">
+<a class="button" href="../index.html">Writeups</a>
+</li>
+<li class="nav-item">
+<a class="button" href="../../challenges/index.html">Challenges</a>
+</li>
+<br/>
+<li class="nav-item">
+<a class="button" href="../tags.html">Tag List</a>
+</li>
+<li class="nav-item">
+<a class="button" href="../new.html">New Writeup</a>
+</li>
+</ul>
+</nav>
+<br/>
+<form action="../index.html" class="pure-form" method="GET">
+<input autocomplete="off" class="search-bar" id="search-bar" name="search" placeholder="Search writeups" type="search" value=""/>
+</form>
+<div class="header-content">
+<div class="article-meta">
+<h2>Hotel</h2>
+<h4 class="author">By: <a href="../user/derbytron.html">derbytron</a></h4>
+<h4 class="date">2019-04-12 10:39:45.845624</h4>
+<div class="tags">
+<a class="post-category" href="../tag/lfi.html">lfi</a>
+<a class="post-category" href="../tag/web.html">web</a>
+<a class="post-category" href="../tag/pcap.html">pcap</a>
+<a class="post-category" href="../tag/panad-ctf.html">panad-ctf</a>
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+<div class="legal">
+<div class="">
+<a href="#" title="Sign In">Sign In</a>
+</div>
+</div>
+</div>
+</div>
+<div class="not-sidebar">
+<main>
+<p>We're given a URL and a pcap file, being told that we have captured some traffic from "Jake".
+First thing we need to do is open the pcap in Wireshark. If we've captured traffic, hopefully it will include the username and password.
+Once in Wireshark we filter by <code>http</code></p>
+<p><img alt="Wireshark filtered by http" class="pure-img" src="../../_assets/i.imgur.com/VCEdQaN.png"/></p>
+<p>We're looking for POST requests, and more specifically, the data the contain.  There are two in the screenshot above, the first one contains the following:</p>
+<p><img alt="First POST request data" class="pure-img" src="../../_assets/imgur.com/M3L8nO4.png"/></p>
+<p>Unfortunately when we try this it doesn't work, so we see if the second one contains anything useful:</p>
+<p><img alt="Second POST request data" class="pure-img" src="../../_assets/imgur.com/V2XKZ3M.png"/></p>
+<p>It seems Jake had made a typo and not capitalised the first character in his password, this one works!</p>
+<p><img alt="Screenshot of website after login" class="pure-img" src="../../_assets/imgur.com/oZ0PcLO.png"/></p>
+<p>Once logged in it's time to look around.  We were told to see if we can get to /home/jake/flag.txt, this is clearly a local file, so we need to check for local file inclusion techniques.
+There is a file upload within the recipes which seems lucrative however this isn't the way we managed to do it, we eventually managed to export the local file over base64 via the following URL:</p>
+<p><code>&lt;base_URL&gt;/&lt;page&gt;.php?page=php://filter/convert.base64-encode/resource=/home/jake/flag.txt</code></p>
+<p>This printed out the following:</p>
+<p><code>CgoKCiAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgX18KICAgICAgICAgICAgICAgICAgLyBcLS0uLl9fX18KICAgICAgICAgICAgICAgICAgIFwgXCAgICAgICBcLS0tLS0sLCwuLgogICAgICAgICAgICAgICAgICAgIFwgXCAgICAgICBcICAgICAgICAgXC0tLCwuLgogICAgICAgICAgICAgICAgICAgICBcIFwgICAgICAgXCAgICAgICAgIFwgICwnCiAgICAgICAgICAgICAgICAgICAgICBcIFwgICAgICAgXCAgICAgICAgIFwgYGAuLgogICAgICAgICAgICAgICAgICAgICAgIFwgXCAgICAgICBcICAgICAgICAgXC0nJwogICAgICAgICAgICAgICAgICAgICAgICBcIFwgICAgICAgXF9fLCwtLScnJwogICAgICAgICAgICAgICAgICAgICAgICAgXCBcICAgICAgIFwuCiAgICAgICAgICAgICAgICAgICAgICAgICAgXCBcICAgICAgLC8KICAgICAgICAgICAgICAgICAgICAgICAgICAgXCBcX18uLi0KICAgICAgICAgICAgICAgICAgICAgICAgICAgIFwgXAogICAgICAgICAgICAgICAgICAgICAgICAgICAgIFwgXCAgICAgcGFjdGZ7bTB0ZWxfS2FMaWZvcm4xYX0KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgXCBcCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBcIFwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBcIFwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgXCBcCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBcIFwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBcIFwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgXCBcCgoK</code></p>
+<p>Which looked like:</p>
+<p><img alt="Screenshot of website after base64 export" class="pure-img" src="../../_assets/imgur.com/xxGqIO5.png"/></p>
+<p>When this was decoded from base64, we got the following:</p>
+<pre><code>
+
+
+
+                   __
+                  / \--..____
+                   \ \       \-----,,,..
+                    \ \       \         \--,,..
+                     \ \       \         \  ,'
+                      \ \       \         \ ``..
+                       \ \       \         \-''
+                        \ \       \__,,--'''
+                         \ \       \.
+                          \ \      ,/
+                           \ \__..-
+                            \ \
+                             \ \     pactf{m0tel_KaLiforn1a}
+                              \ \
+                               \ \
+                                \ \
+                                 \ \
+                                  \ \
+                                   \ \
+                                    \ \
+
+
+</code></pre>
+</main>
+</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="KxBie6T6uw1Iexm0-tldr4zEIM4zAUdDLF9N_t97cIE" name="google-site-verification"/>
+<meta content="CTF writeups made by LUHack members." name="description">
+<meta content="Matroyshka" property="og:title"/>
+<meta content="website" property="og:type"/>
+<meta content="../../static/images/logo_small.png" property="og:image"/>
+<meta content="" property="og:url"/>
+<meta content="LUHack" property="og:site_name"/>
+<meta content="CTF writeups made by LUHack members." property="og:description"/>
+<link href="../../static/images/apple-touch-icon-57x57.png" rel="apple-touch-icon-precomposed" sizes="57x57"/>
+<link href="../../static/images/apple-touch-icon-114x114.png" rel="apple-touch-icon-precomposed" sizes="114x114">
+<link href="../../static/images/apple-touch-icon-72x72.png" rel="apple-touch-icon-precomposed" sizes="72x72"/>
+<link href="../../static/images/apple-touch-icon-144x144.png" rel="apple-touch-icon-precomposed" sizes="144x144"/>
+<link href="../../static/images/apple-touch-icon-60x60.png" rel="apple-touch-icon-precomposed" sizes="60x60"/>
+<link href="../../static/images/apple-touch-icon-120x120.png" rel="apple-touch-icon-precomposed" sizes="120x120"/>
+<link href="../../static/images/apple-touch-icon-76x76.png" rel="apple-touch-icon-precomposed" sizes="76x76"/>
+<link href="../../static/images/apple-touch-icon-152x152.png" rel="apple-touch-icon-precomposed" sizes="152x152"/>
+<link href="../../static/images/favicon-196x196.png" rel="icon" sizes="196x196" type="image/png"/>
+<link href="../../static/images/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+<link href="../../static/images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="../../static/images/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="../../static/images/favicon-128.png" rel="icon" sizes="128x128" type="image/png"/>
+<meta content="LUHack" name="application-name"/>
+<meta content="#FFFFFF" name="msapplication-TileColor"/>
+<meta content="../../static/images/mstile-144x144.png" name="msapplication-TileImage"/>
+<meta content="../../static/images/mstile-70x70.png" name="msapplication-square70x70logo"/>
+<meta content="../../static/images/mstile-150x150.png" name="msapplication-square150x150logo"/>
+<meta content="../../static/images/mstile-310x150.png" name="msapplication-wide310x150logo"/>
+<meta content="../../static/images/mstile-310x310.png" name="msapplication-square310x310logo"/>
+<script type="application/ld+json">
+     {
+         "@context": "https://schema.org",
+         "@type": "Article",
+         "author": "mysterypotatoguy",
+         "name": "Matroyshka",
+         "about": "Cyber Security",
+         "url": "",
+         "datePublished": "2019-04-17T00:12:26.895251",
+         "dateModified": "2019-04-17T00:12:26.895251",
+         "publsher": {
+             "@type": "Organization",
+             "name": "LUHack"
+         }
+     }
+    </script>
+<title>LUHack Writeup: Matroyshka</title>
+<link href="../../_assets/cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/fontawesome.min.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="../../_assets/cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/solid.min.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="../../_assets/cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/brands.min.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="../../_assets/unpkg.com/purecss%402.0.3/build/pure-min.css" rel="stylesheet"/>
+<link href="../../_assets/fonts.googleapis.com/css_81f601ca.css" rel="stylesheet"/>
+<link href="../../static/css/main.css" rel="stylesheet"/>
+<link href="../../static/css/highlight.min.css" rel="stylesheet"/>
+<script defer="" src="../../static/js/base.js"></script>
+</link></meta></head>
+<body>
+<div class="with-sidebar">
+<div class="fill-height">
+<div class="sidebar" id="menu">
+<div class="header">
+<h1 class="brand-title">
+<a class="logo" href="../../index.html">
+<img alt="LUHack logo" src="../../static/images/luhack_logo.png" width="100%"/>
+</a>
+</h1>
+<nav class="nav">
+<ul class="nav-list">
+<li class="nav-item">
+<a class="button" href="../../index.html">Home</a>
+</li>
+<li class="nav-item">
+<a class="button" href="../index.html">Writeups</a>
+</li>
+<li class="nav-item">
+<a class="button" href="../../challenges/index.html">Challenges</a>
+</li>
+<br/>
+<li class="nav-item">
+<a class="button" href="../tags.html">Tag List</a>
+</li>
+<li class="nav-item">
+<a class="button" href="../new.html">New Writeup</a>
+</li>
+</ul>
+</nav>
+<br/>
+<form action="../index.html" class="pure-form" method="GET">
+<input autocomplete="off" class="search-bar" id="search-bar" name="search" placeholder="Search writeups" type="search" value=""/>
+</form>
+<div class="header-content">
+<div class="article-meta">
+<h2>Matroyshka</h2>
+<h4 class="author">By: <a href="../user/mysterypotatoguy.html">mysterypotatoguy</a></h4>
+<h4 class="date">2019-04-17 00:12:26.895251</h4>
+<div class="tags">
+<a class="post-category" href="../tag/misc.html">misc</a>
+<a class="post-category" href="../tag/panad-ctf.html">panad-ctf</a>
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+<div class="legal">
+<div class="">
+<a href="#" title="Sign In">Sign In</a>
+</div>
+</div>
+</div>
+</div>
+<div class="not-sidebar">
+<main>
+<blockquote>
+<p>Matryoshka is hiding a flag in its heart. Open it layer by layer, and get the flag!</p>
+</blockquote>
+<p>Matryoshka a.k.a. Russian nesting dolls are a set of wooden dolls of decreasing size which are designed to fit inside each other. The name of this challenge suggested that there would be multiple layers of challenges to solve</p>
+<p>This challenge provided us with a file containing a large base64 encoded string: 
+<img alt="matroyshka.txt" class="pure-img" src="../../images/f9fd1fda-2b11-4802-b394-0e64d8565dc6.png"/></p>
+<p>Decoding the base64 to ascii produced another base64 string but with additional obstacles:</p>
+<p><img alt="layer2" class="pure-img" src="../../images/de74da1c-7672-456e-bbdd-0c35e27e2bae.png"/></p>
+<ul>
+<li>The entire string was reversed</li>
+<li><code>&lt;removeme&gt;</code> was placed into the string at random positions</li>
+<li>Some characters had diacritics</li>
+</ul>
+<p>Decoding this layer produced another layer with similar obstacles.</p>
+<p>Some stages also decoded to hexadecimal which, when converted to ASCII would also produce the next layer of the challenge</p>
+<p>Using <a href="https://gchq.github.io/CyberChef/">GCHQ's CyberChef</a> we can create a recipe which will solve each stage of this nested puzzle:</p>
+<ul>
+<li>Regex to remove the random strings and brackets at the start and end: <code>(\\[\d+\.\d+\])|[\-\[\]]</code></li>
+<li>Removing diacritics from letters</li>
+<li>Replacing ø with o (Remove diacritics does not convert this character)</li>
+<li>Reversing the string where necessary</li>
+<li>Remove the duplicate letters from the final stage</li>
+<li>Decoding hexadecimal to ASCII where necessary</li>
+<li>Decoding base64 to ASCII</li>
+</ul>
+<pre><code>Find_/_Replace({'option':'Regex','string':'(\\[\\d+\\.\\d+\\])|[\\-\\[\\]]'},'',true,false,true,false)
+From_Base64('A-Za-z0-9+/=',true)
+Reverse('Character')
+Remove_Diacritics()
+Find_/_Replace({'option':'Regex','string':'ø'},'o',true,false,true,false)
+Find_/_Replace({'option':'Regex','string':'&lt;removeme&gt;'},'',true,false,true,false)
+Find_/_Replace({'option':'Regex','string':'&lt;removeme&gt;'},'',true,false,true,false)
+Find_/_Replace({'option':'Regex','string':'(\\w+|\\d+)\\.(\\w+|\\d+)|[\\[\\]\\-\\.]'},'',true,false,true,false)
+From_Base64('A-Za-z0-9+/=',true)
+Find_/_Replace({'option':'Regex','string':'(\\w+|\\d+)\\.(\\w+|\\d+)|[\\[\\]\\-\\.]'},'',true,false,true,false)
+Reverse('Character')
+From_Hex('Auto')
+Find_/_Replace({'option':'Regex','string':'(\\w+|\\d+)\\.(\\w+|\\d+)|[\\[\\]\\-\\.]'},'',true,false,true,false)
+From_Base64('A-Za-z0-9+/=',true)
+Remove_Diacritics()
+Find_/_Replace({'option':'Regex','string':'ø'},'o',true,false,true,false)
+Find_/_Replace({'option':'Regex','string':'&lt;removeme&gt;'},'',true,false,true,false)
+Find_/_Replace({'option':'Regex','string':'(\\w+|\\d+)\\.(\\w+|\\d+)|[\\[\\]\\-\\.]'},'',true,false,true,false)
+From_Base64('A-Za-z0-9+/=',true)
+Find_/_Replace({'option':'Regex','string':'(\\w+|\\d+)\\.(\\w+|\\d+)|[\\[\\]\\-\\.]'},'',true,false,true,false)
+From_Base64('A-Za-z0-9+/=',true)
+Find_/_Replace({'option':'Regex','string':'(\\w+|\\d+)\\.(\\w+|\\d+)|[\\[\\]\\-\\.]'},'',true,false,true,false)
+From_Hex('Auto')
+Remove_Diacritics()
+Find_/_Replace({'option':'Regex','string':'(\\w+|\\d+)\\.(\\w+|\\d+)|[\\[\\]\\-\\.]'},'',true,false,true,false)
+From_Base64('A-Za-z0-9+/=',true)
+Find_/_Replace({'option':'Regex','string':'(\\w+|\\d+)\\.(\\w+|\\d+)|[\\[\\]\\-\\.]'},'',true,false,true,false)
+From_Hex('Auto')
+Find_/_Replace({'option':'Regex','string':'(\\w+|\\d+)\\.(\\w+|\\d+)|[\\[\\]\\-\\.]'},'',true,false,true,false)
+Reverse('Character')
+From_Base64('A-Za-z0-9+/=',true)
+Remove_Diacritics()
+Reverse('Character')
+Find_/_Replace({'option':'Regex','string':'&lt;removeme&gt;'},'',true,false,true,false)
+Find_/_Replace({'option':'Regex','string':'&lt;removeme&gt;'},'',true,false,true,false)
+Find_/_Replace({'option':'Regex','string':'(\\w+|\\d+)\\.+(\\w+|\\d+)|[\\[\\]\\-\\.]'},'',true,false,true,false)
+Find_/_Replace({'option':'Regex','string':'(.).'},'$1',true,false,false,false)
+From_Base64('A-Za-z0-9+/=',true)
+</code></pre>
+<ul>
+<li>(Use "Load recipe" in CyberChef and copy-paste this)</li>
+</ul>
+<p>With the full recipe and initial input, the output is our final flag:</p>
+<p><code>pactf{gr4nm0tr_DoLl}</code></p>
+</main>
+</div>
+</div>
+</div>
+</body>
+</html>

